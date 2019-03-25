@@ -1,0 +1,96 @@
+/* pages/home/index/index.wxss */
+
+/* 头部搜索 */
+
+.head-box {
+  height: 112rpx;
+  background-color: #45ae8c;
+}
+
+.search-box {
+  padding: 24rpx;
+  border-radius: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-box .search {
+  flex: 1;
+}
+
+/* swipe */
+
+.swipe image {
+  width: 100%;
+  height: 300rpx;
+}
+
+/* 分类列表 */
+
+.nav-box {
+  height: calc(100vh - 412rpx);
+  display: flex;
+}
+
+.nav-box .nav {
+  width: 200rpx;
+  height: 100%;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.nav-box .cu-item {
+  display: inline-block;
+  width: 200rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.nav-box .cu-item.cur {
+  color: #45ae8c;
+  background-color: #fff;
+}
+
+.nav-box .item-box {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-box .item-list {
+  text-align: center;
+  width: 33.33%;
+  margin-bottom: 30rpx;
+}
+
+.sec-box .title {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+  padding: 24rpx;
+}
+
+.item-list .img {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.item-list .name {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.nav-box .nav::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.sec-box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

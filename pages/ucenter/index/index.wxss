@@ -1,0 +1,149 @@
+/* pages/ucenter/index/index.wxss */
+
+.container {
+  position: relative;
+}
+
+.author-container {
+  background-color: #45ae8c;
+  height: 360rpx;
+  margin-bottom: 132rpx;
+}
+
+.user-box {
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.info-box {
+  margin-left: 28rpx;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+
+.info-box .name {
+  font-size: 36rpx;
+}
+
+.amount-box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: #fff;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.amount-box .item-list {
+  flex: 1;
+  font-size: 36rpx;
+}
+
+.amount-box .des {
+  font-size: 24rpx;
+  color: #e6e6e6;
+  margin-top: 5rpx;
+}
+
+.order-box {
+  width: 702rpx;
+  height: 212rpx;
+  position: absolute;
+  top: 280rpx;
+  left: 24rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 4rpx 4rpx 6rpx rgba(6, 0, 1, 0.1), -4rpx 4rpx 6rpx rgba(6, 0, 1, 0.1);
+}
+
+.order-box .title {
+  padding: 24rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order-group {
+  display: flex;
+}
+
+.order-group .order-list {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.order-list image {
+  width: 44rpx;
+  height: 44rpx;
+  margin-bottom: 5rpx;
+}
+
+.order-list .img-box {
+  position: relative;
+}
+
+.order-list .img-box .tip {
+  position: absolute;
+  display: inline-block;
+  top: -16rpx;
+  left: 90rpx;
+  max-width: 36rpx;
+  min-width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 5rpx;
+  overflow: hidden;
+  font-size: 20rpx;
+  background-color: rgba(69, 174, 140, .9);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.ad-box {
+  padding: 24rpx;
+  height: 180rpx;
+}
+
+.ad-box image {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.nav-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  width: 33%;
+  text-align: center;
+  padding: 28rpx 0;
+}
+
+.nav-item image {
+  width: 52rpx;
+  height: 52rpx;
+  margin-bottom: 10rpx;
+}
+
+.nav-item .name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.btn {
+  width: 100%;
+  padding: 24rpx;
+  box-sizing: border-box;
+}

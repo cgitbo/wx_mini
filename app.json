@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/ucenter/index/index",
+    "pages/group/index/index",
+    "pages/car/index/index",
+    "pages/components/button/cmp"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#45AE8C",
+    "navigationBarTitleText": "万泽冰酒",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "iconPath": "images/tab-bar/shop.png",
+        "selectedIconPath": "images/tab-bar/shop-select.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/car/index/index",
+        "iconPath": "images/tab-bar/car.png",
+        "selectedIconPath": "images/tab-bar/car-select.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/group/index/index",
+        "iconPath": "images/tab-bar/group.png",
+        "selectedIconPath": "images/tab-bar/group-select.png",
+        "text": "团队"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "images/tab-bar/my.png",
+        "selectedIconPath": "images/tab-bar/my-select.png",
+        "text": "我的"
+      }
+    ],
+    "color": "#666666",
+    "selectedColor": "#45AE8C",
+    "backgroundColor": "#ffffff"
+  }
+}

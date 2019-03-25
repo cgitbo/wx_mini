@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "yh-button": "/pages/components/button/cmp"
+  },
+  "navigationBarTitleText": "我的"
+}

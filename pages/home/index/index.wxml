@@ -1,0 +1,36 @@
+<!--pages/home/index/index.wxml-->
+<view class='container'>
+  <view class='head-box'>
+    <view class='search-box'>
+      <yh-search class='search' confirm-type='search' size='big' placeholder='请输入关键词' />
+    </view>
+  </view>
+
+  <view class='swipe'>
+    <swiper indicator-dots='{{SwiperConf.indicatorDots}}' autoplay='{{SwiperConf.autoplay}}' interval='{{SwiperConf.interval}}' duration='{{SwiperConf.duration}}' circular='{{SwiperConf.circular}}' indicator-color='#fff' indicator-active-color='#45AE8C'>
+      <block wx:for='{{ImgUrls}}' wx:key='*this'>
+        <swiper-item>
+          <image src='{{item}}' class='slide-image' mode='scaleToFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='nav-box'>
+    <scroll-view class='nav' scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}rpx">
+      <view class='cu-item {{index == CurIndex ? "cur" : ""}}' catchtap='onNavTap' wx:for='{{FirstNavList}}' wx:key data-id='{{index}}'>
+        {{item}}
+      </view>
+    </scroll-view>
+
+    <scroll-view class='sec-box' scroll-y scroll-with-animation>
+      <view class='title'>杭州特产</view>
+      <view class='item-box'>
+        <view class='item-list' wx:for='{{SecondNavList}}' wx:key data-id='{{index}}'>
+          <image class='img' src='{{item.img}}'></image>
+          <view class='name'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
