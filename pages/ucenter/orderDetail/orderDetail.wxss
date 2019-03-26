@@ -4,10 +4,6 @@ page {
   background-color: #f7f7f7;
 }
 
-.container {
-  margin-bottom: 116rpx;
-}
-
 /* 头部 */
 
 .status-box {
@@ -63,6 +59,11 @@ page {
   margin-top: 30rpx;
   background-color: #fff;
   padding: 20rpx 24rpx;
+}
+
+.fixed-bug {
+  width: 100%;
+  height: 100rpx;
 }
 
 .order-summary .item:not(:last-child) {

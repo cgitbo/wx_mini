@@ -5,18 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ImgUrls: [
+    SwiperImgs: [
       'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
       'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
       'https://m.360buyimg.com/mobilecms/s750x366_jfs/t27871/347/1676989741/116594/4b38926b/5bea2f7bNe9efdcfa.jpg!cr_1125x549_0_72!q70.jpg.dpg'
     ],
-    SwiperConf: {
-      indicatorDots: true,
-      autoplay: true,
-      circular: true,
-      interval: 5000,
-      duration: 500,
-    },
     FirstNavList: [
       '杭州特产',
       '杭州特产',
@@ -50,7 +43,8 @@ Page({
       { name: '床上用品', img: 'https://img30.360buyimg.com/focus/s140x140_jfs/t1/1446/14/631/8500/5b9237e5E0d1f9e16/b1a627b92323b5ed.png'},
     ],
     CurIndex: 0,
-    VerticalNavTop: 0
+    VerticalNavTop: 0,
+    ShowLoading: false
   },
 
   // 一级分类点击事件
@@ -70,6 +64,18 @@ Page({
     })
   },
 
+  // 图片加载完成 隐藏loading
+  onSwiperTap(e){
+    console.log(e, 76)
+  },
+
+  // 隐藏 loading
+  _hideLoading() {
+    this.setData({
+      ShowLoading: false
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -81,7 +87,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

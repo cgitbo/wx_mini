@@ -6,7 +6,7 @@ Page({
    */
   data: {
     OrderType: 0, // 订单类型 0.全部 1.待付款 2.待发货 3.待收货 4.已完成
-    OrderNavList: ['全部' ,'待付款', '待发货', '待收货', '已完成'],
+    OrderNavList: ['全部', '待付款', '待发货', '待收货', '已完成'],
     OrderDetailList: [
       // { name: ''}
     ]

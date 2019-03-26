@@ -1,2 +1,15 @@
 <!--pages/home/product/product.wxml-->
-<text>pages/home/product/product.wxml</text>
+<view class='container'>
+  <view class='swiper'>
+    <yh-swiper class='item' swiper-height='670' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
+  </view>
+
+  <view class='goods-info'>
+
+  </view>
+
+  <view class='goods-detail'>
+    <view class='detail-sku'></view>
+    <view class='detail-imgs'></view>
+  </view>
+</view>

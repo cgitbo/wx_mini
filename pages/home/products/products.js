@@ -49,6 +49,14 @@ Page({
     })
   },
 
+  // 当前商品点击事件
+  onProductListTap(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/home/product/product?id=${id}`
+    })
+  },
+
   // 设置当前的下标和页面标题
   _setCurData(CurIndex) {
     const NavList = this.data.NavList || []

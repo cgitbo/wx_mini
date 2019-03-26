@@ -1,8 +1,5 @@
 // pages/components/textList/cmp.js
 Component({
-  attached() {
-    console.log(this.data.listType)
-  },
   /**
    * 组件的属性列表
    */

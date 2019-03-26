@@ -1,8 +1,5 @@
 // pages/components/goodsList/cmp.js
 Component({
-  attached() {
-    console.log(this.data.goods)
-  },
   /**
    * 组件的属性列表
    */

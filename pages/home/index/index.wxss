@@ -94,3 +94,17 @@
   height: 0;
   color: transparent;
 }
+
+/* nodata */
+
+.no-data {
+  width: 100%;
+  height: 300rpx;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.no-data .loading {
+  width: 100%;
+}

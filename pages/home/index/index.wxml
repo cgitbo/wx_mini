@@ -6,14 +6,12 @@
     </view>
   </view>
 
-  <view class='swipe'>
-    <swiper indicator-dots='{{SwiperConf.indicatorDots}}' autoplay='{{SwiperConf.autoplay}}' interval='{{SwiperConf.interval}}' duration='{{SwiperConf.duration}}' circular='{{SwiperConf.circular}}' indicator-color='#fff' indicator-active-color='#45AE8C'>
-      <block wx:for='{{ImgUrls}}' wx:key='*this'>
-        <swiper-item>
-          <image src='{{item}}' class='slide-image' mode='scaleToFill' />
-        </swiper-item>
-      </block>
-    </swiper>
+  <view class='swipe' hidden='{{ShowLoading}}'>
+    <yh-swiper class='item' bind:onSwiperTap='onSwiperTap' swiper-imgs='{{SwiperImgs}}' />
+  </view>
+
+  <view class='no-data' wx:if='{{ShowLoading}}'>
+    <yh-loading class='loading' />
   </view>
 
   <view class='nav-box'>
@@ -27,10 +25,11 @@
       <view class='title'>杭州特产</view>
       <view class='item-box'>
         <view class='item-list' wx:for='{{SecondNavList}}' wx:key='index' data-id='{{index}}' catchtap='onNavListTap'>
-          <image class='img' src='{{item.img}}'></image>
+          <image lazy-load class='img' src='{{item.img}}'></image>
           <view class='name'>{{item.name}}</view>
         </view>
       </view>
     </scroll-view>
   </view>
+
 </view>

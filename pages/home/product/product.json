@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "yh-swiper": "/pages/components/swiper/cmp"
+  }
 }

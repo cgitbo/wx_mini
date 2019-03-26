@@ -1,1 +1,4 @@
 /* pages/home/product/product.wxss */
+.swiper {
+  height: 670rpx;
+}

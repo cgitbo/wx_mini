@@ -35,6 +35,8 @@
     </view>
   </view>
 
+  <view class='fixed-bug'></view>
+
   <view class='btn-group'>
     <view class='btn'>
       <button size='mini'>退款</button>

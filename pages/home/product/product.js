@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    SwiperImgs: [
+      'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
+      'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
+      'https://m.360buyimg.com/mobilecms/s750x366_jfs/t27871/347/1676989741/116594/4b38926b/5bea2f7bNe9efdcfa.jpg!cr_1125x549_0_72!q70.jpg.dpg'],
+    SwiperConf: {
+      indicatorDots: false
+    }
   },
 
   /**
