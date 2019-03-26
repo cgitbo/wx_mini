@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "yh-shopBar": "/pages/components/shopBar/cmp"
+  },
+  "navigationBarTitleText": "我的订单",
+  "backgroundColor": "#f7f7f7",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

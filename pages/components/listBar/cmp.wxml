@@ -1,0 +1,11 @@
+<!--pages/components/listBar/cmp.wxml-->
+<view class='container'>
+  <image class='img' src='{{imgSrc}}'></image>
+  <view class='text-box'>
+    <view class='text'>
+      <view>{{listName}}</view>
+      <view>{{listRight}}</view>
+    </view>
+    <view class='tip'>{{listDes}}</view>
+  </view>
+</view>

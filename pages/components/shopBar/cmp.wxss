@@ -1,0 +1,24 @@
+/* pages/components/shopBar/cmp.wxss */
+
+.shop-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+}
+
+.img {
+  vertical-align: middle;
+  width: 37rpx;
+  height: 32rpx;
+}
+
+.title {
+  margin-left: 20rpx;
+}
+
+.status {
+  color: #999;
+}

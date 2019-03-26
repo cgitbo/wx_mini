@@ -1,0 +1,88 @@
+/* pages/ucenter/orderDetail/orderDetail.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin-bottom: 116rpx;
+}
+
+/* 头部 */
+
+.status-box {
+  height: 200rpx;
+  background-color: #45ae8c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+.status-box .status {
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.status-box .img {
+  width: 172rpx;
+  height: 94rpx;
+}
+
+/* wuliu */
+.wuliu-box {
+  margin-top: 30rpx;
+  padding: 0 24rpx 20rpx;
+  background-color: #fff;
+}
+
+.wuliu-box .content:not(:last-child) {
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* order-list */
+.order-goods {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+}
+
+.order-goods .shop-title {
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+.order-goods .goods {
+  padding-top: 10rpx;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* 订单详情 */
+.order-summary {
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+}
+
+.order-summary .item:not(:last-child) {
+  margin-bottom: 6rpx;
+}
+
+/* btn */
+.btn-group {
+  z-index: 9;
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.btn-group .btn {
+  margin-left: 20rpx;
+}

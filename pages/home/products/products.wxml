@@ -1,0 +1,19 @@
+<!--pages/home/products/products.wxml-->
+<view class='container'>
+  <view class='nav-box'>
+    <scroll-view class='scroll-box' scroll-x scroll-with-animation scroll-into-view='{{NavId}}' hidden='{{MoreBool}}'>
+      <view class='nav-list'>
+        <view class='nav {{index == CurIndex ? "cur" : ""}}' wx:for='{{NavList}}' wx:key='index' catchtap='onNavListTap' id='{{"navId" + index}}' data-index='{{index}}'>{{item.name}}</view>
+      </view>
+    </scroll-view>
+
+    <view class='category-box' hidden='{{!MoreBool}}'>
+      <view class='cate-title'>全部分类</view>
+      <view class='cate-detail'>
+        <view class='item {{index == CurIndex ? "cur" : ""}}' wx:for='{{NavList}}' wx:key='index' catchtap='onMoreNavListTap' data-index='{{index}}'>{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class='more {{MoreBool && "up"}}' catchtap='onMoreTap'></view>
+  </view>
+</view>

@@ -26,7 +26,7 @@
     <scroll-view class='sec-box' scroll-y scroll-with-animation>
       <view class='title'>杭州特产</view>
       <view class='item-box'>
-        <view class='item-list' wx:for='{{SecondNavList}}' wx:key data-id='{{index}}'>
+        <view class='item-list' wx:for='{{SecondNavList}}' wx:key='index' data-id='{{index}}' catchtap='onNavListTap'>
           <image class='img' src='{{item.img}}'></image>
           <view class='name'>{{item.name}}</view>
         </view>

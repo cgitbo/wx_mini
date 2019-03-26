@@ -3,5 +3,6 @@
     "yh-search": "/pages/components/search/cmp"
   },
   "navigationBarTitleText": "积分商城",
-  "enablePullDownRefresh": false
+  "enablePullDownRefresh": false,
+  "disableScroll": true
 }

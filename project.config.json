@@ -28,13 +28,53 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "order",
+					"pathName": "pages/ucenter/order/order",
+					"query": "type=2",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "home",
+					"pathName": "pages/home/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/ucenter/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "product",
+					"pathName": "pages/home/product/product",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "products",
+					"pathName": "pages/home/products/products",
+					"query": "id=2",
+					"scene": null
+				}
+			]
 		}
 	}
 }

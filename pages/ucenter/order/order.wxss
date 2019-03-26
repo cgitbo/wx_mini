@@ -1,0 +1,150 @@
+/* pages/ucenter/order/order.wxss */
+
+/* 订单头部 */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.order-nav {
+  height: 78rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fff;
+}
+
+.order-nav .nav {
+  font-size: 28rpx;
+  color: #666;
+  padding: 20rpx;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+}
+
+.order-nav .nav.cur {
+  color: #45ae8c;
+  border-bottom: 2px solid #45ae8c;
+}
+
+/* 商品列表 */
+
+.order-list {
+  padding: 24rpx;
+}
+
+.order-box {
+  margin-bottom: 24rpx;
+  padding: 20rpx 20rpx 16rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+
+.shop-title {
+  width: 100%;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.order-item .img-box {
+  margin-top: 10rpx;
+  color: #333;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.img-box .num {
+  font-size: 24rpx;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 10rpx;
+  border-radius: 4rpx 0;
+  letter-spacing: 2rpx;
+}
+
+.order-item .img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.order-item .des {
+  height: 150rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.order-item .more {
+  flex: 1;
+  font-size: 24rpx;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-item .more-icon {
+  width: 24rpx;
+  height: 24rpx;
+  background-color: #ccc;
+  border-radius: 12rpx;
+  position: relative;
+}
+
+.order-item .more-icon::after {
+  content: '';
+  display: block;
+  width: 8rpx;
+  height: 8rpx;
+  position: absolute;
+  top: 50%;
+  right: 8rpx;
+  margin-top: -6rpx;
+  border-top: 4rpx solid #fff;
+  border-left: 4rpx solid #fff;
+  transform: rotate(135deg);
+}
+
+.total-bar {
+  display: flex;
+  color: #999;
+  font-size: 24rpx;
+  padding: 12rpx 0;
+}
+
+.total-bar .count {
+  flex: 1;
+  text-align: right;
+}
+
+.total-bar .payment {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.total-bar .payment .price {
+  color: #151515;
+}
+
+.btn-group {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  border-top: 1px solid #e5e5e5;
+}
+
+.btn-group .btn {
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+
+.btn-group .btn .btn-normal {
+  border-color: #ccc;
+}

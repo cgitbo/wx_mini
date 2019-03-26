@@ -1,0 +1,23 @@
+/* pages/components/textList/cmp.wxss */
+
+.container {
+  display: flex;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.title {
+  color: #999;
+}
+
+.container.between {
+  justify-content: space-between;
+}
+
+.black {
+  color: #333;
+}
+
+.red {
+  color: #e93b3d;
+}

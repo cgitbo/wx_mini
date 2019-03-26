@@ -25,6 +25,14 @@ Page({
     console.log('退出')
   },
 
+  // 跳转订单页面
+  onOrderListTap(e) {
+    const type = e.currentTarget.dataset.type || 0
+    wx.navigateTo({
+      url: `/pages/ucenter/order/order?type=${type}`
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

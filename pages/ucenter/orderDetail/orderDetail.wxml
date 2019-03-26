@@ -1,0 +1,46 @@
+<!--pages/ucenter/orderDetail/orderDetail.wxml-->
+<view class='container'>
+  <view class='status-box'>
+    <view class='status'>交易完成</view>
+    <image class='img' src='/images/order/detail-success-bg.png'></image>
+  </view>
+
+  <view class='wuliu-box'>
+    <view class='content'>
+      <yh-listBar img-src='/images/order/detail-car.png' list-name='卖家已发货' list-des='2018-01-12 14:11:02' />
+    </view>
+
+    <view class='content'>
+      <yh-listBar img-src='/images/order/detail-addr.png' list-name='范先生' list-des='浙江杭州市萧山区义桥镇东方文化园 金色大厅旁 VIP体验中心' list-right='186****9067' />
+    </view>
+  </view>
+
+  <view class='order-goods'>
+    <view class='shop-title'>
+      <yh-shopBar right-text='共计2件商品' />
+    </view>
+    <view class='goods'>
+      <yh-goodsList wx:for='{{GoodsList}}' wx:key='index' goods='{{item}}' />
+    </view>
+  </view>
+
+  <view class='order-summary'>
+    <view class='item' wx:for='{{OrderSummary}}' wx:key='index' wx:if='{{item.bool}}'>
+      <yh-textList list-title='{{item.title}}' list-content='{{item.content}}' />
+    </view>
+  </view>
+  <view class='order-summary'>
+    <view class='item' wx:for='{{OrderTotle}}' wx:key='index' wx:if='{{item.bool}}'>
+      <yh-textList list-title='{{item.title}}' list-content='{{item.content}}' list-type='between' title-color='black' content-color='red' />
+    </view>
+  </view>
+
+  <view class='btn-group'>
+    <view class='btn'>
+      <button size='mini'>退款</button>
+    </view>
+    <view class='btn'>
+      <button size='mini' type='warn'>确认收货</button>
+    </view>
+  </view>
+</view>

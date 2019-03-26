@@ -1,10 +1,14 @@
 {
   "pages": [
-    "pages/home/index/index",
     "pages/ucenter/index/index",
+    "pages/home/index/index",
+    "pages/ucenter/order/order",
     "pages/group/index/index",
     "pages/car/index/index",
-    "pages/components/button/cmp"
+    "pages/components/button/cmp",
+    "pages/ucenter/orderDetail/orderDetail",
+    "pages/home/product/product",
+    "pages/home/products/products"
   ],
   "window": {
     "backgroundTextStyle": "light",

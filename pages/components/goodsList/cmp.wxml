@@ -1,0 +1,12 @@
+<!--pages/components/goodsList/cmp.wxml-->
+<view class='container'>
+  <image class='img' src='{{goods.imgSrc}}'></image>
+  <view class='goods-info'>
+    <view class='goods-name'>{{goods.name}}</view>
+    <view class='goods-sku'>{{goods.sku}}</view>
+    <view class='goods-price'>
+      <view class='price'>￥<text class='big-price'>{{goods.price}}</text></view>
+      <view class='num'>x{{goods.num}}</view>
+    </view>
+  </view>
+</view>

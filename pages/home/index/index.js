@@ -53,11 +53,20 @@ Page({
     VerticalNavTop: 0
   },
 
+  // 一级分类点击事件
   onNavTap(e) {
     const CurIndex = e.currentTarget.dataset.id
     this.setData({
       CurIndex,
       VerticalNavTop: (CurIndex - 1) * 100
+    })
+  },
+
+  // 二级分类点击事件
+  onNavListTap(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/home/products/products?id=${id}`
     })
   },
 

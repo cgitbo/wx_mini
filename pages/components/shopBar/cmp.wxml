@@ -1,0 +1,10 @@
+<!--pages/components/shopBar/cmp.wxml-->
+<view class='container'>
+  <view class='shop-title'>
+    <view class='title-box'>
+      <image class='img' src='/images/order/shop.png'></image>
+      <text class='title'>积分商城</text>
+    </view>
+    <view class='status'>待付款</view>
+  </view>
+</view>

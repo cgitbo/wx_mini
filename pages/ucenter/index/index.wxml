@@ -33,28 +33,28 @@
       <view>我的订单</view>
     </view>
     <view class='order-group'>
-      <view class='order-list'>
+      <view class='order-list' catchtap='onOrderListTap' data-type='1'>
         <view class='img-box'>
           <image src='/images/order/pay.png'></image>
           <text class='tip'>99+</text>
         </view>
         <view>待付款</view>
       </view>
-      <view class='order-list'>
+      <view class='order-list' catchtap='onOrderListTap' data-type='2'>
         <view class='img-box'>
           <image src='/images/order/car.png'></image>
           <text class='tip'>2</text>
         </view>
         <view>待发货</view>
       </view>
-      <view class='order-list'>
+      <view class='order-list' catchtap='onOrderListTap' data-type='3'>
         <view class='img-box'>
           <image src='/images/order/bag.png'></image>
           <text class='tip'>2</text>
         </view>
         <view>待收货</view>
       </view>
-      <view class='order-list'>
+      <view class='order-list' catchtap='onOrderListTap' data-type='0'>
         <image src='/images/order/order.png'></image>
         <view>全部订单</view>
       </view>
