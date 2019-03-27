@@ -1,0 +1,19 @@
+.bg-color {
+  background-color: #f8f8f8;
+}
+
+.bg-yellow {
+  background-color: #ff9600;
+}
+
+.bg-green {
+  background-color: #45ae8c;
+}
+
+.red {
+  color: #e4393c;
+}
+
+.green {
+  color: #45ae8c;
+}

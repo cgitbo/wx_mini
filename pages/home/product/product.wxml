@@ -1,16 +1,42 @@
 <!--pages/home/product/product.wxml-->
 <view class='container'>
-  <yh-back class='back' style='height:{{CustomConf.CustomBar}}px' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' />
+  <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' hide-icon='{{PageLength < 2}}' />
   <view class='swiper'>
     <yh-swiper class='item' swiper-size='big' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
   </view>
 
   <view class='goods-info'>
-    <view class='des'></view>
+    <view class='goods-title'>
+      <view class='des'>汤米男士秋装新款2018纯色翻领POLO衫男长袖纯棉衣服欧美潮牌t恤 TM814320905 16 加厚藏青色 175/L</view>
+      <image class='like' src='/images/like.png' />
+    </view>
+    <view class='goods-price'>
+      <view class='price'>670
+        <text class='unit'>积分</text>
+      </view>
+      <view class='sale'>11</view>
+    </view>
   </view>
 
   <view class='goods-detail'>
     <view class='detail-sku'></view>
-    <view class='detail-imgs'></view>
   </view>
+  <view class='goods-content'>
+    <image class='img' mode='widthFix' lazy-load src='https://img14.360buyimg.com/imgzone/jfs/t1/8967/6/696/786245/5bcb3a41E39889f44/5c7ad2e2b1d72c97.jpg'></image>
+    <image class='img' mode='widthFix' lazy-load src='https://img13.360buyimg.com/imgzone/jfs/t1/3924/14/10481/842647/5bcb3a45E031be366/e49600c76bfd7135.jpg'></image>
+    <image class='img' mode='widthFix' lazy-load src='https://img13.360buyimg.com/imgzone/jfs/t1/4688/10/10529/465725/5bcb3a44E6c66f49a/d36d95eeca7acaee.jpg'></image>
+    <image class='img' mode='widthFix' lazy-load src='//img14.360buyimg.com/imgzone/jfs/t1/3070/24/10446/348171/5bcb3a43Ec32a5e3f/bdd81c7ffe157f30.jpg'></image>
+  </view>
+
+  <view class='fiexd-bug'></view>
+
+  <view class='btn-group'>
+    <view class='car' catchtap='onCarTap'>
+      <image class='img' src='/images/like.png' />
+      <text class='text'>购物车</text>
+    </view>
+    <view class='btn bg-yellow' catchtap='onJoinCarTap'>加入购物车</view>
+    <view class='btn bg-green' catchtap='onBuyNowTap'>立即购买</view>
+  </view>
+
 </view>

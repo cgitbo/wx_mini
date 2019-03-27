@@ -8,7 +8,8 @@
     "pages/components/button/cmp",
     "pages/ucenter/orderDetail/orderDetail",
     "pages/home/product/product",
-    "pages/home/products/products"
+    "pages/home/products/products",
+    "pages/home/car/car"
   ],
   "window": {
     "backgroundTextStyle": "light",

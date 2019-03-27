@@ -4,7 +4,6 @@
 
 .head-box {
   height: 112rpx;
-  background-color: #45ae8c;
 }
 
 .search-box {

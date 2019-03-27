@@ -141,10 +141,6 @@ page {
   padding: 0 24rpx;
 }
 
-.product-list .item .item-price .price {
-  color: #e93b3d;
-}
-
 .product-list .item .item-price .des {
   font-size: 23rpx;
 }

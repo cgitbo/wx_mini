@@ -5,7 +5,6 @@
 }
 
 .author-container {
-  background-color: #45ae8c;
   height: 360rpx;
   margin-bottom: 132rpx;
 }
@@ -105,7 +104,7 @@
   padding: 5rpx;
   overflow: hidden;
   font-size: 20rpx;
-  background-color: rgba(69, 174, 140, .9);
+  opacity: .9;
   border-radius: 50%;
   color: #fff;
 }

@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     customConf: Object,
-    barTitle: String
+    barTitle: String,
+    hideIcon: Boolean
   },
 
   /**

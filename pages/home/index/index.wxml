@@ -1,6 +1,6 @@
 <!--pages/home/index/index.wxml-->
 <view class='container'>
-  <view class='head-box'>
+  <view class='head-box bg-green'>
     <view class='search-box'>
       <yh-search class='search' confirm-type='search' size='big' placeholder='请输入关键词' />
     </view>

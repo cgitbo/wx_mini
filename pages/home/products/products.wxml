@@ -22,7 +22,7 @@
       <image lazy-load class='item-img' src='https://img14.360buyimg.com/mobilecms/s316x316_jfs/t1/8394/19/7842/321626/5c0894e8Efb63ddaf/38ffe7485552a61d.jpg'></image>
       <view class='item-name'>红Bellini 彼得子酒</view>
       <view class='item-price'>
-        <view class='price'>750
+        <view class='price red'>750
           <text class='des'>积分</text>
         </view>
         <view class='sale'>已售 188</view>
@@ -33,7 +33,7 @@
       <image class='item-img' src='https://img14.360buyimg.com/mobilecms/s316x316_jfs/t1/8394/19/7842/321626/5c0894e8Efb63ddaf/38ffe7485552a61d.jpg'></image>
       <view class='item-name'>【两瓶赠红酒】网红Bellini 彼得美德贝利尼果味微气泡甜酒鸡尾酒配制酒 桃子酒</view>
       <view class='item-price'>
-        <view class='price'>750
+        <view class='price red'>750
           <text class='des'>积分</text>
         </view>
         <view class='sale'>已售 188</view>
@@ -45,7 +45,7 @@
       <view class='item-name'>
       [两瓶赠红酒】网红Bellini 彼得美德贝利尼果味微气泡甜酒鸡尾酒配制酒 桃子酒</view>
       <view class='item-price'>
-        <view class='price'>750
+        <view class='price red'>750
           <text class='des'>积分</text>
         </view>
         <view class='sale'>已售 188</view>
@@ -57,7 +57,7 @@
       <view class='item-name'>
       [两瓶赠红酒】网红Bellini 彼得美德贝利尼果味微气泡甜酒鸡尾酒配制酒 桃子酒</view>
       <view class='item-price'>
-        <view class='price'>750
+        <view class='price red'>750
           <text class='des'>积分</text>
         </view>
         <view class='sale'>已售 188</view>
@@ -69,7 +69,7 @@
       <view class='item-name'>
       [两瓶赠红酒】网红Bellini 彼得美德贝利尼果味微气泡甜酒鸡尾酒配制酒 桃子酒</view>
       <view class='item-price'>
-        <view class='price'>750
+        <view class='price red'>750
           <text class='des'>积分</text>
         </view>
         <view class='sale'>已售 188</view>
