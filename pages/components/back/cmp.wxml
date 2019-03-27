@@ -1,0 +1,9 @@
+<!--pages/components/back/cmp.wxml-->
+<view class='container'>
+  <view class="cu-bar" style="height:{{customConf.CustomBar}}rpx;padding-top:{{customConf.StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <view class='back'></view>
+    </navigator>
+    <view class='content'>{{barTitle}}</view>
+  </view>
+</view>

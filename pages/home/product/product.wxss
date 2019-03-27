@@ -1,4 +1,14 @@
 /* pages/home/product/product.wxss */
 .swiper {
-  height: 670rpx;
+  height: 750rpx;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  z-index: 9;
+}
+
+.goods-info {
+  height: 7777px;
 }

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "yh-swiper": "/pages/components/swiper/cmp"
-  }
+    "yh-swiper": "/pages/components/swiper/cmp",
+    "yh-back": "/pages/components/back/cmp"
+  },
+  "navigationStyle": "custom"
 }

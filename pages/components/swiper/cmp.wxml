@@ -1,6 +1,6 @@
 <!--pages/components/swiper/cmp.wxml-->
 <view class='container'>
-  <swiper class='{{"height" + swiperHeight}}' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' circular='{{circular}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{activeColor}}' bindchange='onSwiperChange'>
+  <swiper class='{{swiperSize}}' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' circular='{{circular}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{activeColor}}' bindchange='onSwiperChange'>
     <block wx:for='{{swiperImgs}}' wx:key='index'>
       <swiper-item>
         <image catchtap='onImgTap' data-index='{{index}}' src='{{item}}' class='slide-image' mode='scaleToFill' />

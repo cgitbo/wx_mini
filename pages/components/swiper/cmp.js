@@ -28,7 +28,7 @@ Component({
       type: String,
       value: '#45AE8C'
     },
-    swiperHeight: String,
+    swiperSize: String,
     swiperImgs: Array,
     curIndex: {
       type: Number,

@@ -4,8 +4,8 @@
   position: relative;
 }
 
-.height670 {
-  height: 670rpx;
+.big {
+  height: 750rpx;
 }
 
 .slide-image {

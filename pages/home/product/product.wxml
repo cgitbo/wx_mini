@@ -1,11 +1,12 @@
 <!--pages/home/product/product.wxml-->
 <view class='container'>
+  <yh-back class='back' style='height:{{CustomConf.CustomBar}}px' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' />
   <view class='swiper'>
-    <yh-swiper class='item' swiper-height='670' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
+    <yh-swiper class='item' swiper-size='big' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
   </view>
 
   <view class='goods-info'>
-
+    <view class='des'></view>
   </view>
 
   <view class='goods-detail'>
