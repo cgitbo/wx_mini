@@ -12,14 +12,16 @@ Page({
         sku: '猫眼，棕色',
         price: '769.00',
         num: '8',
-        imgSrc: 'http://a.hiphotos.baidu.com/image/h%3D300/sign=c724ff91482309f7f86fab12420f0c39/30adcbef76094b3624c1f1e8adcc7cd98d109d60.jpg'
+        imgSrc: 'http://a.hiphotos.baidu.com/image/h%3D300/sign=c724ff91482309f7f86fab12420f0c39/30adcbef76094b3624c1f1e8adcc7cd98d109d60.jpg',
+        goods_id: 1
       },
       {
         name: '萤石（EZVIZ）视频监控 摄像头 专用Micro SD存储卡TF卡 16GB Class10 海康威视 旗下品牌',
         sku: '16G专用卡',
         price: '69.00',
         num: '2',
-        imgSrc: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=4cf62521bdde9c82b965ff8f5c8080d2/d1160924ab18972b0aa9c1d2e8cd7b899e510a13.jpg'
+        imgSrc: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=4cf62521bdde9c82b965ff8f5c8080d2/d1160924ab18972b0aa9c1d2e8cd7b899e510a13.jpg',
+        goods_id: 2
       }
     ],
     OrderSummary: [
@@ -38,6 +40,14 @@ Page({
       { title: '实付积分', content: '6780', bool: true },
     ],
     IsIPX: app.globalData.CustomBar > 80 // 是否ipx
+  },
+
+  // 点击当前商品跳转到商品详情页
+  onGoodsTap(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/home/product/product?id=${id}`
+    })
   },
 
   /**

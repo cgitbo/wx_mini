@@ -82,7 +82,7 @@
             <view class='item bg-color'>白色牛仔裙</view>
           </view>
         </view>
-        
+
         <view class='detail'>
           <view class='sku-kind'>颜色</view>
           <view class='sku-list'>
@@ -96,16 +96,7 @@
 
         <view class='count-choose'>
           <view class='sku-kind'>颜色</view>
-          <view class='num-box'>
-            <view class='min bg-color' catch:tap='onChooseMinTap'>
-              <view class='row' />
-            </view>
-            <input class='text bg-color' type='number' value='{{CountChoose}}' bindblur='onCountInputBlur' />
-            <view class='plus bg-color' catch:tap='onChoosePlusTap'>
-              <view class='row' />
-              <view class='col' />
-            </view>
-          </view>
+          <yh-countChoose catch:countChange='onCountChangeTap' class='count' />
         </view>
 
       </view>

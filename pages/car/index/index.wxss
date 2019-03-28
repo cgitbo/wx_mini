@@ -1,1 +1,29 @@
 /* pages/car/index/index.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.goods {
+  position: relative;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.goods .item {
+  padding-left: 80rpx;
+}
+
+.goods .item .checkbox {
+  position: absolute;
+  left: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.goods .item .count-choose {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}

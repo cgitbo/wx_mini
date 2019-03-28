@@ -23,7 +23,7 @@ Page({
 
   // 返回按钮 如果pagelength等于1 跳首页
   onBackTap() {
-    if (this.data.PageLength > 2) return
+    if (this.data.PageLength >= 2) return
     this.onHomeTap()
   },
 
@@ -81,28 +81,9 @@ Page({
     })
   },
 
-  // 选择购买数量失焦事件
-  onCountInputBlur(e) {
-    const CountChoose = +e.detail.value
-    this.setData({
-      CountChoose
-    })
-  },
-
-  // 购买数量减少事件
-  onChooseMinTap() {
-    let CountChoose = this.data.CountChoose
-    if (CountChoose == 1) return
-    CountChoose -= 1
-    this.setData({
-      CountChoose
-    })
-  },
-
-  // 购买数量增加事件
-  onChoosePlusTap() {
-    let CountChoose = this.data.CountChoose
-    CountChoose += 1
+  // 监听数量变动
+  onCountChangeTap(e) {
+    const CountChoose = e.detail.val
     this.setData({
       CountChoose
     })
@@ -111,8 +92,9 @@ Page({
   // 滚动监听
   onPageScroll(e) {
     const scrollTop = e.scrollTop
-    if (scrollTop < 323) {
-      const NavbarOpacity = scrollTop / 300
+    let NavbarOpacity = this.data.NavbarOpacity
+    if (scrollTop < 300 || NavbarOpacity < 1) {
+      NavbarOpacity = scrollTop / 300
       this.setData({
         NavbarOpacity
       })
@@ -123,6 +105,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const id = options.id
+    console.log('请求数据 id:', id)
+
     const CustomConf = wx.getStorageSync('systemInfo') || {}
     this.setData({
       CustomConf

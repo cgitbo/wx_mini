@@ -242,33 +242,11 @@ page {
 .count-choose {
   display: flex;
   justify-content: space-between;
-}
-
-.count-choose .num-box {
-  width: 220rpx;
-  display: flex;
-  justify-items: center;
   align-items: center;
+}
+
+.count-choose .count {
   padding-right: 20rpx;
-}
-
-.count-choose .num-box .min {
-  width: 60rpx;
-  height: 60rpx;
-  position: relative;
-}
-
-.count-choose .num-box .plus {
-  width: 60rpx;
-  height: 60rpx;
-  position: relative;
-}
-
-.count-choose .num-box .text {
-  width: 96rpx;
-  height: 60rpx;
-  margin: 0 1px;
-  text-align: center;
 }
 
 /* 顶部bar背景色 */

@@ -1,9 +1,5 @@
 // pages/components/swiper/cmp.js
 Component({
-  attached() {
-    console.log(this.properties)
-
-  },
   /**
    * 组件的属性列表
    */

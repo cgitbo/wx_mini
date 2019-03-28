@@ -20,7 +20,9 @@
       <yh-shopBar right-text='共计2件商品' />
     </view>
     <view class='goods'>
-      <yh-goodsList wx:for='{{GoodsList}}' wx:key='index' goods='{{item}}' />
+      <view wx:for='{{GoodsList}}' wx:key='item.goods_id' catch:tap='onGoodsTap' data-id='{{item.goods_id}}'>
+        <yh-goodsList goods='{{item}}' />
+      </view>
     </view>
   </view>
 

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "yh-goodsList": "/pages/components/goodsList/cmp",
+    "yh-countChoose": "/pages/components/countChoose/cmp"
+  }
 }

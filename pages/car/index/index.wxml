@@ -1,2 +1,16 @@
 <!--pages/car/index/index.wxml-->
-<text>pages/car/index/index.wxml</text>
+<view class='container'>
+  <view class='car-list'>
+    <checkbox-group bindchange="checkboxChange">
+      <view wx:for='{{GoodsList}}' wx:key='item.goods_id' class='goods'>
+        <view class='item'>
+          <label class="checkbox">
+            <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
+          </label>
+          <yh-goodsList goods='{{item}}' hide-num='true' data-id='{{index}}' catch:tap='onGoodsTap' />
+          <yh-countChoose class='count-choose' />
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+</view>
