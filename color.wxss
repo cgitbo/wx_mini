@@ -10,6 +10,10 @@
   background-color: #45ae8c;
 }
 
+.bg-red {
+  background-color: #e4393c;
+}
+
 .red {
   color: #e4393c;
 }

@@ -1,7 +1,10 @@
 {
   "usingComponents": {
     "yh-swiper": "/pages/components/swiper/cmp",
-    "yh-back": "/pages/components/back/cmp"
+    "yh-back": "/pages/components/back/cmp",
+    "yh-tip": "/pages/components/tip/cmp",
+    "yh-mask": "/pages/components/mask/cmp",
+    "yh-close": "/pages/components/close/cmp"
   },
   "navigationStyle": "custom"
 }

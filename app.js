@@ -2,11 +2,12 @@
 App({
   onLaunch: function () {
     const res = wx.getSystemInfoSync() || {}
-    const systemInfo = {}
-    systemInfo.StatusBar = res.statusBarHeight
+    this.globalData.StatusBar = res.statusBarHeight
     let custom = wx.getMenuButtonBoundingClientRect()
-    systemInfo.Custom = custom
-    systemInfo.CustomBar = custom.bottom + custom.top - res.statusBarHeight
-    wx.setStorageSync('systemInfo', systemInfo)
+    this.globalData.Custom = custom
+    this.globalData.CustomBar = custom.bottom + custom.top - res.statusBarHeight
+  },
+  globalData: {
+
   }
 })

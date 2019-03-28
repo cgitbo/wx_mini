@@ -1,0 +1,4 @@
+<!--pages/components/tip/cmp.wxml-->
+<view class='container'>
+  <view class='num'>{{num}}</view>
+</view>

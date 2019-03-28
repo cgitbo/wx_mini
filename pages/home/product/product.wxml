@@ -1,6 +1,6 @@
 <!--pages/home/product/product.wxml-->
-<view class='container'>
-  <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' hide-icon='{{PageLength < 2}}' />
+<view class='container {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}'>
+  <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' catchtap='onBackTap' />
   <view class='swiper'>
     <yh-swiper class='item' swiper-size='big' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
   </view>
@@ -8,19 +8,19 @@
   <view class='goods-info'>
     <view class='goods-title'>
       <view class='des'>汤米男士秋装新款2018纯色翻领POLO衫男长袖纯棉衣服欧美潮牌t恤 TM814320905 16 加厚藏青色 175/L</view>
-      <image class='like' src='/images/like.png' />
+      <image class='like' src='/images/share.png' />
     </view>
     <view class='goods-price'>
       <view class='price'>670
         <text class='unit'>积分</text>
       </view>
-      <view class='sale'>11</view>
+      <view class='stock'>库存：88</view>
     </view>
   </view>
 
-  <view class='goods-detail'>
+  <!-- <view class='goods-detail'>
     <view class='detail-sku'></view>
-  </view>
+  </view> -->
   <view class='goods-content'>
     <image class='img' mode='widthFix' lazy-load src='https://img14.360buyimg.com/imgzone/jfs/t1/8967/6/696/786245/5bcb3a41E39889f44/5c7ad2e2b1d72c97.jpg'></image>
     <image class='img' mode='widthFix' lazy-load src='https://img13.360buyimg.com/imgzone/jfs/t1/3924/14/10481/842647/5bcb3a45E031be366/e49600c76bfd7135.jpg'></image>
@@ -30,13 +30,90 @@
 
   <view class='fiexd-bug'></view>
 
-  <view class='btn-group'>
-    <view class='car' catchtap='onCarTap'>
-      <image class='img' src='/images/like.png' />
-      <text class='text'>购物车</text>
+  <view class='btn-group {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}' hidden='{{ShowMask}}'>
+    <view class='btn-ico'>
+      <view class='item' catchtap='onHomeTap'>
+        <image class='img' src='/images/home.png' />
+        <text class='text'>首页</text>
+      </view>
+      <view class='car item' catchtap='onCarTap'>
+        <image class='img' src='/images/tab-bar/car.png' />
+        <text class='text'>购物车</text>
+        <yh-tip class='tip' num='99' />
+      </view>
     </view>
+
     <view class='btn bg-yellow' catchtap='onJoinCarTap'>加入购物车</view>
-    <view class='btn bg-green' catchtap='onBuyNowTap'>立即购买</view>
+    <view class='btn bg-red' catchtap='onBuyNowTap'>立即购买</view>
+  </view>
+
+  <view hidden='{{!ShowMask}}'>
+    <yh-mask catch:touchmove='onMaskTouchmove' catch:tap='onMaskTap' />
+  </view>
+
+  <view class='nav-bar-bg bg-green' style='height:{{CustomConf.CustomBar}}px;opacity:{{NavbarOpacity}}'></view>
+
+  <view class='detail-sku {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}' style='bottom: {{ShowMask ? 0 : -1024}}rpx;' catch:touchmove='onDetailSkuTouchmove'>
+    <view class='body'>
+      <view class='head'>
+        <image class='img' src='//m.360buyimg.com/mobilecms/s750x750_jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg!q80.dpg.webp'></image>
+        <view class='sku-choose'>
+          <view class='price red'>￥
+            <text class='amount'>55.00</text>
+          </view>
+          <view class='choose'>已选
+            <text class='sku'>白色条纹,L,3个</text>
+          </view>
+        </view>
+
+        <view class='close' catch:tap='onMaskTap'>
+          <yh-close />
+        </view>
+      </view>
+
+      <view class='main'>
+        <view class='detail'>
+          <view class='sku-kind'>颜色</view>
+          <view class='sku-list'>
+            <view class='item bg-color active'>白色牛仔裙</view>
+            <view class='item bg-color'>黑色</view>
+            <view class='item bg-color'>白牛仔裙</view>
+            <view class='item bg-color'>白色牛仔裙子</view>
+            <view class='item bg-color'>白色牛仔裙</view>
+          </view>
+        </view>
+        
+        <view class='detail'>
+          <view class='sku-kind'>颜色</view>
+          <view class='sku-list'>
+            <view class='item bg-color active'>白色牛仔裙</view>
+            <view class='item bg-color'>黑色</view>
+            <view class='item bg-color'>白牛仔裙</view>
+            <view class='item bg-color'>白色牛仔裙子</view>
+            <view class='item bg-color'>白色牛仔裙</view>
+          </view>
+        </view>
+
+        <view class='count-choose'>
+          <view class='sku-kind'>颜色</view>
+          <view class='num-box'>
+            <view class='min bg-color' catch:tap='onChooseMinTap'>
+              <view class='row' />
+            </view>
+            <input class='text bg-color' type='number' value='{{CountChoose}}' bindblur='onCountInputBlur' />
+            <view class='plus bg-color' catch:tap='onChoosePlusTap'>
+              <view class='row' />
+              <view class='col' />
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <view class='btn-group no-fixed'>
+        <view class='btn bg-yellow' catchtap='onJoinCarTap'>加入购物车</view>
+        <view class='btn bg-red' catchtap='onBuyNowTap'>立即购买</view>
+      </view>
+    </view>
   </view>
 
 </view>

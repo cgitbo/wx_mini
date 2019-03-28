@@ -1,2 +1,30 @@
 /**app.wxss**/
 @import './color.wxss';
+
+.feed-bottom-ipx {
+  padding-bottom: 34px !important;
+}
+
+.no-fixed {
+  position: unset !important;
+}
+
+.row {
+  background-color: #999;
+  width: 28rpx;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col {
+  background-color: #999;
+  width: 2px;
+  height: 28rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

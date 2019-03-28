@@ -6,14 +6,32 @@ Page({
    */
   data: {
     SwiperImgs: [
-      // 'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
-      // 'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
-      'https://m.360buyimg.com/mobilecms/s750x366_jfs/t27871/347/1676989741/116594/4b38926b/5bea2f7bNe9efdcfa.jpg!cr_1125x549_0_72!q70.jpg.dpg'],
+      'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
+      'https://bfs.biyao.com/group1/M00/25/71/rBACYVo3dlaAI0j7AADGcjli3j0675.jpg',
+      'https://m.360buyimg.com/mobilecms/s750x366_jfs/t27871/347/1676989741/116594/4b38926b/5bea2f7bNe9efdcfa.jpg!cr_1125x549_0_72!q70.jpg.dpg',
+      'https://m.360buyimg.com/mobilecms/s750x366_jfs/t27871/347/1676989741/116594/4b38926b/5bea2f7bNe9efdcfa.jpg!cr_1125x549_0_72!q70.jpg.dpg'
+    ],
     SwiperConf: { // swiper 配置
       indicatorDots: false
     },
     CustomConf: {}, // 系统头部信息
-    PageLength: 0 // 页面数量
+    PageLength: 0, // 页面数量 控制返回按钮回退
+    ShowMask: false, // 是否显示mask
+    CountChoose: 1, // 购买数量
+    NavbarOpacity: 0 // 默认顶部bar透明
+  },
+
+  // 返回按钮 如果pagelength等于1 跳首页
+  onBackTap() {
+    if (this.data.PageLength > 2) return
+    this.onHomeTap()
+  },
+
+  // 首页按钮
+  onHomeTap() {
+    wx.switchTab({
+      url: '/pages/home/index/index'
+    })
   },
 
   // 购物车按钮
@@ -25,26 +43,86 @@ Page({
 
   // 加入购物车按钮
   onJoinCarTap() {
-    
+    this._toggleMaskStatus()
   },
 
   // 立即购买按钮
   onBuyNowTap() {
+    this._toggleMaskStatus()
     // wx.navigateTo({
     //   url: ''
     // })
   },
 
+  // maskTouchmove
+  onMaskTouchmove() {
+    const ShowMask = !this.data.ShowMask
+    if (ShowMask) return
+    this.setData({
+      ShowMask
+    })
+  },
+
+  // masktap
+  onMaskTap() {
+    this._toggleMaskStatus()
+  },
+
+  // 阻止滑动事件
+  onDetailSkuTouchmove() {
+    return
+  },
+
+  // 切换mask显示隐藏
+  _toggleMaskStatus() {
+    const ShowMask = !this.data.ShowMask
+    this.setData({
+      ShowMask
+    })
+  },
+
+  // 选择购买数量失焦事件
+  onCountInputBlur(e) {
+    const CountChoose = +e.detail.value
+    this.setData({
+      CountChoose
+    })
+  },
+
+  // 购买数量减少事件
+  onChooseMinTap() {
+    let CountChoose = this.data.CountChoose
+    if (CountChoose == 1) return
+    CountChoose -= 1
+    this.setData({
+      CountChoose
+    })
+  },
+
+  // 购买数量增加事件
+  onChoosePlusTap() {
+    let CountChoose = this.data.CountChoose
+    CountChoose += 1
+    this.setData({
+      CountChoose
+    })
+  },
+
   // 滚动监听
-  // onPageScroll(e) {
-  //   console.log(e)
-  // },
+  onPageScroll(e) {
+    const scrollTop = e.scrollTop
+    if (scrollTop < 323) {
+      const NavbarOpacity = scrollTop / 300
+      this.setData({
+        NavbarOpacity
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     const CustomConf = wx.getStorageSync('systemInfo') || {}
     this.setData({
       CustomConf

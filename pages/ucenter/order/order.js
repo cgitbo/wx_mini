@@ -1,4 +1,5 @@
 // pages/ucenter/order/order.js
+const app = getApp()
 Page({
 
   /**
@@ -9,7 +10,8 @@ Page({
     OrderNavList: ['全部', '待付款', '待发货', '待收货', '已完成'],
     OrderDetailList: [
       // { name: ''}
-    ]
+    ],
+    IsIPX: app.globalData.CustomBar > 80 // 是否ipx
   },
 
   // 订单类型点击事件

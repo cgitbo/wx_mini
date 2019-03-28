@@ -97,16 +97,6 @@
   display: inline-block;
   top: -16rpx;
   left: 90rpx;
-  max-width: 36rpx;
-  min-width: 30rpx;
-  height: 30rpx;
-  line-height: 30rpx;
-  padding: 5rpx;
-  overflow: hidden;
-  font-size: 20rpx;
-  opacity: .9;
-  border-radius: 50%;
-  color: #fff;
 }
 
 .ad-box {

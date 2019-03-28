@@ -36,21 +36,21 @@
       <view class='order-list' catchtap='onOrderListTap' data-type='1'>
         <view class='img-box'>
           <image src='/images/order/pay.png'></image>
-          <text class='tip bg-green'>99+</text>
+          <yh-tip class='tip' num='99' />
         </view>
         <view>待付款</view>
       </view>
       <view class='order-list' catchtap='onOrderListTap' data-type='2'>
         <view class='img-box'>
           <image src='/images/order/car.png'></image>
-          <text class='tip bg-green'>2</text>
+          <yh-tip class='tip' num='15' />
         </view>
         <view>待发货</view>
       </view>
       <view class='order-list' catchtap='onOrderListTap' data-type='3'>
         <view class='img-box'>
           <image src='/images/order/bag.png'></image>
-          <text class='tip bg-green'>2</text>
+          <yh-tip class='tip' num='34' />
         </view>
         <view>待收货</view>
       </view>
