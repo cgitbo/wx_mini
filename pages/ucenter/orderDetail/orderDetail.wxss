@@ -27,7 +27,6 @@ page {
 
 /* wuliu */
 .wuliu-box {
-  margin-top: 30rpx;
   padding: 0 24rpx 20rpx;
   background-color: #fff;
 }
@@ -39,7 +38,7 @@ page {
 
 /* order-list */
 .order-goods {
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   background-color: #fff;
   padding: 20rpx 24rpx;
 }
@@ -56,7 +55,7 @@ page {
 
 /* 订单详情 */
 .order-summary {
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   background-color: #fff;
   padding: 20rpx 24rpx;
 }

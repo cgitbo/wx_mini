@@ -1,4 +1,5 @@
 // pages/home/product/product.js
+const app = getApp()
 Page({
 
   /**
@@ -14,11 +15,15 @@ Page({
     SwiperConf: { // swiper 配置
       indicatorDots: false
     },
-    CustomConf: {}, // 系统头部信息
     PageLength: 0, // 页面数量 控制返回按钮回退
     ShowMask: false, // 是否显示mask
     CountChoose: 1, // 购买数量
-    NavbarOpacity: 0 // 默认顶部bar透明
+    NavbarOpacity: 0, // 默认顶部bar透明
+    IsIPX: app.globalData.CustomBar > 80, // 是否ipx
+    CustomConf: {
+      CustomBar: app.globalData.CustomBar,
+      StatusBar: app.globalData.StatusBar
+    }
   },
 
   // 返回按钮 如果pagelength等于1 跳首页
@@ -107,11 +112,6 @@ Page({
   onLoad: function (options) {
     const id = options.id
     console.log('请求数据 id:', id)
-
-    const CustomConf = wx.getStorageSync('systemInfo') || {}
-    this.setData({
-      CustomConf
-    })
 
     const PageLength = getCurrentPages().length
     this.setData({

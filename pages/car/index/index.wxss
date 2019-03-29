@@ -4,26 +4,61 @@ page {
   background-color: #f8f8f8;
 }
 
-.goods {
-  position: relative;
+.car-list {
   background-color: #fff;
-  padding: 0 20rpx;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  overflow: hidden;
 }
 
-.goods .item {
+.car-list .shop-bar {
+  width: 100%;
+}
+
+.car-list .goods {
+  position: relative;
+  left: 0;
+  transition: all .3s ease;
+}
+
+.car-list .goods.touch-move-active {
+  left: -170rpx;
+}
+
+.car-list .goods .del {
+  width: 150rpx;
+  height: 100%;
+  position: absolute;
+  right: -170rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.car-list .goods .del .text {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.car-list .goods {
   padding-left: 80rpx;
 }
 
-.goods .item .checkbox {
+.car-list .goods .checkbox {
   position: absolute;
-  left: 20rpx;
+  left: 10rpx;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
 }
 
-.goods .item .count-choose {
+.car-list .goods .count-choose {
   position: absolute;
-  right: 20rpx;
+  right: 0;
   bottom: 20rpx;
 }
+

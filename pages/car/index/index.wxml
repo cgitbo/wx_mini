@@ -1,16 +1,52 @@
 <!--pages/car/index/index.wxml-->
 <view class='container'>
   <view class='car-list'>
+    <yh-shopBar title='可自提' right-text='共计2件商品' />
     <checkbox-group bindchange="checkboxChange">
-      <view wx:for='{{GoodsList}}' wx:key='item.goods_id' class='goods'>
+      <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
+            wx:for='{{GoodsList}}' 
+            wx:key='item.goods_id' 
+            bind:touchstart='onGoodsTouchstart'
+            bind:touchend='onGoodsTouchend' 
+            data-index='{{index}}'>
         <view class='item'>
           <label class="checkbox">
             <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
           </label>
-          <yh-goodsList goods='{{item}}' hide-num='true' data-id='{{index}}' catch:tap='onGoodsTap' />
+          <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
           <yh-countChoose class='count-choose' />
+        </view>
+        <view class="del bg-red" catchtap="del" data-index="{{index}}">
+          <view class='text'>删除</view>
         </view>
       </view>
     </checkbox-group>
+  </view>
+
+  <view class='car-list'>
+    <yh-shopBar title='不可自提' right-text='共计2件商品' />
+    <checkbox-group bindchange="checkboxChange">
+      <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
+            wx:for='{{GoodsList}}' 
+            wx:key='item.goods_id' 
+            bind:touchstart='onGoodsTouchstart'
+            bind:touchend='onGoodsTouchend' 
+            data-index='{{index}}'>
+        <view class='item'>
+          <label class="checkbox">
+            <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
+          </label>
+          <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
+          <yh-countChoose class='count-choose' />
+        </view>
+        <view class="del bg-red" catchtap="del" data-index="{{index}}">
+          <view class='text'>删除</view>
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+
+  <view class='btn-group'>
+
   </view>
 </view>

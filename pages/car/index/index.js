@@ -13,6 +13,7 @@ Page({
         num: '8',
         imgSrc: 'http://a.hiphotos.baidu.com/image/h%3D300/sign=c724ff91482309f7f86fab12420f0c39/30adcbef76094b3624c1f1e8adcc7cd98d109d60.jpg',
         goods_id: 1,
+        id: 11,
         checked: false
       },
       {
@@ -22,17 +23,20 @@ Page({
         num: '2',
         imgSrc: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=4cf62521bdde9c82b965ff8f5c8080d2/d1160924ab18972b0aa9c1d2e8cd7b899e510a13.jpg',
         goods_id: 2,
+        id: 13,
         checked: true
       }
-    ]
+    ],
+    touchStartPosition: { X: 0, Y: 0 }, // 当前触摸位置
+    touchMoveActive: false, // 是否显示滑动删除
+    ActiveIndex: -1 // 当前滑动删除的是哪个元素
   },
 
   // 单项选择器事件
   checkboxChange(e) {
     const index = e.detail.value.toString()
     console.log(e.detail.value)
-    // const checked = !this.data.GoodsList[index].checked
-    
+
   },
 
   // 商品跳转
@@ -41,6 +45,44 @@ Page({
     wx.navigateTo({
       url: `/pages/home/product/product?id=${id}`
     })
+  },
+
+  // 滑动删除开始
+  onGoodsTouchstart(e) {
+    this.setData({
+      touchStartPosition: {
+        X: e.changedTouches[0].pageX,
+        Y: e.changedTouches[0].pageY
+      }
+    })
+  },
+
+  // 滑动删除结束
+  onGoodsTouchend(e) {
+    const touchEndPosition = {
+      X: e.changedTouches[0].pageX,
+      Y: e.changedTouches[0].pageY
+    },
+      offSetStartToEndX = touchEndPosition.X - this.data.touchStartPosition.X,  // 获取滑动的距离，正代表右滑，负代表左滑
+      offSetStartToEndY = touchEndPosition.Y - this.data.touchStartPosition.Y, 
+      ActiveIndex = e.currentTarget.dataset.index
+
+    // 滑动距离小于10px则不生效
+    if (offSetStartToEndX < 60 && offSetStartToEndX > -60 || offSetStartToEndY > 200) return
+    if (offSetStartToEndX > 60) {
+      // 如果本身不是滑动状态，则不需要我们再设置
+      if (!this.data.touchMoveActive) return
+      this.setData({
+        touchMoveActive: false,
+        ActiveIndex: -1
+      })
+    }
+    if (offSetStartToEndX < -60) {
+      this.setData({
+        touchMoveActive: true,
+        ActiveIndex
+      })
+    }
   },
 
   /**

@@ -15,6 +15,11 @@
   height: 32rpx;
 }
 
+.title-box {
+  display: flex;
+  align-items: center;
+}
+
 .title {
   margin-left: 20rpx;
 }

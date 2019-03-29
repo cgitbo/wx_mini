@@ -1,5 +1,5 @@
 <!--pages/home/product/product.wxml-->
-<view class='container {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}'>
+<view class='container {{IsIPX && "feed-bottom-ipx"}}'>
   <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' catchtap='onBackTap' />
   <view class='swiper'>
     <yh-swiper class='item' swiper-size='big' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />
@@ -30,7 +30,7 @@
 
   <view class='fiexd-bug'></view>
 
-  <view class='btn-group {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}' hidden='{{ShowMask}}'>
+  <view class='btn-group {{IsIPX && "feed-bottom-ipx"}}' hidden='{{ShowMask}}'>
     <view class='btn-ico'>
       <view class='item' catchtap='onHomeTap'>
         <image class='img' src='/images/home.png' />
@@ -53,8 +53,8 @@
 
   <view class='nav-bar-bg bg-green' style='height:{{CustomConf.CustomBar}}px;opacity:{{NavbarOpacity}}'></view>
 
-  <view class='detail-sku {{CustomConf.CustomBar > 80 && "feed-bottom-ipx"}}' style='bottom: {{ShowMask ? 0 : -1024}}rpx;' catch:touchmove='onDetailSkuTouchmove'>
-    <view class='body'>
+  <view class='detail-sku' style='bottom: {{ShowMask ? 0 : -1024}}rpx;' catch:touchmove='onDetailSkuTouchmove'>
+    <view class='body {{IsIPX && "feed-bottom-ipx"}}'>
       <view class='head'>
         <image class='img' src='//m.360buyimg.com/mobilecms/s750x750_jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg!q80.dpg.webp'></image>
         <view class='sku-choose'>

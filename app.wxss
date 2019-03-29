@@ -1,13 +1,28 @@
 /**app.wxss**/
 @import './color.wxss';
 
+/* 解决ipx底部 */
+
 .feed-bottom-ipx {
-  padding-bottom: 34px !important;
+  bottom: 68rpx !important;
+}
+
+.feed-bottom-ipx::after {
+  content: ' ';
+  position: fixed;
+  bottom: 0 !important;
+  height: 68rpx !important;
+  width: 100%;
+  background: #fff;
 }
 
 .no-fixed {
   position: unset !important;
 }
+
+/* row 和 col 组合 变成 + */
+
+/* 一条横线 */
 
 .row {
   background-color: #999;
@@ -19,6 +34,8 @@
   transform: translate(-50%, -50%);
 }
 
+/* 一条竖线 */
+
 .col {
   background-color: #999;
   width: 2px;
@@ -27,4 +44,35 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* 重写 checkbox 样式 */
+
+/* 未选中的 背景样式 */
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+
+/* 选中后的 背景样式 */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: 1rpx solid #09bb07;
+  background: #09bb07;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
 }

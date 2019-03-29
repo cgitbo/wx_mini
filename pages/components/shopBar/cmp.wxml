@@ -3,8 +3,8 @@
   <view class='shop-title'>
     <view class='title-box'>
       <image class='img' src='/images/order/shop.png'></image>
-      <text class='title'>积分商城</text>
+      <text class='title'>{{title}}</text>
     </view>
-    <view class='status'>待付款</view>
+    <view class='status'>{{rightText}}</view>
   </view>
 </view>
