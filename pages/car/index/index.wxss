@@ -6,7 +6,7 @@ page {
 
 .car-list {
   background-color: #fff;
-  margin: 20rpx 0;
+  margin-top: 20rpx;
   padding: 20rpx;
   overflow: hidden;
 }
@@ -18,7 +18,7 @@ page {
 .car-list .goods {
   position: relative;
   left: 0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .car-list .goods.touch-move-active {
@@ -62,3 +62,43 @@ page {
   bottom: 20rpx;
 }
 
+.fixed-bug {
+  height: 98rpx;
+}
+
+/* 订单结算 */
+
+.btn-group {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: hsla(0, 0%, 100%, 0.95);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.btn-group .total {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn-group .buy-now {
+  color: #fff;
+  width: 248rpx;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32rpx;
+}
+
+.btn-group .small {
+  font-size: 24rpx;
+  font-weight: normal;
+}

@@ -46,7 +46,21 @@
     </checkbox-group>
   </view>
 
-  <view class='btn-group'>
+  <view class='fixed-bug'></view>
 
+  <view class='btn-group'>
+    <checkbox-group class="radio-group" bindchange="onCheckAllTap">
+      <label class="radio">
+        <checkbox value="1" checked="{{checkedAll}}" />
+        全选
+      </label>
+    </checkbox-group>
+    <view class='total'>合计：
+      <view class='red'>987555
+          <text class='small'>积分</text>
+      </view>
+    </view>
+    <view class='buy-now bg-green' catch:tap='onBuynowTap'>去结算<text class='small'>(93件)</text>
+    </view>
   </view>
 </view>

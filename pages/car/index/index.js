@@ -29,7 +29,8 @@ Page({
     ],
     touchStartPosition: { X: 0, Y: 0 }, // 当前触摸位置
     touchMoveActive: false, // 是否显示滑动删除
-    ActiveIndex: -1 // 当前滑动删除的是哪个元素
+    ActiveIndex: -1, // 当前滑动删除的是哪个元素
+    checkedAll: false // 是否全选
   },
 
   // 单项选择器事件
@@ -83,6 +84,20 @@ Page({
         ActiveIndex
       })
     }
+  },
+
+  // 全选按钮
+  onCheckAllTap() {
+    console.log(11)
+    const checkedAll = !this.data.checkedAll
+    this.setData({
+      checkedAll
+    })
+  },
+
+  // 去结算按钮
+  onBuynowTap() {
+    console.log('buy-now')
   },
 
   /**
