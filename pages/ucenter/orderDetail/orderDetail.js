@@ -39,7 +39,7 @@ Page({
       { title: '实付金额', content: '￥154.12', bool: true },
       { title: '实付积分', content: '6780', bool: true },
     ],
-    IsIPX: app.globalData.CustomBar > 80 // 是否ipx
+    IsIPX: app.globalData.IsIPX // 是否ipx
   },
 
   // 点击当前商品跳转到商品详情页

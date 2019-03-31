@@ -13,15 +13,15 @@
 
       <view class='order-item'>
         <view class='img-box'>
-          <image class='img' src='https://img10.360buyimg.com/mobilecms/s117x117_jfs/t1/14312/14/6913/146486/5c639112e6a7447a4/19784d8f59a94429.jpg!q70.dpg.webp'></image>
+          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
           <view class='num'>x8</view>
         </view>
         <view class='img-box'>
-          <image class='img' src='https://img10.360buyimg.com/mobilecms/s117x117_jfs/t1/14312/14/6913/146486/5c639112e6a7447a4/19784d8f59a94429.jpg!q70.dpg.webp'></image>
+          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
           <view class='num'>x9</view>
         </view>
         <view class='img-box'>
-          <image class='img' src='https://img10.360buyimg.com/mobilecms/s117x117_jfs/t1/14312/14/6913/146486/5c639112e6a7447a4/19784d8f59a94429.jpg!q70.dpg.webp'></image>
+          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
           <view class='num'>x2</view>
         </view>
 
@@ -57,10 +57,10 @@
 
       <view class='order-item'>
         <view class='img-box'>
-          <image class='img' src='https://img10.360buyimg.com/mobilecms/s117x117_jfs/t1/14312/14/6913/146486/5c639112e6a7447a4/19784d8f59a94429.jpg!q70.dpg.webp'></image>
+          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
         </view>
 
-        <view class='des'>贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿童手工彩泥黏泥黏泥黏泥黏泥黏泥黏泥黏土太空泥玩具DIY套装</view>
+        <view class='des fixed-line line-clamp-3'>贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿童手工彩泥黏泥黏泥黏泥黏泥黏泥黏泥黏土太空泥玩具DIY套装</view>
 
       </view>
 

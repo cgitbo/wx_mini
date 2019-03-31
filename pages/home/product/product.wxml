@@ -55,7 +55,7 @@
   <view class='detail-sku' style='bottom: {{ShowMask ? 0 : -1024}}rpx;' catch:touchmove='onDetailSkuTouchmove'>
     <view class='body {{IsIPX && "feed-bottom-ipx"}}'>
       <view class='head'>
-        <image class='img' src='//m.360buyimg.com/mobilecms/s750x750_jfs/t10675/253/1344769770/66891/92d54ca4/59df2e7fN86c99a27.jpg!q80.dpg.webp'></image>
+        <image class='img' src='https://img14.360buyimg.com/imgzone/jfs/t1/8967/6/696/786245/5bcb3a41E39889f44/5c7ad2e2b1d72c97.jpg'></image>
         <view class='sku-choose'>
           <view class='price red'>￥
             <text class='amount'>55.00</text>

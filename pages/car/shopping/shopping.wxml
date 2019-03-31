@@ -1,0 +1,76 @@
+<!--pages/car/shopping/shopping.wxml-->
+<view class='container'>
+  <view class='order-addr'>
+    <view class='address'>
+      <image src='/images/order/detail-addr.png' class='img' />
+      <yh-textList class='detail' 
+                  list-title='收件人' 
+                  title-style='font-size:30rpx;color:#333;' 
+                  list-content='请选择收件人' 
+                  content-style='color:#999;font-size:28rpx;margin-left:50rpx;' />
+    </view>
+    <view class='icon'>
+      <view class='icon-right'></view>
+    </view>
+  </view>
+
+  <view class='order-goods list-item'>
+    <view class='item' wx:for='{{GoodsList}}' wx:key>
+      <yh-goodsList goods='{{item}}' />
+    </view>
+  </view>
+
+  <view class='order-info list-item'>
+    <view class='item delivery'>
+      <yh-textList list-type='between' 
+                  list-title='配送方式' 
+                  title-style='font-size:28rpx;color:#666;' 
+                  list-content='请选择收件人' 
+                  content-style='color:#999;font-size:26rpx;margin-right:50rpx;' />
+      <view class='icon'>
+        <view class='icon-right'></view>
+      </view>
+    </view>
+    <view class='item'>
+      <yh-textList list-type='between' 
+                  list-title='配送运费' 
+                  title-style='font-size:28rpx;color:#666;' 
+                  list-content='12' 
+                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
+    </view>
+    <view class='item'>
+      <yh-textList list-type='between' 
+                  list-title='实付金额' 
+                  title-style='font-size:28rpx;color:#666;' 
+                  list-content='2000' 
+                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
+    </view>
+    <view class='item'>
+      <yh-textList list-type='between' 
+                  list-title='实付积分' 
+                  title-style='font-size:28rpx;color:#666;' 
+                  list-content='182' 
+                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
+    </view>
+  </view>
+
+  <view class='order-message list-item'>
+    <view class='message'>买家留言</view>
+    <textarea maxlength='36' class='text fixed-line line-clamp-2' placeholder='给商家留言(最多36个字)'></textarea>
+  </view>
+
+  <view class='order-pay list-item'>
+    <view class='title'>支付方式</view>
+  </view>
+
+  <view class='fixed-bug'></view>
+
+  <view class='btn-group box-shadow fixed-bottom {{IsIPX && "feed-bottom-ipx"}}'>
+    <view class='total'>合计：
+      <text class='number red'>1467 积分</text>
+    </view>
+    <view class='bg-green'>
+      <yh-button name='立即支付' size='normal' height='108rpx' />
+    </view>
+  </view>
+</view>

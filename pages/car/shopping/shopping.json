@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "yh-button": "/components/button/cmp",
+    "yh-textList": "/components/textList/cmp",
+    "yh-goodsList": "/components/goodsList/cmp"
+  }
+}

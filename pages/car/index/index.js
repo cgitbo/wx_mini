@@ -84,7 +84,7 @@ Page({
     }
 
     // 滑动距离小于60px则不生效
-    if (offSetStartToEndX < 60 && offSetStartToEndX > -60) return
+    if (Math.abs(offSetStartToEndX) < 60) return
 
     // 设置滑动状态
     if (offSetStartToEndX < -60) {

@@ -76,9 +76,7 @@ page {
 }
 
 .order-item .des {
-  height: 150rpx;
   font-size: 28rpx;
-  overflow: hidden;
 }
 
 .order-item .more {

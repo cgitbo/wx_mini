@@ -1,0 +1,119 @@
+/* pages/car/shopping/shopping.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+/* 地址栏 */
+
+.order-addr {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  height: 140rpx;
+  background-color: #fff;
+}
+
+.order-addr .address {
+  display: flex;
+}
+
+.order-addr .address .img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 30rpx;
+}
+
+.order-addr .address .detail {
+  flex: 1;
+}
+
+.order-addr .icon {
+  width: 80rpx;
+  line-height: 80rpx;
+  height: 100%;
+}
+
+/* 商品详情 */
+
+.order-goods {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 10rpx 24rpx;
+}
+
+/* 订单信息 */
+
+.list-item {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 10rpx 24rpx;
+}
+
+.order-info .item {
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.order-info .item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.order-info .item.delivery {
+  position: relative;
+}
+
+.order-info .item.item.delivery .icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24rpx;
+  height: 100%;
+}
+
+/* 订单留言 */
+
+.order-message {
+  font-size: 28rpx;
+  height: 116rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.order-message .message {
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-right: 30rpx;
+}
+
+.order-message .text {
+  flex: 1;
+  color: #666;
+}
+
+/* 支付方式 */
+.order-pay .title {
+  font-size: 30rpx;
+}
+
+/* 为了底部fixed 撑高 */
+
+.fixed-bug {
+  height: 108rpx;
+}
+
+/* 底部按钮 */
+
+.btn-group .total {
+  height: 100%;
+  line-height: 106rpx;
+  flex: 1;
+  padding-left: 24rpx;
+  font-size: 30rpx;
+}
+
+.btn-group .total .number {
+  font-size: 28rpx;
+}

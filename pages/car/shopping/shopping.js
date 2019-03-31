@@ -1,4 +1,4 @@
-// pages/ucenter/order/order.js
+// pages/car/shopping/shopping.js
 const app = getApp()
 Page({
 
@@ -6,39 +6,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    OrderType: 0, // 订单类型 0.全部 1.待付款 2.待发货 3.待收货 4.已完成
-    OrderNavList: ['全部', '待付款', '待发货', '待收货', '已完成'],
-    OrderDetailList: [
-      // { name: ''}
+    GoodsList: [
+      {
+        name: '萤石DP1（棕色） 智能猫眼 摄像头 电子猫眼 可视门铃 防盗门监控 海康威视旗下品牌',
+        sku: '猫眼，棕色',
+        price: '769.00',
+        num: '8',
+        imgSrc: 'http://a.hiphotos.baidu.com/image/h%3D300/sign=c724ff91482309f7f86fab12420f0c39/30adcbef76094b3624c1f1e8adcc7cd98d109d60.jpg',
+        goods_id: 1
+      },
+      {
+        name: '萤石（EZVIZ）视频监控 摄像头 专用Micro SD存储卡TF卡 16GB Class10 海康威视 旗下品牌',
+        sku: '16G专用卡',
+        price: '69.00',
+        num: '2',
+        imgSrc: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=4cf62521bdde9c82b965ff8f5c8080d2/d1160924ab18972b0aa9c1d2e8cd7b899e510a13.jpg',
+        goods_id: 2
+      }
     ],
     IsIPX: app.globalData.IsIPX // 是否ipx
-  },
-
-  // 订单类型点击事件
-  onOrderNavTap(e) {
-    const OrderType = e.currentTarget.dataset.type
-    this.setData({
-      OrderType
-    })
-  },
-
-  // 订单详情事件
-  onOrderListTap(e) {
-    console.log(e)
-    wx.navigateTo({
-      url: '/pages/ucenter/orderDetail/orderDetail'
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const OrderType = options.type || 0
-    console.log(OrderType)
-    this.setData({
-      OrderType
-    })
+
   },
 
   /**

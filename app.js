@@ -5,7 +5,9 @@ App({
     this.globalData.StatusBar = res.statusBarHeight
     let custom = wx.getMenuButtonBoundingClientRect()
     this.globalData.Custom = custom
-    this.globalData.CustomBar = custom.bottom + custom.top - res.statusBarHeight
+    const CustomBar = custom.bottom + custom.top - res.statusBarHeight
+    this.globalData.CustomBar = CustomBar
+    this.globalData.IsIPX = CustomBar > 80 
   },
   globalData: {
 

@@ -21,3 +21,7 @@
 .red {
   color: #e93b3d;
 }
+
+.grey {
+  color: #999;
+}

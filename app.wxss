@@ -16,6 +16,13 @@
   background: #fff;
 }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .no-fixed {
   position: unset !important;
 }
@@ -79,12 +86,23 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 
 /* 固定两行超出显示... */
 
-.fixed-line-2 {
+.fixed-line {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
 }
 
 /* 底部btn */
@@ -124,4 +142,36 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 
 .box-shadow {
   box-shadow: 0 2rpx 10rpx #ddd;
+}
+
+/* 箭头 */
+
+.icon {
+  position: relative;
+}
+
+.icon-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-right.up::after {
+  transform: rotate(-135deg);
+}
+
+.icon-right::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+  border-right: 2rpx solid #999;
+  border-bottom: 2rpx solid #999;
 }

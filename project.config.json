@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -78,6 +78,14 @@
 					"id": -1,
 					"name": "car",
 					"pathName": "pages/car/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shopping",
+					"pathName": "pages/car/shopping/shopping",
+					"query": "",
 					"scene": null
 				}
 			]

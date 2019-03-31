@@ -8,7 +8,9 @@ Component({
     listContent: String,
     listType: String,
     titleColor: String,
-    contentColor: String
+    contentColor: String,
+    titleStyle: String,
+    contentStyle: String
   },
 
   /**

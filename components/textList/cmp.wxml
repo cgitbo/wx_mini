@@ -1,5 +1,5 @@
 <!--components/textList/cmp.wxml-->
 <view class='container {{listType=="between" ? "between" : ""}}'>
-  <view class='title {{titleColor}}'>{{listTitle}}：</view>
-  <view class='content {{contentColor}}'>{{listContent}}</view>
+  <view class='title {{titleColor}}' style='{{titleStyle}}'>{{listTitle}}：</view>
+  <view class='content {{contentColor}}' style='{{contentStyle}}'>{{listContent}}</view>
 </view>

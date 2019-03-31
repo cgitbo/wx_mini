@@ -19,7 +19,7 @@ Page({
     ShowMask: false, // 是否显示mask
     CountChoose: 1, // 购买数量
     NavbarOpacity: 0, // 默认顶部bar透明
-    IsIPX: app.globalData.CustomBar > 80, // 是否ipx
+    IsIPX: app.globalData.IsIPX, // 是否ipx
     CustomConf: {
       CustomBar: app.globalData.CustomBar,
       StatusBar: app.globalData.StatusBar
@@ -54,9 +54,9 @@ Page({
   // 立即购买按钮
   onBuyNowTap() {
     this._toggleMaskStatus()
-    // wx.navigateTo({
-    //   url: ''
-    // })
+    wx.navigateTo({
+      url: '/pages/car/shopping/shopping'
+    })
   },
 
   // maskTouchmove

@@ -20,7 +20,7 @@
   <view class='product-list'>
     <view class='item' catchtap='onProductListTap' data-id='0' wx:for='{{ProductsList}}' wx:key>
       <image lazy-load class='item-img' src='{{item.imgSrc}}'></image>
-      <view class='item-name fixed-line-2'>{{item.name}}</view>
+      <view class='item-name fixed-line line-clamp-2'>{{item.name}}</view>
       <view class='item-price'>
         <view class='price red'>{{item.price}}
           <text class='des'>积分</text>
