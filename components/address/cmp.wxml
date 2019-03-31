@@ -1,0 +1,8 @@
+<!--components/address/cmp.wxml-->
+<view class='container'>
+  <view class='name-mobile'>
+    <view class='name'><slot name='before' />{{userInfo.name}}</view>
+    <view class='mobile'>{{userInfo.mobile}}</view>
+  </view>
+  <view class='address'><slot name='after' />{{userInfo.address}}</view>
+</view>

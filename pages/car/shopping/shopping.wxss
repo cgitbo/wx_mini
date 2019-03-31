@@ -17,10 +17,12 @@ page {
 
 .order-addr .address {
   display: flex;
+  align-items: center;
 }
 
 .order-addr .address .img {
   width: 40rpx;
+  min-width: 40rpx;
   height: 40rpx;
   margin: 0 30rpx;
 }

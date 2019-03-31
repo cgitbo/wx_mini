@@ -1,0 +1,42 @@
+/* pages/car/address/address.wxss */
+page {
+  background-color: #f8f8f8;
+}
+
+.address-wrap .address {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.address-wrap .item {
+  padding: 24rpx;
+}
+
+.btn-group {
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 20rpx;
+  font-size: 26rpx;
+  border-top: 1px solid #f7f7f7;
+  box-sizing: border-box;
+}
+
+.btn-group .edit-wrap {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: #666;
+}
+.edit-item {
+  margin-left: 40rpx;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.edit-item  .img {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}

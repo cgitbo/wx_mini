@@ -1,13 +1,21 @@
 <!--pages/car/shopping/shopping.wxml-->
 <view class='container'>
-  <view class='order-addr'>
+  <view class='order-addr' catch:tap='onToggleAddressTap'>
     <view class='address'>
       <image src='/images/order/detail-addr.png' class='img' />
       <yh-textList class='detail' 
+                  wx:if='{{!UserAddr.name}}'
                   list-title='收件人' 
                   title-style='font-size:30rpx;color:#333;' 
                   list-content='请选择收件人' 
                   content-style='color:#999;font-size:28rpx;margin-left:50rpx;' />
+      <view class='user-addr' wx:else>
+        <yh-address user-info='{{UserAddr}}'>
+          <text slot='before'>收件人：</text>
+          <text slot='after'>收件地址：</text>
+        </yh-address>
+
+      </view>
     </view>
     <view class='icon'>
       <view class='icon-right'></view>

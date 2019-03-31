@@ -1,0 +1,33 @@
+<!--pages/car/address/address.wxml-->
+<view class='container'>
+  <view class='address-wrap'>
+    <view class='address' hidden='{{AddressEditBool}}' wx:for='{{AddressList}}' wx:key>
+      <view class='item'>
+        <yh-address user-info='{{item}}' class='address' />
+      </view>
+
+      <view class='btn-group'>
+        <checkbox-group class='green' bindchange='onDefaultAddressTap' data-index='{{index}}'>
+          <label class="radio">
+            <checkbox value='1' checked='{{index == DefaultAddressIndex}}' /> 默认地址
+          </label>
+        </checkbox-group>
+
+        <view class='edit-wrap'>
+          <view class='edit-item' catch:tap='onEditAddressTap' data-index='{{index}}'>
+            <image class='img' src='/images/like.png'></image>
+            <text class='text'>编辑</text>
+          </view>
+          <view class='edit-item'>
+            <image class='img' src='/images/like.png'></image>
+            <text class='text'>删除</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='address-edit'>
+  
+  </view>
+</view>

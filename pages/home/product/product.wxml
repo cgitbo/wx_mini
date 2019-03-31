@@ -39,7 +39,8 @@
       <view class='car item' catchtap='onCarTap'>
         <image class='img' src='/images/tab-bar/car.png' />
         <text class='text'>购物车</text>
-        <yh-tip class='tip' num='99' />
+        <yh-tip class='tip' num='{{CartCount}}' />
+        <text class='red fly {{JoinCartBool && "active"}}'>+1</text>
       </view>
     </view>
     <yh-button size='normal' height='100rpx' name='加入购物车' class='btn bg-yellow' catchtap='onJoinCarTap' />

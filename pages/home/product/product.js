@@ -18,6 +18,8 @@ Page({
     PageLength: 0, // 页面数量 控制返回按钮回退
     ShowMask: false, // 是否显示mask
     CountChoose: 1, // 购买数量
+    CartCount: 2, // 购物车数量
+    JoinCartBool: false, // 是否加入购物车点击
     NavbarOpacity: 0, // 默认顶部bar透明
     IsIPX: app.globalData.IsIPX, // 是否ipx
     CustomConf: {
@@ -49,6 +51,7 @@ Page({
   // 加入购物车按钮
   onJoinCarTap() {
     this._toggleMaskStatus()
+    this._shortShowJoinCar()
   },
 
   // 立即购买按钮
@@ -76,6 +79,19 @@ Page({
   // 阻止滑动事件
   onDetailSkuTouchmove() {
     return
+  },
+
+  // 显示购物车+1
+  _shortShowJoinCar() {
+    const JoinCartBool = true
+    this.setData({
+      JoinCartBool
+    })
+    setTimeout(() => {
+      this.setData({
+        JoinCartBool: !JoinCartBool
+      })
+    }, 500)
   },
 
   // 切换mask显示隐藏

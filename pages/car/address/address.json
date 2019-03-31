@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "yh-address": "/components/address/cmp"
+  }
+}

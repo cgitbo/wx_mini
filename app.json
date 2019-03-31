@@ -10,7 +10,9 @@
     "pages/home/product/product",
     "pages/home/products/products",
     "pages/home/car/car",
-    "pages/car/shopping/shopping"
+    "pages/car/shopping/shopping",
+    "components/address/cmp",
+    "pages/car/address/address"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,6 +1,11 @@
 <!--pages/home/products/products.wxml-->
 <view class='container'>
   <view class='nav-box'>
+
+    <view class='search-box'>
+      <yh-search class='search' confirm-type='search' size='big' placeholder='请输入关键词' />
+    </view>
+
     <scroll-view class='scroll-box' scroll-x scroll-with-animation scroll-into-view='{{NavId}}' hidden='{{MoreBool}}'>
       <view class='nav-list'>
         <view class='nav {{index == CurIndex ? "cur" : ""}}' wx:for='{{NavList}}' wx:key='index' catchtap='onNavListTap' id='{{"navId" + index}}' data-index='{{index}}'>{{item.name}}</view>

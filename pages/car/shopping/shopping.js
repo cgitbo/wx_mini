@@ -24,7 +24,19 @@ Page({
         goods_id: 2
       }
     ],
-    IsIPX: app.globalData.IsIPX // 是否ipx
+    IsIPX: app.globalData.IsIPX, // 是否ipx
+    UserAddr: { // 默认用户的收件地址
+      name: '范大爷',
+      mobile: 18666669999,
+      address: '浙江省杭州市萧山区义桥镇东方文化园旅业集团金色大厅 忆杭网'
+    }
+  },
+
+  // 选择收件地址
+  onToggleAddressTap() {
+    wx.navigateTo({
+      url: '/pages/car/address/address'
+    })
   },
 
   /**

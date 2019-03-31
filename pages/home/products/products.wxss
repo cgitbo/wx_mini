@@ -13,37 +13,50 @@ page {
   box-shadow: 0 2rpx 10rpx #ddd;
 }
 
-.nav-box .more {
-  position: absolute;
-  right: 0;
-  top: 0;
+.search-box {
+  padding-top: 20rpx;
+  padding-right: 150rpx;
+  display: flex;
+  align-items: center;
   background-color: #fff;
+}
+
+.search-box .search {
+  flex: 1;
+}
+
+.nav-box .more {
   width: 100rpx;
   height: 80rpx;
   line-height: 80rpx;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.nav-box .more.up::after {
-  transform: rotate(-135deg);
+.nav-box .up.more::after {
+  transition: all .2s ease;
+  transform: translate(-50%, -50%) rotate(-135deg);
 }
 
 .nav-box .more::after {
   content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
   display: block;
   width: 15rpx;
   height: 15rpx;
   border-right: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .2s ease;
 }
 
 .scroll-box {
   width: 100%;
-  padding-left: 24rpx;
-  padding-right: 100rpx;
+  padding: 0 24rpx;
   height: 80rpx;
   line-height: 80rpx;
   font-size: 30rpx;
@@ -113,7 +126,7 @@ page {
 /* product-list */
 
 .product-list {
-  margin-top: 100rpx;
+  margin-top: 180rpx;
   background-color: #fff;
   padding: 24rpx 24rpx 0;
   display: flex;

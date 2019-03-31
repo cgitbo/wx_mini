@@ -1,0 +1,17 @@
+/* components/address/cmp.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.name-mobile {
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  margin-top: 10rpx;
+}
