@@ -5,7 +5,8 @@
     "yh-tip": "/pages/components/tip/cmp",
     "yh-mask": "/pages/components/mask/cmp",
     "yh-close": "/pages/components/close/cmp",
-    "yh-countChoose": "/pages/components/countChoose/cmp"
+    "yh-countChoose": "/pages/components/countChoose/cmp",
+    "yh-button": "/pages/components/button/cmp"
   },
   "navigationStyle": "custom"
 }

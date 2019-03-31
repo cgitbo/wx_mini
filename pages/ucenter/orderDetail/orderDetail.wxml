@@ -39,7 +39,7 @@
 
   <view class='fixed-bug'></view>
 
-  <view class='btn-group {{IsIPX && "feed-bottom-ipx"}}'>
+  <view class='btn-group fixed box-shadow {{IsIPX && "feed-bottom-ipx"}}'>
     <view class='btn'>
       <view class=''>退款</view>
     </view>

@@ -134,17 +134,5 @@ page {
 }
 
 .btn-group {
-  padding-top: 20rpx;
-  display: flex;
-  flex-direction: row-reverse;
   border-top: 1px solid #e5e5e5;
-}
-
-.btn-group .btn {
-  flex-shrink: 0;
-  margin-left: 16rpx;
-}
-
-.btn-group .btn .btn-normal {
-  border-color: #ccc;
 }

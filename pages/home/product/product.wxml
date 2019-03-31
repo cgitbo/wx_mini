@@ -30,7 +30,7 @@
 
   <view class='fiexd-bug'></view>
 
-  <view class='btn-group {{IsIPX && "feed-bottom-ipx"}}' hidden='{{ShowMask}}'>
+  <view class='btn-wrap {{IsIPX && "feed-bottom-ipx"}}' hidden='{{ShowMask}}'>
     <view class='btn-ico'>
       <view class='item' catchtap='onHomeTap'>
         <image class='img' src='/images/home.png' />
@@ -42,9 +42,8 @@
         <yh-tip class='tip' num='99' />
       </view>
     </view>
-
-    <view class='btn bg-yellow' catchtap='onJoinCarTap'>加入购物车</view>
-    <view class='btn bg-red' catchtap='onBuyNowTap'>立即购买</view>
+    <yh-button size='normal' height='100rpx' name='加入购物车' class='btn bg-yellow' catchtap='onJoinCarTap' />
+    <yh-button size='normal' height='100rpx' name='立即购买' class='btn bg-red' catchtap='onBuyNowTap' />
   </view>
 
   <view hidden='{{!ShowMask}}'>
@@ -100,9 +99,9 @@
         </view>
 
       </view>
-      <view class='btn-group no-fixed'>
-        <view class='btn bg-yellow' catchtap='onJoinCarTap'>加入购物车</view>
-        <view class='btn bg-red' catchtap='onBuyNowTap'>立即购买</view>
+      <view class='btn-wrap no-fixed'>
+        <yh-button size='normal' height='100rpx' name='加入购物车' class='btn bg-yellow' catchtap='onJoinCarTap' />
+        <yh-button size='normal' height='100rpx' name='立即购买' class='btn bg-red' catchtap='onBuyNowTap' />
       </view>
     </view>
   </view>

@@ -5,9 +5,11 @@
 .btn {
   background-color: #45AE8C;
   color: #fff;
-  height: 80rpx;
   font-size: 32rpx;
 }
 .big {
   border-radius: 10rpx;
+}
+.btn.normal {
+  background-color: transparent;
 }

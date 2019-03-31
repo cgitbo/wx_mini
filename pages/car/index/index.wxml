@@ -1,8 +1,15 @@
 <!--pages/car/index/index.wxml-->
 <view class='container'>
   <view class='car-list'>
-    <yh-shopBar title='可自提' right-text='共计2件商品' />
-    <checkbox-group bindchange="checkboxChange">
+    <view class='head'>
+      <checkbox-group class='bar-checkbox' bindchange='onCheckAllTap'>
+        <label class='radio'>
+          <checkbox value='1' checked='{{checkedAll}}' />
+        </label>
+      </checkbox-group>
+      <yh-shopBar class='shop-bar' title='可自提' right-text='共计2件商品' />
+    </view>
+    <checkbox-group bindchange='checkboxChange'>
       <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
             wx:for='{{GoodsList}}' 
             wx:key='item.goods_id' 
@@ -10,13 +17,13 @@
             bind:touchend='onGoodsTouchend' 
             data-index='{{index}}'>
         <view class='item'>
-          <label class="checkbox">
-            <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
+          <label class='checkbox'>
+            <checkbox value='{{item.goods_id}}' checked='{{item.checked}}' />
           </label>
           <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
           <yh-countChoose class='count-choose' />
         </view>
-        <view class="del bg-red" catchtap="del" data-index="{{index}}">
+        <view class='del bg-red' catchtap='del' data-index='{{index}}'>
           <view class='text'>删除</view>
         </view>
       </view>
@@ -24,8 +31,15 @@
   </view>
 
   <view class='car-list'>
-    <yh-shopBar title='不可自提' right-text='共计2件商品' />
-    <checkbox-group bindchange="checkboxChange">
+    <view class='head'>
+      <checkbox-group class='bar-checkbox' bindchange='onCheckAllTap'>
+        <label class='radio'>
+          <checkbox value='1' checked='{{checkedAll}}' />
+        </label>
+      </checkbox-group>
+      <yh-shopBar class='shop-bar' title='不可自提' right-text='共计2件商品' />
+    </view>
+    <checkbox-group bindchange='checkboxChange'>
       <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
             wx:for='{{GoodsList}}' 
             wx:key='item.goods_id' 
@@ -33,13 +47,13 @@
             bind:touchend='onGoodsTouchend' 
             data-index='{{index}}'>
         <view class='item'>
-          <label class="checkbox">
-            <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
+          <label class='checkbox'>
+            <checkbox value='{{item.goods_id}}' checked='{{item.checked}}' />
           </label>
           <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
           <yh-countChoose class='count-choose' />
         </view>
-        <view class="del bg-red" catchtap="del" data-index="{{index}}">
+        <view class='del bg-red' catchtap='del' data-index='{{index}}'>
           <view class='text'>删除</view>
         </view>
       </view>
@@ -49,9 +63,9 @@
   <view class='fixed-bug'></view>
 
   <view class='btn-group'>
-    <checkbox-group class="radio-group" bindchange="onCheckAllTap">
+    <checkbox-group class='radio-group' bindchange='onCheckAllTap'>
       <label class="radio">
-        <checkbox value="1" checked="{{checkedAll}}" />
+        <checkbox value='1' checked='{{checkedAll}}' />
         全选
       </label>
     </checkbox-group>

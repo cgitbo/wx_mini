@@ -25,6 +25,16 @@ Page({
         goods_id: 2,
         id: 13,
         checked: true
+      },
+      {
+        name: '桓仁北纬41度冰酒花冠级20 0ml 果香浓郁 口感圆润...',
+        sku: '冰酒250ml',
+        price: '670',
+        num: '5',
+        imgSrc: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=4cf62521bdde9c82b965ff8f5c8080d2/d1160924ab18972b0aa9c1d2e8cd7b899e510a13.jpg',
+        goods_id: 8,
+        id: 131,
+        checked: true
       }
     ],
     touchStartPosition: { X: 0, Y: 0 }, // 当前触摸位置
@@ -64,26 +74,40 @@ Page({
       X: e.changedTouches[0].pageX,
       Y: e.changedTouches[0].pageY
     },
-      offSetStartToEndX = touchEndPosition.X - this.data.touchStartPosition.X,  // 获取滑动的距离，正代表右滑，负代表左滑
-      offSetStartToEndY = touchEndPosition.Y - this.data.touchStartPosition.Y, 
+      offSetStartToEndX = touchEndPosition.X - this.data.touchStartPosition.X,  // 获取左右滑动的距离，正代表右滑，负代表左滑
+      offSetStartToEndY = touchEndPosition.Y - this.data.touchStartPosition.Y,  // 上下滑动距离
       ActiveIndex = e.currentTarget.dataset.index
 
-    // 滑动距离小于10px则不生效
-    if (offSetStartToEndX < 60 && offSetStartToEndX > -60 || offSetStartToEndY > 200) return
-    if (offSetStartToEndX > 60) {
-      // 如果本身不是滑动状态，则不需要我们再设置
-      if (!this.data.touchMoveActive) return
-      this.setData({
-        touchMoveActive: false,
-        ActiveIndex: -1
-      })
+    // 取消滑动状态
+    if (offSetStartToEndX > 60 || Math.abs(offSetStartToEndY) > 10) {
+      this._cacelTouchActive()
     }
+
+    // 滑动距离小于60px则不生效
+    if (offSetStartToEndX < 60 && offSetStartToEndX > -60) return
+
+    // 设置滑动状态
     if (offSetStartToEndX < -60) {
-      this.setData({
-        touchMoveActive: true,
-        ActiveIndex
-      })
+      this._setTouchActive(ActiveIndex)
     }
+  },
+
+  // 设置滑动状态
+  _setTouchActive(ActiveIndex) {
+    this.setData({
+      touchMoveActive: true,
+      ActiveIndex
+    })
+  },
+
+  // 取消滑动状态
+  _cacelTouchActive() {
+    // 如果本身不是滑动状态，则不需要我们再设置
+    if (!this.data.touchMoveActive) return
+    this.setData({
+      touchMoveActive: false,
+      ActiveIndex: -1
+    })
   },
 
   // 全选按钮

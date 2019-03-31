@@ -85,7 +85,7 @@ page {
 
 /* btn-group */
 
-.btn-group {
+.btn-wrap {
   widows: 100%;
   height: 100rpx;
   display: flex;
@@ -99,13 +99,13 @@ page {
   z-index: 1024;
 }
 
-.btn-group .btn-ico {
+.btn-wrap .btn-ico {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn-group .btn-ico .item {
+.btn-wrap .btn-ico .item {
   width: 120rpx;
   height: 100%;
   display: flex;
@@ -114,28 +114,28 @@ page {
   align-items: center;
 }
 
-.btn-group .btn-ico .img {
+.btn-wrap .btn-ico .img {
   width: 40rpx;
   height: 40rpx;
 }
 
-.btn-group .btn-ico .text {
+.btn-wrap .btn-ico .text {
   font-size: 20rpx;
   color: #666;
   margin-top: 5rpx;
 }
 
-.btn-group .btn-ico .car {
+.btn-wrap .btn-ico .car {
   position: relative;
 }
 
-.btn-group .btn-ico .car .tip {
+.btn-wrap .btn-ico .car .tip {
   position: absolute;
   top: -10rpx;
   right: 10rpx;
 }
 
-.btn-group .btn {
+.btn-wrap .btn {
   text-align: center;
   flex: 1;
   height: 100%;

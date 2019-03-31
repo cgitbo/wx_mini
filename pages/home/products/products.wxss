@@ -5,7 +5,12 @@ page {
 }
 
 .nav-box {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-shadow: 0 2rpx 10rpx #ddd;
 }
 
 .nav-box .more {
@@ -108,7 +113,7 @@ page {
 /* product-list */
 
 .product-list {
-  margin-top: 20rpx;
+  margin-top: 100rpx;
   background-color: #fff;
   padding: 24rpx 24rpx 0;
   display: flex;
@@ -131,7 +136,6 @@ page {
   font-size: 24rpx;
   color: #333;
   height: 70rpx;
-  overflow: hidden;
 }
 
 .product-list .item .item-price {

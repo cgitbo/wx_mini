@@ -6,7 +6,11 @@ Component({
 
   properties: {
     name: String,
-    size: String
+    size: String,
+    height: {
+      type: String,
+      value: '80rpx'
+    }
   },
 
   /**

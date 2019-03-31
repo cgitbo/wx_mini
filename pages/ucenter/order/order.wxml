@@ -41,10 +41,10 @@
 
       <view class='btn-group'>
         <view class='btn'>
-          <button size='mini' type='warn'>立即付款</button>
+          <view class=''>取消订单</view>
         </view>
-        <view class='btn'>
-          <button class='btn-normal' size='mini' plain='true'>取消订单</button>
+        <view class='btn btn-red'>
+          <view class=''>立即付款</view>
         </view>
       </view>
     </view>
@@ -73,10 +73,10 @@
 
       <view class='btn-group'>
         <view class='btn'>
-          <button size='mini' type='warn'>立即付款</button>
+          <view class=''>取消订单</view>
         </view>
         <view class='btn'>
-          <button class='btn-normal' size='mini' plain='true'>取消订单</button>
+          <view class=''>立即付款</view>
         </view>
       </view>
     </view>

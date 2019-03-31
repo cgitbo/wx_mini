@@ -11,8 +11,17 @@ page {
   overflow: hidden;
 }
 
+.car-list .head {
+  display: flex;
+}
+
+.car-list .head .bar-checkbox {
+  margin-right: 20rpx;
+  width: 54rpx;
+}
+
 .car-list .shop-bar {
-  width: 100%;
+  width: 630rpx;
 }
 
 .car-list .goods {
