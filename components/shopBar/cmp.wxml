@@ -1,0 +1,10 @@
+<!--components/shopBar/cmp.wxml-->
+<view class='container'>
+  <view class='shop-title'>
+    <view class='title-box'>
+      <image class='img' src='/images/order/shop.png'></image>
+      <text class='title'>{{title}}</text>
+    </view>
+    <view class='status'>{{rightText}}</view>
+  </view>
+</view>

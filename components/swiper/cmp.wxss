@@ -1,0 +1,29 @@
+/* components/swiper/cmp.wxss */
+
+.container {
+  position: relative;
+}
+
+.big {
+  height: 750rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.current {
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  background-color: rgba(0, 0, 0, .3);
+  width: 112rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #fff;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  text-align: center;
+}

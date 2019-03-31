@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "yh-search": "/pages/components/search/cmp",
-    "yh-loading": "/pages/components/loading/cmp",
-    "yh-swiper": "/pages/components/swiper/cmp"
+    "yh-search": "/components/search/cmp",
+    "yh-loading": "/components/loading/cmp",
+    "yh-swiper": "/components/swiper/cmp"
   },
   "navigationBarTitleText": "积分商城",
   "enablePullDownRefresh": false,

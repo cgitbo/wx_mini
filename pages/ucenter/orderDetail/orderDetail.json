@@ -1,9 +1,9 @@
 {
   "usingComponents": {
-    "yh-listBar": "/pages/components/listBar/cmp",
-    "yh-shopBar": "/pages/components/shopBar/cmp",
-    "yh-goodsList": "/pages/components/goodsList/cmp",
-    "yh-textList": "/pages/components/textList/cmp"
+    "yh-listBar": "/components/listBar/cmp",
+    "yh-shopBar": "/components/shopBar/cmp",
+    "yh-goodsList": "/components/goodsList/cmp",
+    "yh-textList": "/components/textList/cmp"
   },
   "navigationBarTitleText": "订单详情",
   "backgroundColor": "#f7f7f7",

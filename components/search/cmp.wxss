@@ -1,0 +1,31 @@
+/* components/search/cmp.wxss */
+
+.container {
+  position: relative;
+}
+
+.input {
+  height: 56rpx;
+  border-radius: 28rpx;
+  line-height: 56rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  background-color: #fff;
+  padding-right: 24rpx;
+  padding-left: 66rpx;
+  letter-spacing: 2rpx;
+}
+
+.input.big {
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+}
+
+.img {
+  width: 28rpx;
+  height: 29rpx;
+  position: absolute;
+  left: 24rpx;
+  top: 18rpx;
+}

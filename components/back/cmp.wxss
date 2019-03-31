@@ -1,0 +1,46 @@
+/* components/back/cmp.wxss */
+
+.container {
+  position: fixed;
+  top: 0;
+  z-index: 1024;
+  width: 100%;
+}
+
+.cu-bar {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  color: #fff;
+  padding-right: 220rpx;
+  padding-left: 30rpx;
+}
+
+.action {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 88rpx;
+}
+
+.back {
+  width: 20rpx;
+  height: 20rpx;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.content {
+  width: calc(100% - 440rpx);
+  font-size: 32rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

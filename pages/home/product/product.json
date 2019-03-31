@@ -1,12 +1,12 @@
 {
   "usingComponents": {
-    "yh-swiper": "/pages/components/swiper/cmp",
-    "yh-back": "/pages/components/back/cmp",
-    "yh-tip": "/pages/components/tip/cmp",
-    "yh-mask": "/pages/components/mask/cmp",
-    "yh-close": "/pages/components/close/cmp",
-    "yh-countChoose": "/pages/components/countChoose/cmp",
-    "yh-button": "/pages/components/button/cmp"
+    "yh-swiper": "/components/swiper/cmp",
+    "yh-back": "/components/back/cmp",
+    "yh-tip": "/components/tip/cmp",
+    "yh-mask": "/components/mask/cmp",
+    "yh-close": "/components/close/cmp",
+    "yh-countChoose": "/components/countChoose/cmp",
+    "yh-button": "/components/button/cmp"
   },
   "navigationStyle": "custom"
 }

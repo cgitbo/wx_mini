@@ -1,4 +1,0 @@
-<!--pages/components/loading/cmp.wxml-->
-<view class='container'>
-  <view class='loading'></view>
-</view>

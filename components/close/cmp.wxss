@@ -1,0 +1,30 @@
+/* components/close/cmp.wxss */
+.container {
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.container::before{
+  content: '';
+  display: block;
+  width: 30rpx;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.container::after{
+  content: '';
+  display: block;
+  width: 30rpx;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

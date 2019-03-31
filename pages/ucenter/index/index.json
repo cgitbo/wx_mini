@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "yh-button": "/pages/components/button/cmp",
-    "yh-tip": "/pages/components/tip/cmp"
+    "yh-button": "/components/button/cmp",
+    "yh-tip": "/components/tip/cmp"
   },
   "navigationBarTitleText": "我的"
 }
