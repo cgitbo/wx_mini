@@ -122,6 +122,9 @@ Page({
   // 去结算按钮
   onBuynowTap() {
     console.log('buy-now')
+    wx.navigateTo({
+      url: '/pages/car/shopping/shopping'
+    })
   },
 
   /**
