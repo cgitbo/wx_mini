@@ -28,12 +28,14 @@
 
   <view class='order-summary'>
     <view class='item' wx:for='{{OrderSummary}}' wx:key='index' wx:if='{{item.bool}}'>
-      <yh-textList list-title='{{item.title}}' list-content='{{item.content}}' />
+      <view class='normal gray'>{{item.title}}：</view>
+      <view class='normal black'>{{item.content}}</view>
     </view>
   </view>
   <view class='order-summary'>
-    <view class='item' wx:for='{{OrderTotle}}' wx:key='index' wx:if='{{item.bool}}'>
-      <yh-textList list-title='{{item.title}}' list-content='{{item.content}}' list-type='between' title-color='black' content-color='red' />
+    <view class='item total' wx:for='{{OrderTotle}}' wx:key='index' wx:if='{{item.bool}}'>
+      <view class='black'>{{item.title}}</view>
+      <view class='red'>{{item.content}}</view>
     </view>
   </view>
 

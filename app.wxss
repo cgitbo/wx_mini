@@ -21,6 +21,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1024;
 }
 
 .no-fixed {
@@ -176,4 +177,9 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   height: 15rpx;
   border-right: 2rpx solid #999;
   border-bottom: 2rpx solid #999;
+}
+
+
+.normal {
+  font-size: 24rpx;
 }

@@ -21,3 +21,11 @@
 .green {
   color: #45ae8c;
 }
+
+.gray {
+  color: #999;
+}
+
+.black {
+  color: #333;
+}

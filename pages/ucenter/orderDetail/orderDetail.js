@@ -37,7 +37,7 @@ Page({
     ],
     OrderTotle: [
       { title: '实付金额', content: '￥154.12', bool: true },
-      { title: '实付积分', content: '6780', bool: true },
+      { title: '实付积分', content: '6780', bool: true }
     ],
     IsIPX: app.globalData.IsIPX // 是否ipx
   },

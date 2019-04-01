@@ -1,5 +1,9 @@
 {
   "usingComponents": {
-    "yh-address": "/components/address/cmp"
-  }
+    "yh-address": "/components/address/cmp",
+    "yh-button": "/components/button/cmp"
+  },
+  "navigationBarTitleText": "收货地址",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
 }

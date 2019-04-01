@@ -1,6 +1,13 @@
 /* pages/car/address/address.wxss */
+
 page {
   background-color: #f8f8f8;
+}
+
+/* 地址列表 */
+
+.address-wrap {
+  padding-bottom: 100rpx;
 }
 
 .address-wrap .address {
@@ -11,6 +18,8 @@ page {
 .address-wrap .item {
   padding: 24rpx;
 }
+
+/* 地址btn */
 
 .btn-group {
   justify-content: space-between;
@@ -28,6 +37,7 @@ page {
   align-items: center;
   color: #666;
 }
+
 .edit-item {
   margin-left: 40rpx;
   display: flex;
@@ -39,4 +49,57 @@ page {
   width: 36rpx;
   height: 36rpx;
   margin-right: 20rpx;
+}
+
+.add-btn-wrap {
+  padding: 24rpx;
+}
+
+.add-btn-wrap .add-btn {
+  color: #fff;
+  background-color: #45ae8c;
+  border: none;
+}
+
+/* 编辑地址 */
+
+.edit-wrap {
+  padding: 0 24rpx;
+  background-color: #fff;
+}
+
+.edit-wrap .item {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-size: 28rpx;
+  height: 88rpx;
+}
+
+.edit-wrap .item .title {
+  width: 158rpx;
+}
+
+.edit-wrap .item .cur {
+  flex: 1;
+  font-size: 26rpx;
+  color: #999;
+  height: 88rpx;
+  padding-left: 10rpx;
+}
+
+.edit-wrap .item.switch {
+  justify-content: space-between;
+}
+
+.edit-wrap .item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.address-edit .edit-submit-btn {
+  margin-top: 160rpx;
+  padding: 0 24rpx;
+  border: none;
+  background-color: #45ae8c;
+  color: #fff;
 }

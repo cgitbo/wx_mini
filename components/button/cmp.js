@@ -10,7 +10,8 @@ Component({
     height: {
       type: String,
       value: '80rpx'
-    }
+    },
+    formType: String
   },
 
   /**

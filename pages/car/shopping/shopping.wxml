@@ -3,16 +3,14 @@
   <view class='order-addr' catch:tap='onToggleAddressTap'>
     <view class='address'>
       <image src='/images/order/detail-addr.png' class='img' />
-      <yh-textList class='detail' 
-                  wx:if='{{!UserAddr.name}}'
-                  list-title='收件人' 
-                  title-style='font-size:30rpx;color:#333;' 
-                  list-content='请选择收件人' 
-                  content-style='color:#999;font-size:28rpx;margin-left:50rpx;' />
+      <view class='detail' wx:if='{{!UserAddr.name}}'>
+          <text class='black title'>收件人</text>
+          <text class='gray cur'>请选择收件人</text>
+      </view>
       <view class='user-addr' wx:else>
         <yh-address user-info='{{UserAddr}}'>
           <text slot='before'>收件人：</text>
-          <text slot='after'>收件地址：</text>
+          <!-- <text slot='after'>收件地址：</text> -->
         </yh-address>
 
       </view>
@@ -27,48 +25,55 @@
       <yh-goodsList goods='{{item}}' />
     </view>
   </view>
+  
+  <view class='order-pay list-item'>
+    <radio-group class='payment' bindchange=''>
+      <view class='title'>配送方式</view>
+      <label class='pay-type' >
+        <view class='name'>顺丰快递</view>
+        <radio value='' checked='checked' />
+      </label>
+      <label class='pay-type' >
+        <view class='name'>体验店自提</view>
+        <radio value='' checked='' />
+      </label>
+    </radio-group>
+  </view>
+
+  <view class='order-pay list-item'>
+    <radio-group class='payment' bindchange=''>
+      <view class='title'>支付方式</view>
+      <label class='pay-type' >
+        <image class='img' src='/images/order/wx-pay.png'></image>
+        <view class='name'>微信支付</view>
+        <radio value='' checked='checked' />
+      </label>
+      <label class='pay-type' >
+        <image class='img' src='/images/order/money.png'></image>
+        <view class='name'>余额支付</view>
+        <radio value='' checked='' />
+      </label>
+    </radio-group>
+  </view>
 
   <view class='order-info list-item'>
-    <view class='item delivery'>
-      <yh-textList list-type='between' 
-                  list-title='配送方式' 
-                  title-style='font-size:28rpx;color:#666;' 
-                  list-content='请选择收件人' 
-                  content-style='color:#999;font-size:26rpx;margin-right:50rpx;' />
-      <view class='icon'>
-        <view class='icon-right'></view>
-      </view>
+    <view class='item'>
+      <view class='title'>配送运费</view>
+      <view>￥12</view>
     </view>
     <view class='item'>
-      <yh-textList list-type='between' 
-                  list-title='配送运费' 
-                  title-style='font-size:28rpx;color:#666;' 
-                  list-content='12' 
-                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
+      <view class='title'>商品金额</view>
+      <view>￥200</view>
     </view>
     <view class='item'>
-      <yh-textList list-type='between' 
-                  list-title='实付金额' 
-                  title-style='font-size:28rpx;color:#666;' 
-                  list-content='2000' 
-                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
-    </view>
-    <view class='item'>
-      <yh-textList list-type='between' 
-                  list-title='实付积分' 
-                  title-style='font-size:28rpx;color:#666;' 
-                  list-content='182' 
-                  content-style='color:#333;font-size:26rpx;margin-left:50rpx;' />
+      <view class='title'>商品积分</view>
+      <view>5182</view>
     </view>
   </view>
 
   <view class='order-message list-item'>
     <view class='message'>买家留言</view>
-    <textarea maxlength='36' class='text fixed-line line-clamp-2' placeholder='给商家留言(最多36个字)'></textarea>
-  </view>
-
-  <view class='order-pay list-item'>
-    <view class='title'>支付方式</view>
+    <textarea maxlength='32' class='text fixed-line line-clamp-2' placeholder='给商家留言(最多32个字)'></textarea>
   </view>
 
   <view class='fixed-bug'></view>
@@ -77,7 +82,7 @@
     <view class='total'>合计：
       <text class='number red'>1467 积分</text>
     </view>
-    <view class='bg-green'>
+    <view class='bg-green pay-now'>
       <yh-button name='立即支付' size='normal' height='108rpx' />
     </view>
   </view>

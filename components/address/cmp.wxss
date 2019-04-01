@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   font-size: 24rpx;
-  color: #666;
 }
 
 .name-mobile {
@@ -14,4 +13,5 @@
 
 .address {
   margin-top: 10rpx;
+  color: #666;
 }

@@ -65,6 +65,18 @@ page {
   height: 100rpx;
 }
 
+.order-summary .item {
+  display: flex;
+  color: #999;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.order-summary .item.total {
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
 .order-summary .item:not(:last-child) {
   margin-bottom: 6rpx;
 }

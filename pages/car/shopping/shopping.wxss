@@ -18,6 +18,7 @@ page {
 .order-addr .address {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .order-addr .address .img {
@@ -29,6 +30,15 @@ page {
 
 .order-addr .address .detail {
   flex: 1;
+}
+
+.address .detail .title {
+  font-size: 30rpx;
+  margin-right: 40rpx;
+}
+
+.address .detail .cur {
+  font-size: 28rpx
 }
 
 .order-addr .icon {
@@ -56,6 +66,14 @@ page {
 .order-info .item {
   height: 88rpx;
   line-height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.order-info .item .title {
+  color: #666;
+  font-size: 28rpx;
 }
 
 .order-info .item:not(:last-child) {
@@ -93,11 +111,41 @@ page {
 .order-message .text {
   flex: 1;
   color: #666;
+  height: 100%;
 }
 
 /* 支付方式 */
+
 .order-pay .title {
+  height: 68rpx;
+  line-height: 68rpx;
   font-size: 30rpx;
+}
+
+.pay-type {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 108rpx;
+  line-height: 108rpx;
+}
+
+.pay-type:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.pay-type .img {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 24rpx;
+}
+
+.pay-type .name {
+  flex: 1;
+  margin-left: 25rpx;
+  font-size: 28rpx;
+  color: #666;
 }
 
 /* 为了底部fixed 撑高 */
@@ -118,4 +166,8 @@ page {
 
 .btn-group .total .number {
   font-size: 28rpx;
+}
+
+.btn-group .pay-now {
+  width: 280rpx;
 }

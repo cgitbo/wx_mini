@@ -1,13 +1,13 @@
 <!--pages/car/address/address.wxml-->
-<view class='container'>
-  <view class='address-wrap'>
-    <view class='address' hidden='{{AddressEditBool}}' wx:for='{{AddressList}}' wx:key>
+<view class='container {{IsIPX && "feed-bottom-ipx"}}'>
+  <view class='address-wrap' hidden='{{AddressEditBool}}'>
+    <view class='address' wx:for='{{AddressList}}' wx:key catch:tap='onSelectAddressTap'>
       <view class='item'>
         <yh-address user-info='{{item}}' class='address' />
       </view>
 
       <view class='btn-group'>
-        <checkbox-group class='green' bindchange='onDefaultAddressTap' data-index='{{index}}'>
+        <checkbox-group class='green' catch:tap='onDefaultAddressTap' data-index='{{index}}'>
           <label class="radio">
             <checkbox value='1' checked='{{index == DefaultAddressIndex}}' /> 默认地址
           </label>
@@ -15,19 +15,52 @@
 
         <view class='edit-wrap'>
           <view class='edit-item' catch:tap='onEditAddressTap' data-index='{{index}}'>
-            <image class='img' src='/images/like.png'></image>
+            <image class='img' src='/images/order/edit.png'></image>
             <text class='text'>编辑</text>
           </view>
-          <view class='edit-item'>
-            <image class='img' src='/images/like.png'></image>
+          <view class='edit-item' catch:tap='onDelAddressTap' data-index='{{index}}'>
+            <image class='img' src='/images/order/del.png'></image>
             <text class='text'>删除</text>
           </view>
         </view>
       </view>
     </view>
+
+    <view class='fixed-bug'></view>
+
+    <view class='add-btn-wrap fixed-bottom'>
+      <button form-type='submit' plain class='add-btn {{IsIPX && "feed-bottom-ipx"}}'>添加新地址</button>
+    </view>
   </view>
 
-  <view class='address-edit'>
-  
+  <view class='address-edit' hidden='{{!AddressEditBool}}'>
+    <view class='edit-wrap'>
+      <form bindsubmit='onEditAddressSubmitTap'>
+        <view class='item'>
+            <view class='title'>收件人</view>
+            <input class='cur' name='username' value='范大爷' />
+          </view>
+          <view class='item'>
+            <view class='title'>联系电话</view>
+            <input class='cur' name='mobile' value='18655558888' type='number' />
+          </view>
+          <view class='item'>
+            <view class='title'>所在地区</view>
+            <input class='cur' name='area' value='浙江省 杭州市 萧山区' disabled />
+            <!-- <yh-form title='所在地区' value='请选择' disabled inputRight icon /> -->
+          </view>
+          <view class='item'>
+            <view class='title'>详细地址</view>
+            <textarea class='cur' name='address' maxLength='36' value='古墩路与丰谭路245号政新花园小区8 幢2单元502'></textarea>
+          </view>
+          <view class='item switch'>
+            <view class='title'>设为默认</view>
+            <switch name='switch' checked />
+          </view>
+
+          <button form-type='submit' plain class='edit-submit-btn'>保存</button>
+      </form>
+    </view>
   </view>
+
 </view>
