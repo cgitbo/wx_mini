@@ -1,0 +1,50 @@
+<!--pages/ucenter/wallet/wallet.wxml-->
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <view class='head-wrap'>
+    <image class='img' src='/images/ucenter/wallet-bg.png'></image>
+
+    <view class='bank-wrap'>
+      <view class='bank-title'>
+        <image class='img' src='/images/ucenter/{{hasBankInfo ? BankIcon : "no-bank"}}.png' binderror='onIconError'></image>
+        <view class='bank-name'>
+          <view class='name'>{{hasBankInfo ? BankInfo.name : '— — — —'}}</view>
+          <view class='type'>储蓄卡</view>
+        </view>
+      </view>
+
+      <view class='bank-num'>
+        <view class='number' wx:for='{{3}}' wx:key>{{hasBankInfo ? '****' : '----'}}</view>
+        <view class='number'>{{hasBankInfo ? BankInfo.number : '----'}}</view>
+      </view>
+
+      <view class='bind-card' catch:tap='onChangeCardTap'>
+        <view class='text'>{{hasBankInfo ? '更换银行卡' : '绑定银行卡'}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='amount-wrap list-item'>
+    <view class='item col-line'>
+      <view class='title'>账户余额</view>
+      <view class='number red'>27888.00</view>
+    </view>
+    <view class='item'>
+      <view class='title'>股权保证金</view>
+      <view class='number red'>97888</view>
+    </view>
+  </view>
+
+  <view class='detail-wrap list-item'>
+    <view class='item' wx:for='{{ListNav}}' wx:key data-url='{{item.url}}' catch:tap='onListnavTap'>
+      <view class='img-text'>
+        <image class='img' src='{{item.imgSrc}}' />
+        <view class='text'>{{item.title}}</view>
+      </view>
+      <view class='icon'>
+        <view class='icon-right'></view>
+      </view>
+    </view>
+  </view>
+
+</view>

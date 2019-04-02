@@ -12,7 +12,10 @@
     "pages/home/car/car",
     "pages/car/shopping/shopping",
     "components/address/cmp",
-    "pages/car/address/address"
+    "pages/car/address/address",
+    "pages/ucenter/wallet/wallet",
+    "pages/ucenter/withdraw/withdraw",
+    "pages/ucenter/bankCard/bankCard"
   ],
   "window": {
     "backgroundTextStyle": "light",

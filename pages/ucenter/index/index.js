@@ -8,15 +8,15 @@ Page({
    */
   data: {
     navList: [
-      { name: '钱包', img: '/images/nav/wallet.png' },
-      { name: '我要报单', img: '/images/nav/report.png' },
-      { name: '会员升级', img: '/images/nav/update.png' },
-      { name: '我的推荐', img: '/images/nav/referrer.png' },
-      { name: '我的积分', img: '/images/nav/point.png' },
-      { name: '报单列表', img: '/images/nav/report-list.png' },
-      { name: '我的二维码', img: '/images/nav/qr-code.png' },
-      { name: '修改登录密码', img: '/images/nav/lock.png' },
-      { name: '修改提现密码', img: '/images/nav/card-lock.png' },
+      { name: '钱包', img: '/images/nav/wallet.png', url: 'wallet' },
+      { name: '我要报单', img: '/images/nav/report.png', url: '' },
+      { name: '会员升级', img: '/images/nav/update.png', url: '' },
+      { name: '我的推荐', img: '/images/nav/referrer.png', url: '' },
+      { name: '我的积分', img: '/images/nav/point.png', url: '' },
+      { name: '报单列表', img: '/images/nav/report-list.png', url: '' },
+      { name: '我的二维码', img: '/images/nav/qr-code.png', url: '' },
+      { name: '修改登录密码', img: '/images/nav/lock.png', url: '' },
+      { name: '修改提现密码', img: '/images/nav/card-lock.png', url: '' },
     ]
   },
 
@@ -30,6 +30,15 @@ Page({
     const type = e.currentTarget.dataset.type || 0
     wx.navigateTo({
       url: `/pages/ucenter/order/order?type=${type}`
+    })
+  },
+
+  // 导航跳转方法 
+  onNavlistTap(e) {
+    const url = e.currentTarget.dataset.url
+    if(!url) return
+    wx.navigateTo({
+      url: `/pages/ucenter/${url}/${url}`
     })
   },
 

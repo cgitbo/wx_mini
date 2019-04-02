@@ -1,5 +1,5 @@
 <!--pages/car/shopping/shopping.wxml-->
-<view class='container'>
+<view class='container {{IsIPX && "container-ipx"}}'>
   <view class='order-addr' catch:tap='onToggleAddressTap'>
     <view class='address'>
       <image src='/images/order/detail-addr.png' class='img' />

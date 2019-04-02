@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "yh-goodsList": "/components/goodsList/cmp",
+    "yh-countChoose": "/components/countChoose/cmp",
+    "yh-shopBar": "/components/shopBar/cmp"
+  },
+  "navigationBarTitleText": "购物车"
 }

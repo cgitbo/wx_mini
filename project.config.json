@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -92,6 +92,28 @@
 					"id": -1,
 					"name": "address",
 					"pathName": "pages/car/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wallet",
+					"pathName": "pages/ucenter/wallet/wallet",
+					"query": "type=2",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "withdraw",
+					"pathName": "pages/ucenter/withdraw/withdraw",
+					"query": "bankInfo={\"name\":\"中信银行\",\"number\":8905,\"icon\":\"no-bank\"}",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "bankCard",
+					"pathName": "pages/ucenter/bankCard/bankCard",
+					"query": "",
 					"scene": null
 				}
 			]

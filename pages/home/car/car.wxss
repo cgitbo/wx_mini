@@ -1,1 +1,113 @@
 /* pages/home/car/car.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.car-list {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  overflow: hidden;
+}
+
+.car-list .head {
+  display: flex;
+}
+
+.car-list .head .bar-checkbox {
+  margin-right: 20rpx;
+  width: 54rpx;
+}
+
+.car-list .shop-bar {
+  width: 630rpx;
+}
+
+.car-list .goods {
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.car-list .goods.touch-move-active {
+  left: -170rpx;
+}
+
+.car-list .goods .del {
+  width: 150rpx;
+  height: 100%;
+  position: absolute;
+  right: -170rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.car-list .goods .del .text {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.car-list .goods {
+  padding-left: 80rpx;
+}
+
+.car-list .goods .checkbox {
+  position: absolute;
+  left: 10rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.car-list .goods .count-choose {
+  position: absolute;
+  right: 0;
+  bottom: 20rpx;
+}
+
+.fixed-bug {
+  height: 98rpx;
+}
+
+/* 订单结算 */
+
+.btn-group {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: hsla(0, 0%, 100%, 0.95);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.btn-group .total {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn-group .buy-now {
+  color: #fff;
+  width: 248rpx;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32rpx;
+}
+
+.btn-group .small {
+  font-size: 24rpx;
+  font-weight: normal;
+}

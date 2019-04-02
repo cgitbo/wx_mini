@@ -1,0 +1,50 @@
+/* pages/ucenter/bankCard/bankCard.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.bank-wrap {
+  padding: 0 24rpx;
+}
+
+.bank-wrap .mess {
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 银行卡信息 */
+
+.bank-info {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+}
+
+.list-item {
+  font-size: 26rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  align-items: center;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.list-item .title {
+  font-size: 28rpx;
+  color: #666;
+  width: 130rpx;
+  margin-right: 20rpx;
+}
+.list-item .value {
+  flex: 1;
+  height: 88rpx;
+}
+.list-item .value.pick {
+  width: 420rpx;
+}

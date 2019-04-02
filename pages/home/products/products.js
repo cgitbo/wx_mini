@@ -1,4 +1,5 @@
 // pages/home/products/products.js
+const app = getApp()
 Page({
 
   /**
@@ -27,6 +28,7 @@ Page({
     CurIndex: 0, // 当前点击的下标
     NavId: 'navId0', // 要滚动的id值
     MoreBool: false, // 更多菜单状态
+    IsIPX: app.globalData.IsIPX, // 是否ipx
     ProductsList: [ // 要渲染的商品数据
       {
         name: '飞利浦（PHILIPS）E108 陨石黑 直板按键 移动联通2G 双卡双待 老人手机 老年功能机 学生机备机',

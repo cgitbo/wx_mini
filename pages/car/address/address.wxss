@@ -7,7 +7,7 @@ page {
 /* 地址列表 */
 
 .address-wrap {
-  padding-bottom: 100rpx;
+  padding-bottom: 120rpx;
 }
 
 .address-wrap .address {
@@ -51,14 +51,8 @@ page {
   margin-right: 20rpx;
 }
 
-.add-btn-wrap {
+.fixed-bottom {
   padding: 24rpx;
-}
-
-.add-btn-wrap .add-btn {
-  color: #fff;
-  background-color: #45ae8c;
-  border: none;
 }
 
 /* 编辑地址 */
@@ -96,10 +90,6 @@ page {
   border-bottom: 1px solid #f2f2f2;
 }
 
-.address-edit .edit-submit-btn {
+.submit-btn {
   margin-top: 160rpx;
-  padding: 0 24rpx;
-  border: none;
-  background-color: #45ae8c;
-  color: #fff;
 }

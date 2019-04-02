@@ -1,2 +1,93 @@
 <!--pages/home/car/car.wxml-->
-<text>pages/home/car/car.wxml</text>
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <view class='car-wrap' hidden='{{!GoodsList.length}}'>
+
+    <view class='car-list'>
+      <view class='head'>
+        <checkbox-group class='bar-checkbox' bindchange='onCheckAllTap'>
+          <label class='radio'>
+            <checkbox value='1' checked='{{checkedAll}}' />
+          </label>
+        </checkbox-group>
+        <yh-shopBar class='shop-bar' title='可自提' right-text='共计2件商品' />
+      </view>
+      <checkbox-group bindchange='checkboxChange'>
+        <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
+              wx:for='{{GoodsList}}' 
+              wx:key='item.goods_id' 
+              bind:touchstart='onGoodsTouchstart'
+              bind:touchend='onGoodsTouchend' 
+              data-index='{{index}}'>
+          <view class='item'>
+            <label class='checkbox'>
+              <checkbox value='{{item.goods_id}}' checked='{{item.checked}}' />
+            </label>
+            <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
+            <yh-countChoose class='count-choose' />
+          </view>
+          <view class='del bg-red' catchtap='del' data-index='{{index}}'>
+            <view class='text'>删除</view>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+
+    <view class='car-list'>
+      <view class='head'>
+        <checkbox-group class='bar-checkbox' bindchange='onCheckAllTap'>
+          <label class='radio'>
+            <checkbox value='1' checked='{{checkedAll}}' />
+          </label>
+        </checkbox-group>
+        <yh-shopBar class='shop-bar' title='不可自提' right-text='共计2件商品' />
+      </view>
+      <checkbox-group bindchange='checkboxChange'>
+        <view class='goods {{touchMoveActive && ActiveIndex == index && "touch-move-active"}}' 
+              wx:for='{{GoodsList}}' 
+              wx:key='item.goods_id' 
+              bind:touchstart='onGoodsTouchstart'
+              bind:touchend='onGoodsTouchend' 
+              data-index='{{index}}'>
+          <view class='item'>
+            <label class='checkbox'>
+              <checkbox value='{{item.goods_id}}' checked='{{item.checked}}' />
+            </label>
+            <yh-goodsList goods='{{item}}' hide-num='true' catch:tap='onGoodsTap' data-id='{{item.id}}' />
+            <yh-countChoose class='count-choose' />
+          </view>
+          <view class='del bg-red' catchtap='del' data-index='{{index}}'>
+            <view class='text'>删除</view>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+
+    <view class='fixed-bug'></view>
+
+    <view class='btn-group {{IsIPX && "feed-bottom-ipx"}}'>
+      <checkbox-group class='radio-group' bindchange='onCheckAllTap'>
+        <label class="radio">
+          <checkbox value='1' checked='{{checkedAll}}' />
+          全选
+        </label>
+      </checkbox-group>
+      <view class='total'>合计：
+        <view class='red'>987555
+            <text class='small'>积分</text>
+        </view>
+      </view>
+      <view class='buy-now bg-green' catch:tap='onBuynowTap'>去结算<text class='small'>(93件)</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='nothing-wrap' hidden='{{GoodsList.length}}'>
+    <view class='img-text'>
+      <image class='img' src='/images/like.png'></image>
+      <view class='text'>购物车空空如也~~</view>
+    </view>
+    <view class='tip'>“再忙，也要记得买点什么犒劳自己”</view>
+  </view>
+
+</view>

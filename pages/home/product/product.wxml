@@ -1,5 +1,5 @@
 <!--pages/home/product/product.wxml-->
-<view class='container {{IsIPX && "feed-bottom-ipx"}}'>
+<view class='container {{IsIPX && "container-ipx"}}'>
   <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='亓口成衣免烫80支纯棉短袖衬衫 8004' catchtap='onBackTap' />
   <view class='swiper'>
     <yh-swiper class='item' swiper-size='big' swiper-imgs='{{SwiperImgs}}' indicator-dots='{{SwiperConf.indicatorDots}}' />

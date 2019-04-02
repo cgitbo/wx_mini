@@ -3,6 +3,10 @@
 
 /* 解决ipx底部 */
 
+.container-ipx {
+  padding-bottom: 68rpx !important;
+}
+
 .feed-bottom-ipx {
   bottom: 68rpx !important;
 }
@@ -147,6 +151,12 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   box-shadow: 0 2rpx 10rpx #ddd;
 }
 
+.submit-btn .btn {
+  border: none;
+  color: #fff;
+  background-color: #45ae8c;
+}
+
 /* 箭头 */
 
 .icon {
@@ -179,7 +189,35 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   border-bottom: 2rpx solid #999;
 }
 
+/* 没内容的样式 */
 
-.normal {
+.nothing-wrap {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30rpx 0;
+}
+
+.nothing-wrap .img-text {
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.nothing-wrap .img-text .img {
+  width: 88rpx;
+  height: 66rpx;
+  margin-right: 24rpx;
+}
+
+.nothing-wrap .tip {
   font-size: 24rpx;
+  color: #999;
+  height: 46rpx;
+  line-height: 46rpx;
 }

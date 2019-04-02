@@ -1,5 +1,5 @@
 <!--pages/ucenter/order/order.wxml-->
-<view class='container {{IsIPX && "feed-bottom-ipx"}}'>
+<view class='container {{IsIPX && "container-ipx"}}'>
   <view class='order-nav'>
     <view class='nav {{index == OrderType ? "cur" : ""}}' wx:for='{{OrderNavList}}' wx:key='*this' catchtap='onOrderNavTap' data-type='{{index}}'>{{item}}</view>
   </view>

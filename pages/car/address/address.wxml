@@ -1,5 +1,5 @@
 <!--pages/car/address/address.wxml-->
-<view class='container {{IsIPX && "feed-bottom-ipx"}}'>
+<view class='container {{IsIPX && "container-ipx"}}'>
   <view class='address-wrap' hidden='{{AddressEditBool}}'>
     <view class='address' wx:for='{{AddressList}}' wx:key catch:tap='onSelectAddressTap'>
       <view class='item'>
@@ -28,8 +28,10 @@
 
     <view class='fixed-bug'></view>
 
-    <view class='add-btn-wrap fixed-bottom'>
-      <button form-type='submit' plain class='add-btn {{IsIPX && "feed-bottom-ipx"}}'>添加新地址</button>
+    <view class='fixed-bottom'>
+      <view class='submit-btn'>
+        <button form-type='submit' plain class='btn {{IsIPX && "feed-bottom-ipx"}}'>添加新地址</button>
+      </view>
     </view>
   </view>
 
@@ -58,7 +60,9 @@
             <switch name='switch' checked />
           </view>
 
-          <button form-type='submit' plain class='edit-submit-btn'>保存</button>
+          <view class='submit-btn'>
+            <button form-type='submit' plain class='btn'>保存</button>
+          </view>
       </form>
     </view>
   </view>

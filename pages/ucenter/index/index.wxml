@@ -66,7 +66,7 @@
   </view>
 
   <view class='nav-box'>
-    <view class='nav-item' wx:for='{{navList}}' wx:key='index'>
+    <view class='nav-item' wx:for='{{navList}}' wx:key='index' catch:tap='onNavlistTap' data-url='{{item.url}}'>
       <image src='{{item.img}}'></image>
       <view class='name'>{{item.name}}</view>
     </view>

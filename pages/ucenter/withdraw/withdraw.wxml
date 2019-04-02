@@ -1,0 +1,38 @@
+<!--pages/ucenter/withdraw/withdraw.wxml-->
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <view class='head-wrap'>
+    <image class='img' src='/images/ucenter/{{BankInfo.icon}}.png' />
+    <view class='bank-info'>
+      <view class='name'>{{BankInfo.name}}</view>
+      <view class='des'>尾号 {{BankInfo.number}} 的银行卡</view>
+    </view>
+  </view>
+
+  <form bindsubmit='onAmountFormSubmit'>
+    <view class='amount-wrap'>
+      <view class='title'>提现金额</view>
+      <view class='img-inp'>
+        <view class='rmb'>￥</view>
+        <input class='inp' name='amount' focus type='number' maxlength='5' bindinput='onAmountInput' />
+      </view>
+    </view>
+
+    <view class='amount-wrap pass-wrap'>
+      <view class='title'>提现密码</view>
+      <input class='inp' name='password' password />
+    </view>
+
+    <view class='tip-msg'>
+      <view class='text'>
+        <text class='red'>1.</text>当前可提现金额 <text class='red'>29500元</text>
+      </view>
+      <view class='text'>
+        <text class='red'>2.</text>预计7个工作日到账。
+      </view>
+    </view>
+
+    <view class='submit-btn'>
+      <button class='btn' form-type='submit' plain>提交</button>
+    </view>
+  </form>
+</view>

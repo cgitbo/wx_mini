@@ -1,0 +1,86 @@
+/* pages/ucenter/withdraw/withdraw.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+/* 银行卡信息 */
+
+.head-wrap {
+  display: flex;
+  height: 108rpx;
+  align-items: center;
+  padding: 0 24rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.head-wrap .img {
+  width: 72rpx;
+  height: 72rpx;
+  margin-right: 24rpx;
+}
+
+.head-wrap .des {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 提现金额 */
+
+.amount-wrap {
+  margin-top: 20rpx;
+  padding: 0 24rpx;
+  background-color: #fff;
+}
+
+.amount-wrap .title {
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.img-inp {
+  height: 90rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.img-inp .rmb {
+  font-size: 50rpx;
+  color: #e50113;
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+}
+
+.img-inp .inp {
+  height: 70rpx;
+  font-size: 72rpx;
+  padding-left: 50rpx;
+}
+
+/* pass */
+.pass-wrap .inp {
+  padding-bottom: 10rpx;
+}
+
+/* 提示信息 */
+
+.tip-msg {
+  padding: 24rpx;
+}
+
+.tip-msg .text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* 提交按钮 */
+
+.submit-btn {
+  margin-top: 130rpx;
+  padding: 0 24rpx;
+}
+
