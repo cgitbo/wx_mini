@@ -1,0 +1,61 @@
+/* pages/ucenter/transfer/transfer.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+/* 转账手机号 */
+
+.re-mobiel {
+  height: 88rpx;
+  background-color: #fff;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+  position: relative;
+}
+
+.re-mobiel .title {
+  margin-right: 40rpx;
+  width: 108rpx;
+}
+
+.re-mobiel .inp {
+  flex: 1;
+  height: 100%;
+}
+
+.mobile-wrap {
+  width: 600rpx;
+  z-index: 9;
+  position: absolute;
+  top: 86rpx;
+  left: 130rpx;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  box-shadow: 0 2rpx 10rpx #ddd;
+}
+
+.mobile-wrap .item {
+  height: 56rpx;
+  line-height: 56rpx;
+  color: #565656;
+  font-size: 28rpx;
+}
+
+/* 提升信息 */
+
+.tip-wrap {
+  font-size: 24rpx;
+  color: #999;
+  padding: 24rpx;
+}
+
+/* 提交按钮 */
+
+.submit-btn {
+  margin-top: 140rpx;
+  padding: 0 24rpx;
+}

@@ -41,10 +41,30 @@ page {
   width: 130rpx;
   margin-right: 20rpx;
 }
+
 .list-item .value {
   flex: 1;
   height: 88rpx;
 }
-.list-item .value.pick {
+
+.list-item .value.picker {
   width: 420rpx;
+}
+
+/* 提示信息 */
+
+.tip-msg {
+  padding: 24rpx;
+}
+
+.tip-msg .text {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* btn */
+
+.submit-btn {
+  margin-top: 140rpx;
 }

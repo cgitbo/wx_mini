@@ -1,6 +1,0 @@
-/* components/cityData/cmp.wxss */
-
-.picker {
-  padding: 13px;
-  background-color: #fff;
-}

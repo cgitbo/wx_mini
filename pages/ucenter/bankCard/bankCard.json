@@ -1,6 +1,4 @@
 {
-  "usingComponents": {
-    "yh-cityData": "/components/cityData/cmp"
-  },
+  "usingComponents": {},
   "navigationBarTitleText": "绑定银行卡"
 }

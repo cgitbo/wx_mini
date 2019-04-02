@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": 0,
@@ -114,6 +114,13 @@
 					"name": "bankCard",
 					"pathName": "pages/ucenter/bankCard/bankCard",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "transfer",
+					"pathName": "pages/ucenter/transfer/transfer",
+					"query": "type=balance",
 					"scene": null
 				}
 			]

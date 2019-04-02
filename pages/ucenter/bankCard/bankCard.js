@@ -6,14 +6,33 @@ Page({
    */
   data: {
     BankList: ['请选择', '农业银行', '中国银行', '建设银行', '中信银行', '招商银行', '工商银行', '农商银行', '其他'],
-    BankIndex: 0 // 当前银行卡对应的list下标
+    BankIndex: 0, // 当前银行卡对应的list下标
+    region: ['请选择'], // 默认选择的省市区
+    postcode: '311200' // 邮编
   },
 
+  // 选择开户地区
+  bindRegionChange(e) {
+    // 值 编码 邮编
+    const { value, code, postcode } = e.detail
+    this.setData({
+      region: value,
+      postcode
+    })
+  },
+
+  // 选择银行
   bindPickerBankChange(e) {
     const BankIndex = e.detail.value
     this.setData({
       BankIndex 
     })
+  },
+
+  // 表单提交
+  onCardFormSubmit(e) {
+    const params = e.detail
+    console.log(params)
   },
 
   /**

@@ -1,0 +1,38 @@
+<!--pages/ucenter/transfer/transfer.wxml-->
+<view class='container'>
+  <view class='re-wrap' hidden='{{Formstep != 1}}'>
+    <view class='opp-wrap'>
+      <view class='re-mobiel'>
+        <view class='title'>对方账号</view>
+        <input type='number' 
+              class='inp'
+              value='{{ReMobile}}'
+              placeholder='请输入收款人手机号' 
+              bindinput='onReMobileInput' 
+              bindfocus='onReMobileFocus'
+              bindblur='onReMobileBlur'
+              maxlength='11' />
+
+        <view class='mobile-wrap' hidden='{{!showReMobileListBool || !historyReMobileList.length}}'>
+          <view class='item'
+                wx:for='{{historyReMobileList}}' 
+                wx:key 
+                data-index='{{index}}'
+                catch:tap='onHistoryReMobileTap'>
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <view class='tip-wrap'>
+        <view>
+          <text class='red'>1.</text>实时转入对方账号, 无法撤销
+        </view>
+      </view>
+
+      <view class='submit-btn' catch:tap='onNextBtnTap'>
+        <button class='btn'>下一步</button>
+      </view>
+    </view>
+  </view>
+</view>

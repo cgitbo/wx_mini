@@ -8,8 +8,8 @@ Page({
   data: {
     ListNav: [ // 下面的菜单栏
       { title: '我要提现', imgSrc: '/images/ucenter/card.png', url: 'withdraw' },
-      { title: '我要转账', imgSrc: '/images/ucenter/money.png', url: '' },
-      { title: '账单明细', imgSrc: '/images/ucenter/bill.png', url: '' }
+      { title: '我要转账', imgSrc: '/images/ucenter/money.png', url: 'transfer' },
+      { title: '账单明细', imgSrc: '/images/ucenter/bill.png', url: 'balance' }
     ],
     hasBankInfo: false, // 是否有银行卡
     BankInfo: { // 银行卡信息
@@ -53,9 +53,14 @@ Page({
   // 页面跳转
   onListnavTap(e) {
     const url = e.currentTarget.dataset.url
-    const bankInfo = JSON.stringify(this.data.BankInfo)
+    const navUrlConf = {
+      withdraw: () => `withdraw/withdraw?bankInfo=${JSON.stringify(this.data.BankInfo)}`,
+      transfer: () => `transfer/transfer?type=balance`
+    }
+    const navUrl = navUrlConf[url] && navUrlConf[url]()
+    if (!navUrl) return
     wx.navigateTo({
-      url: `/pages/ucenter/${url}/${url}?bankInfo=${bankInfo}`
+      url: `/pages/ucenter/${navUrl}`
     })
   },
 
