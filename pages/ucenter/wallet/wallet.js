@@ -9,9 +9,9 @@ Page({
     ListNav: [ // 下面的菜单栏
       { title: '我要提现', imgSrc: '/images/ucenter/card.png', url: 'withdraw' },
       { title: '我要转账', imgSrc: '/images/ucenter/money.png', url: 'transfer' },
-      { title: '账单明细', imgSrc: '/images/ucenter/bill.png', url: 'balance' }
+      { title: '账单明细', imgSrc: '/images/ucenter/bill.png', url: 'billingDetail' }
     ],
-    hasBankInfo: false, // 是否有银行卡
+    hasBankInfo: true, // 是否有银行卡
     BankInfo: { // 银行卡信息
       name: '中信银行',
       number: 8905,
@@ -54,13 +54,14 @@ Page({
   onListnavTap(e) {
     const url = e.currentTarget.dataset.url
     const navUrlConf = {
-      withdraw: () => `withdraw/withdraw?bankInfo=${JSON.stringify(this.data.BankInfo)}`,
-      transfer: () => `transfer/transfer?type=balance`
+      withdraw: () => `/pages/ucenter/withdraw/withdraw?bankInfo=${JSON.stringify(this.data.BankInfo)}`,
+      transfer: () => `/pages/ucenter/transfer/transfer?type=balance`,
+      billingDetail: () => `/pages/ucenter/billingDetail/billingDetail`
     }
     const navUrl = navUrlConf[url] && navUrlConf[url]()
     if (!navUrl) return
     wx.navigateTo({
-      url: `/pages/ucenter/${navUrl}`
+      url: `${navUrl}`
     })
   },
 

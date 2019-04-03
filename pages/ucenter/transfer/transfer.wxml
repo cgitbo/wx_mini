@@ -35,4 +35,34 @@
       </view>
     </view>
   </view>
+
+  <view class='trans-wrap' hidden='{{Formstep != 2}}'>
+    <view class='user-wrap'>
+      <image class='img' src='https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg' />
+      <view class='name'>熊大</view>
+      <view class='mobile'>18856699888</view>
+    </view>
+
+    <view class='amount-wrap'>
+        <view class='title'>转账金额</view>
+
+        <view class='amount'>
+          <view class='rmb'>￥</view>
+          <input type='number' 
+                class='inp'
+                value='{{amountVal}}'
+                maxlength='5' />
+        </view>
+    </view>
+
+    <view class='tip-wrap'>
+      <view>
+        <text class='red'>1.</text>可转账金额 <text class='red'>26800.00元</text>
+      </view>
+    </view>
+
+    <view class='submit-btn'>
+      <button class='btn'>提交</button>
+    </view>
+  </view>
 </view>

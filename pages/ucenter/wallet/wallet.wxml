@@ -5,7 +5,7 @@
 
     <view class='bank-wrap'>
       <view class='bank-title'>
-        <image class='img' src='/images/ucenter/{{hasBankInfo ? BankIcon : "no-bank"}}.png' binderror='onIconError'></image>
+        <image class='img' src='/images/ucenter/bankIcon/{{hasBankInfo ? BankIcon : "no-bank"}}.png' binderror='onIconError'></image>
         <view class='bank-name'>
           <view class='name'>{{hasBankInfo ? BankInfo.name : '— — — —'}}</view>
           <view class='type'>储蓄卡</view>
@@ -24,7 +24,7 @@
 
   </view>
 
-  <view class='amount-wrap list-item'>
+  <view class='amount-wrap list-item box-shadow'>
     <view class='item col-line'>
       <view class='title'>账户余额</view>
       <view class='number red'>27888.00</view>
@@ -35,7 +35,7 @@
     </view>
   </view>
 
-  <view class='detail-wrap list-item'>
+  <view class='detail-wrap list-item box-shadow'>
     <view class='item' wx:for='{{ListNav}}' wx:key data-url='{{item.url}}' catch:tap='onListnavTap'>
       <view class='img-text'>
         <image class='img' src='{{item.imgSrc}}' />

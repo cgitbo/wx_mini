@@ -127,11 +127,12 @@ page {
   align-items: center;
   height: 98rpx;
   padding: 0 24rpx;
+  color: #666;
 }
 
 .img-text {
   display: flex;
-  font-size: 28rpx;
+  font-size: 30rpx;
 }
 
 .img-text .img {

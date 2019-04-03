@@ -16,7 +16,8 @@
     "pages/ucenter/wallet/wallet",
     "pages/ucenter/withdraw/withdraw",
     "pages/ucenter/bankCard/bankCard",
-    "pages/ucenter/transfer/transfer"
+    "pages/ucenter/transfer/transfer",
+    "pages/ucenter/billingDetail/billingDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

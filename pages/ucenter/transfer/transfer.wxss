@@ -59,3 +59,64 @@ page {
   margin-top: 140rpx;
   padding: 0 24rpx;
 }
+
+/* 用户信息 */
+.user-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-wrap .img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-top: 40rpx;
+}
+
+.user-wrap .name {
+  font-size: 32rpx;
+  color: #111;
+  margin-top: 28rpx;
+}
+
+.user-wrap .mobile {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 22rpx;
+}
+
+/* 转账金额 */
+
+.amount-wrap {
+  background-color: #fff;
+  padding: 0 24rpx;
+  margin-top: 40rpx;
+}
+
+.amount-wrap .title {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.amount {
+  display: flex;
+  height: 100rpx;
+}
+
+.amount .rmb {
+  font-size: 50rpx;
+  color: #e50113;
+  width: 40rpx;
+  height: 46rpx;
+  margin-top: 10rpx;
+}
+
+.amount .inp {
+  flex: 1;
+  font-size: 72rpx;
+  height: 70rpx;
+  margin-left: 5rpx;
+}

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 12,
 			"list": [
 				{
 					"id": 0,
@@ -121,6 +121,12 @@
 					"name": "transfer",
 					"pathName": "pages/ucenter/transfer/transfer",
 					"query": "type=balance",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "billingDetail",
+					"pathName": "pages/ucenter/billingDetail/billingDetail",
 					"scene": null
 				}
 			]
