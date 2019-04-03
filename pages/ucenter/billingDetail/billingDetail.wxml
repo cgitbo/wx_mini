@@ -1,4 +1,29 @@
 <!--pages/ucenter/billingDetail/billingDetail.wxml-->
 <view class='container'>
-  <view class=''></view>
+  <view wx:for='{{4}}'>
+    <view class='{{fixedIndex == index && "head-fixed"}}'>
+      <view class='head-wrap'>
+        <view class='month'>2019-02</view>
+        <view class='income'>
+          <text class='text'>收入: ¥18992</text>
+          <text class='text'>支出: ¥8992</text>
+        </view>
+        <image class='date-icon' src='/images/ucenter/bill-date.png' />
+      </view>
+    </view>
+
+    <view class='bill-wrap'>
+      <view class='bill-item' wx:for='{{BillList}}' wx:key>
+        <image class='img' src='/images/ucenter/{{item.icon}}' />
+        <view class='detail-wrap'>
+          <view class='log-wrap'>
+            <view class='des fixed-line line-clamp-2'>{{item.log}}</view>
+            <view class='type'>{{item.type}}</view>
+            <view class='time'>03-14 12:11</view>
+          </view>
+          <view class='bill-value {{item.value > 0 && "red"}}'>{{item.value > 0 ? '+'+item.value : item.value}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

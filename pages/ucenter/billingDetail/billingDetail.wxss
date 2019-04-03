@@ -1,1 +1,92 @@
 /* pages/ucenter/billingDetail/billingDetail.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.head-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 108rpx;
+  background-color: #f8f8f8;
+}
+
+.head-wrap {
+  height: 108rpx;
+  padding: 0 24rpx;
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.head-wrap .month {
+  font-size: 28rpx;
+  color: #333;
+  height: 46rpx;
+  line-height: 46rpx;
+  margin-top: 10rpx;
+}
+
+.head-wrap .income {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.head-wrap .income .text {
+  margin-right: 40rpx;
+}
+
+.head-wrap .date-icon {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 24rpx;
+  top: 24rpx;
+}
+
+.bill-wrap {
+  background-color: #fff;
+  padding-bottom: 30rpx;
+}
+
+.bill-item {
+  padding: 24rpx 24rpx 0;
+  display: flex;
+}
+
+.bill-item .detail-wrap {
+  margin-left: 40rpx;
+  flex: 1;
+  font-size: 26rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill-item:not(:last-child) .detail-wrap {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.bill-item .img {
+  width: 56rpx;
+  min-width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+}
+
+.detail-wrap .log-wrap .type {
+  margin-top: 10rpx;
+}
+
+.detail-wrap .log-wrap .time {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail-wrap .bill-value {
+  font-size: 30rpx;
+  margin-left: 40rpx;
+}

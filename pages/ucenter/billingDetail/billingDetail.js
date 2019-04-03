@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    BillList: [ // 账单明细
+      { icon: 'bill-card.png', type: '提现', log: '用户18167156338获得高级总监分总监分红用户8获得高级总监分红', value: -15 },
+      { icon: 'bill-rmb.png', type: '转账', log: '用户18167156338获得高级总监分红用户188获得高级总监分红用户18167156338获得高级总监分红', value: 315 },
+      { icon: 'bill-rmb.png', type: '税收', log: '用户18167156总监分红', value: 675 },
+      { icon: 'bill-card.png', type: '分红', log: '用户18167156338获得高级总监分红', value: 15 },
+      { icon: 'bill-rmb.png', type: '重消', log: '用户18167156338获得高级总监分红', value: -215 },
+      { icon: 'bill-card.png', type: '提现', log: '用户18167156338获得高级总监分红', value: 695 },
+      { icon: 'bill-trans.png', type: '邀请奖励', log: '邀请用户18167156338获得邀请奖励', value: -815 },
+    ],
+    fixedIndex: 1
   },
 
   /**
