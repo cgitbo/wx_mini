@@ -11,6 +11,7 @@ page {
   right: 0;
   height: 108rpx;
   background-color: #f8f8f8;
+  z-index: 9;
 }
 
 .head-wrap {
@@ -18,6 +19,8 @@ page {
   padding: 0 24rpx;
   position: relative;
   background-color: #f8f8f8;
+  box-sizing: border-box;
+  border: 1px solid #eee;
 }
 
 .head-wrap .month {
@@ -25,7 +28,7 @@ page {
   color: #333;
   height: 46rpx;
   line-height: 46rpx;
-  margin-top: 10rpx;
+  padding-top: 10rpx;
 }
 
 .head-wrap .income {
@@ -77,6 +80,11 @@ page {
 
 .detail-wrap .log-wrap .type {
   margin-top: 10rpx;
+  color: #666;
+}
+
+.detail-wrap .log-wrap .des {
+  line-height: 1.5;
 }
 
 .detail-wrap .log-wrap .time {

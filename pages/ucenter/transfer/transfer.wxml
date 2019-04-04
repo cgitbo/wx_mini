@@ -4,7 +4,8 @@
     <view class='opp-wrap'>
       <view class='re-mobiel'>
         <view class='title'>对方账号</view>
-        <input type='number' 
+        <input focus
+              type='number' 
               class='inp'
               value='{{ReMobile}}'
               placeholder='请输入收款人手机号' 

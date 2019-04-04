@@ -6,15 +6,221 @@ Page({
    */
   data: {
     BillList: [ // 账单明细
-      { icon: 'bill-card.png', type: '提现', log: '用户18167156338获得高级总监分总监分红用户8获得高级总监分红', value: -15 },
-      { icon: 'bill-rmb.png', type: '转账', log: '用户18167156338获得高级总监分红用户188获得高级总监分红用户18167156338获得高级总监分红', value: 315 },
-      { icon: 'bill-rmb.png', type: '税收', log: '用户18167156总监分红', value: 675 },
-      { icon: 'bill-card.png', type: '分红', log: '用户18167156338获得高级总监分红', value: 15 },
-      { icon: 'bill-rmb.png', type: '重消', log: '用户18167156338获得高级总监分红', value: -215 },
-      { icon: 'bill-card.png', type: '提现', log: '用户18167156338获得高级总监分红', value: 695 },
-      { icon: 'bill-trans.png', type: '邀请奖励', log: '邀请用户18167156338获得邀请奖励', value: -815 },
+      {
+        time: '2019-03',
+        income: '18654',
+        expenditure: '9854',
+        list: [
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
+            value: -15,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '转账',
+            log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
+            value: 315,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '税收',
+            log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
+            value: 675,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '分红',
+            log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
+            value: 15,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '重消',
+            log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
+            value: -215,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
+            value: 695,
+            time: '03-14-12:07'
+          },
+          {
+            icon: 'bill-trans.png',
+            type: '邀请奖励',
+            log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
+            value: -815,
+            time: '03-14-12:07'
+          }
+        ]
+      },
+      {
+        time: '2019-02',
+        income: '98514',
+        expenditure: '44531',
+        list: [
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
+            value: -15,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '转账',
+            log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
+            value: 315,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '税收',
+            log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
+            value: 675,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '分红',
+            log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
+            value: 15,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '重消',
+            log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
+            value: -215,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
+            value: 695,
+            time: '02-14-12:07'
+          },
+          {
+            icon: 'bill-trans.png',
+            type: '邀请奖励',
+            log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
+            value: -815,
+            time: '02-14-12:07'
+          }
+        ]
+      },
+      {
+        time: '2019-01',
+        income: '5654',
+        expenditure: '14730',
+        list: [
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
+            value: -15,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '转账',
+            log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
+            value: 315,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '税收',
+            log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
+            value: 675,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '分红',
+            log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
+            value: 15,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-rmb.png',
+            type: '重消',
+            log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
+            value: -215,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-card.png',
+            type: '提现',
+            log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
+            value: 695,
+            time: '01-14-12:07'
+          },
+          {
+            icon: 'bill-trans.png',
+            type: '邀请奖励',
+            log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
+            value: -815,
+            time: '01-14-12:07'
+          }
+        ]
+      }
     ],
-    fixedIndex: 1
+    BillHead: { // 固定顶部的信息
+      time: '2019-03',
+      income: '9547',
+      expenditure: '6485'
+    },
+    fixedIndex: 0, // 固定头部的下标
+    fixedTop: 0
+  },
+
+  // 获取滚动头部的距离
+  _getAllRects() {
+    new Promise((resolve, reject) => {
+      wx.createSelectorQuery().selectAll('.head-fixed-wrap').boundingClientRect(rects => {
+        const arr = rects.filter(item => {
+          return item.top < 60 && item.top > 0
+        })
+        if (arr.length) resolve(arr)
+      }).exec()
+    }).then(res => {
+      const index = res[0].dataset.index
+      this._setHeadFixedItem({ index, top: res[0].top })
+    })
+  },
+
+  // 设置滚动的index及滚动条数据
+  _setHeadFixedItem({ index, top }) {
+
+    let { fixedTop, fixedIndex, BillList } = this.data
+
+    if (fixedTop < top && top > 50) index--
+    this.setData({
+      fixedTop: top
+    })
+
+    if (index == fixedIndex) return
+
+    const { time, income, expenditure } = BillList[index]
+    this.setData({
+      fixedIndex: index,
+      BillHead: { time, income, expenditure }
+    })
+  },
+
+  // 滚动监听
+  onPageScroll() {
+    this._getAllRects()
   },
 
   /**
