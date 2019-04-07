@@ -17,7 +17,8 @@
     "pages/ucenter/withdraw/withdraw",
     "pages/ucenter/bankCard/bankCard",
     "pages/ucenter/transfer/transfer",
-    "pages/ucenter/billingDetail/billingDetail"
+    "pages/ucenter/billingDetail/billingDetail",
+    "pages/ucenter/report/report"
   ],
   "window": {
     "backgroundTextStyle": "light",

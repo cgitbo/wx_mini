@@ -1,14 +1,12 @@
 <!--pages/ucenter/bankCard/bankCard.wxml-->
-<view class='container'>
-  <view class='bank-wrap'>
-    <view class='mess'>请绑定本人银行卡</view>
-    <form bindsubmit='onCardFormSubmit'>
-      <view class='bank-info'>
-        <view class='list-item' >
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <form bindsubmit='onCardFormSubmit'>
+    <view class='form-wrap'>
+      <view class='mess'>请绑定本人银行卡</view>
+      <view class='form-info'>
+        <view class='list-item'>
           <view class='title'>开户银行</view>
-          <picker bindchange='bindPickerBankChange' 
-                  value='{{BankIndex}}' 
-                  range='{{BankList}}'>
+          <picker bindchange='bindPickerBankChange' value='{{BankIndex}}' range='{{BankList}}'>
             <input name='bank_name' hidden value='{{BankList[BankIndex]}}' />
             <view class='value picker'>{{BankList[BankIndex]}}</view>
           </picker>
@@ -23,14 +21,12 @@
         </view>
         <view class='list-item'>
           <view class='title'>开户地区</view>
-            <picker mode='region'
-                    bindchange='bindRegionChange'
-                    value='{{region}}'>
-              <input name='bank_area' hidden value='{{postcode}}' />
-              <view class='value picker'>
-                {{region[0]}} {{region[1]}} {{region[2]}}
-              </view>
-            </picker>
+          <picker mode='region' bindchange='bindRegionChange' value='{{region}}'>
+            <input name='bank_area' hidden value='{{postcode}}' />
+            <view class='value picker'>
+              {{region[0]}} {{region[1]}} {{region[2]}}
+            </view>
+          </picker>
         </view>
         <view class='list-item'>
           <view class='title'>开户支行</view>
@@ -41,22 +37,22 @@
           <input name='bank_number' class='value' placeholder='请输入银行卡卡号' type='number' />
         </view>
       </view>
+    </view>
 
-      <view class='tip-msg'>
-        <view class='text'>
-          <text class='red'>1.</text>银行卡信息必须填写完整准确。
-        </view>
-        <view class='text'>
-          <text class='red'>2.</text>绑定的必须是本人的银行卡。
-        </view>
-         <view class='text'>
-          <text class='red'>3.</text>银行卡信息填写不正确会导致提现失败。
-        </view>
+    <view class='tip-msg'>
+      <view class='text'>
+        <text class='red'>1.</text>银行卡信息必须填写完整准确。
       </view>
+      <view class='text'>
+        <text class='red'>2.</text>绑定的必须是本人的银行卡。
+      </view>
+      <view class='text'>
+        <text class='red'>3.</text>银行卡信息填写不正确会导致提现失败。
+      </view>
+    </view>
 
-      <view class='submit-btn'>
-        <button class='btn' plain form-type='submit'>提交</button>
-      </view>
-    </form>
-  </view>
+    <view class='submit-btn'>
+      <button class='btn' plain form-type='submit'>提交</button>
+    </view>
+  </form>
 </view>

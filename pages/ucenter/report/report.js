@@ -1,4 +1,4 @@
-// pages/ucenter/bankCard/bankCard.js
+// pages/ucenter/report/report.js
 const app = getApp()
 Page({
 
@@ -7,8 +7,8 @@ Page({
    */
   data: {
     IsIPX: app.globalData.IsIPX, // 是否ipx
-    BankList: ['请选择', '农业银行', '中国银行', '建设银行', '中信银行', '招商银行', '工商银行', '农商银行', '其他'],
-    BankIndex: 0, // 当前银行卡对应的list下标
+    ReportAmountList: ['1500', '6000', '18000', '36000'], // 报单金额数组
+    AmountIndex: 1, // 选择报单金额数组的下标
     region: ['请选择'], // 默认选择的省市区
     postcode: '311200' // 邮编
   },
@@ -23,11 +23,11 @@ Page({
     })
   },
 
-  // 选择银行
-  bindPickerBankChange(e) {
-    const BankIndex = e.detail.value
+  // 选择报单金额
+  bindPickerAmountChange(e) {
+    const AmountIndex = e.detail.value
     this.setData({
-      BankIndex 
+      AmountIndex
     })
   },
 

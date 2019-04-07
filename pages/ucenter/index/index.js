@@ -9,7 +9,7 @@ Page({
   data: {
     navList: [
       { name: '我的钱包', img: '/images/nav/wallet.png', url: 'wallet' },
-      { name: '我要报单', img: '/images/nav/report.png', url: '' },
+      { name: '我要报单', img: '/images/nav/report.png', url: 'report' },
       { name: '会员升级', img: '/images/nav/update.png', url: '' },
       { name: '我的推荐', img: '/images/nav/referrer.png', url: '' },
       { name: '我的积分', img: '/images/nav/point.png', url: '' },
