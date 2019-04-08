@@ -1,0 +1,20 @@
+<!--pages/ucenter/setting/setting.wxml-->
+<view class='container'>
+  <view class='user-wrap'>
+    <image class='img' src='https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=1ae574b8e8cd7b89f66c3c833f254291/1e30e924b899a90182ea2f4413950a7b0308f5e1.jpg' />
+    <view class='user'>
+      <view class='name'>李元芳</view>
+      <view class='des'>实习经销商</view>
+    </view>
+  </view>
+
+  <view class='list-item'>
+    <view class='item' wx:for='{{UserSettingList}}' wx:key data-url='{{item.url}}' catch:tap='onSettingListTap'>
+      <view class='title'>{{item.title}}</view>
+      <view class='des {{item.type == "author" && UserAuthor === false ? "red" : ""}}'>{{item.des}}</view>
+      <view class='icon'>
+        <view class='icon-right' />
+      </view>
+    </view>
+  </view>
+</view>

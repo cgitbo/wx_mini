@@ -21,7 +21,11 @@
     "pages/ucenter/report/report",
     "pages/ucenter/userUpgrade/userUpgrade",
     "pages/ucenter/referrer/referrer",
-    "pages/ucenter/point/point"
+    "pages/ucenter/point/point",
+    "pages/ucenter/setting/setting",
+    "pages/ucenter/verification/verification",
+    "pages/ucenter/qrCode/qrCode",
+    "pages/ucenter/reportList/reportList"
   ],
   "window": {
     "backgroundTextStyle": "light",

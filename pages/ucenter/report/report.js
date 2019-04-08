@@ -9,7 +9,7 @@ Page({
     IsIPX: app.globalData.IsIPX, // 是否ipx
     ReportAmountList: ['1500', '6000', '18000', '36000'], // 报单金额数组
     AmountIndex: 1, // 选择报单金额数组的下标
-    region: ['请选择'], // 默认选择的省市区
+    region: ['浙江省', '杭州市', '萧山区'], // 默认选择的省市区
     postcode: '311200' // 邮编
   },
 

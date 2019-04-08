@@ -46,6 +46,11 @@ page {
   height: 88rpx;
 }
 
+.list-item .value.textarea {
+  max-height: 88rpx;
+  line-height: 1.5;
+}
+
 /* 提示信息 */
 
 .tip-msg {

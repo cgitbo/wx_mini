@@ -26,6 +26,10 @@
             </view>
           </picker>
         </view>
+        <view class='list-item'>
+          <view class='title'>详细地址</view>
+          <textarea class='value textarea' auto-height placeholder='请输入详细地址' />
+        </view>
       </view>
     </view>
 
@@ -59,12 +63,12 @@
         <view class='form-info'>
           <label class='list-item'>
             <view class='title'>积分支付</view>
-            <input name='bank_name_user' class='value' value='4521' disabled />
+            <view class='value'> 19785 </view>
             <radio value='' checked='checked' />
           </label>
           <label class='list-item'>
             <view class='title'>余额支付</view>
-            <input name='bank_name_user' class='value' value='9524' disabled />
+            <view class='value'> 9365 </view>
             <radio value='' checked='checked' />
           </label>
         </view>

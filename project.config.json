@@ -139,8 +139,8 @@
 				},
 				{
 					"id": 14,
-					"name": "point",
-					"pathName": "pages/ucenter/point/point",
+					"name": "setting",
+					"pathName": "pages/ucenter/setting/setting",
 					"query": "",
 					"scene": null
 				}
