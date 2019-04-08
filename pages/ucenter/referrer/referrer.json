@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "yh-search": "/components/search/cmp"
+  },
+  "navigationBarTitleText": "我的推荐"
+}

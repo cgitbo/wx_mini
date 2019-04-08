@@ -1,6 +1,6 @@
 /* pages/ucenter/report/report.wxss */
 @import '../../../form.wxss';
 
-page {
-  background-color: #f8f8f8;
+.submit-btn {
+  margin-top: 30rpx;
 }

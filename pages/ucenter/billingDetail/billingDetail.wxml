@@ -5,20 +5,20 @@
     <view class='head-wrap'>
       <view class='month'>{{BillHead.time}}</view>
       <view class='income'>
-        <text class='text'>收入: ¥{{BillHead.income}}</text>
-        <text class='text'>支出: ¥{{BillHead.expenditure}}</text>
+        <text class='text'>收入: {{BillHead.income}}</text>
+        <text class='text'>支出: {{BillHead.expenditure}}</text>
       </view>
       <image class='date-icon' src='/images/ucenter/bill-date.png' />
     </view>
   </view>
 
   <view wx:for='{{BillList}}' wx:key wx:for-item='listItem' wx:for-index='listIndex'>
-    <view class='head-fixed-wrap' data-index='{{listIndex}}' >
+    <view class='head-fixed-wrap' data-index='{{listIndex}}'>
       <view class='head-wrap'>
         <view class='month'>{{listItem.time}}</view>
         <view class='income'>
-          <text class='text'>收入: ¥{{listItem.income}}</text>
-          <text class='text'>支出: ¥{{listItem.expenditure}}</text>
+          <text class='text'>收入: {{listItem.income}}</text>
+          <text class='text'>支出: {{listItem.expenditure}}</text>
         </view>
         <image class='date-icon' src='/images/ucenter/bill-date.png' />
       </view>
@@ -26,11 +26,11 @@
 
     <view class='bill-wrap {{listIndex == 0 ? "bill-pd-top" : ""}}'>
       <view class='bill-item' wx:for='{{listItem.list}}' wx:key>
-        <image class='img' src='/images/ucenter/{{item.icon}}' />
+        <image class='img' src='/images/ucenter/{{IconConf[item.type].icon}}' />
         <view class='detail-wrap'>
           <view class='log-wrap'>
             <view class='des fixed-line line-clamp-2'>{{item.log}}</view>
-            <view class='type'>{{item.type}}</view>
+            <view class='type'>{{IconConf[item.type].name}}</view>
             <view class='time'>{{item.time}}</view>
           </view>
           <view class='bill-value {{item.value > 0 && "red"}}'>{{item.value > 0 ? '+' + item.value : item.value}}</view>

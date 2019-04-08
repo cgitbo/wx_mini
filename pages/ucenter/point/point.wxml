@@ -1,0 +1,18 @@
+<!--pages/ucenter/point/point.wxml-->
+<view class='container'>
+  <view class='head-wrap'>
+    <image class='img' src='/images/ucenter/point-bg.png' />
+    <view class='title'>积分</view>
+    <view class='number'>7800</view>
+  </view>
+
+  <view class='list-item'>
+    <view class='item' wx:for='{{ListNav}}' wx:key data-url='{{item.url}}' catch:tap='onListnavTap'>
+      <image class='img' src='{{item.imgSrc}}' />
+      <view class='title'>{{item.title}}</view>
+      <view class='icon'>
+        <view class='icon-right'></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -5,6 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    IconConf: [ // 图标配置 0 1 2 3 4 5 余额 6 7 8 积分
+      { icon: 'bill-card.png', name: '提现' },
+      { icon: 'bill-rmb.png', name: '转账' },
+      { icon: 'bill-rmb.png', name: '税收' },
+      { icon: 'bill-card.png', name: '分红' },
+      { icon: 'bill-rmb.png', name: '重消' },
+      { icon: 'bill-trans.png', name: '邀请奖励' },
+
+      { icon: 'bill-shop.png', name: '消费' },
+      { icon: 'bill-point.png', name: '增加' },
+      { icon: 'bill-point-trans.png', name: '转账' },
+    ],
     BillList: [ // 账单明细
       {
         time: '2019-03',
@@ -12,50 +24,43 @@ Page({
         expenditure: '9854',
         list: [
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
             value: -15,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '转账',
+            type: '1',
             log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
             value: 315,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '税收',
+            type: '2',
             log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
             value: 675,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '分红',
+            type: '3',
             log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
             value: 15,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '重消',
+            type: '4',
             log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
             value: -215,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
             value: 695,
             time: '03-14-12:07'
           },
           {
-            icon: 'bill-trans.png',
-            type: '邀请奖励',
+            type: '5',
             log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
             value: -815,
             time: '03-14-12:07'
@@ -68,50 +73,43 @@ Page({
         expenditure: '44531',
         list: [
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
             value: -15,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '转账',
+            type: '1',
             log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
             value: 315,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '税收',
+            type: '2',
             log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
             value: 675,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '分红',
+            type: '3',
             log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
             value: 15,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '重消',
+            type: '4',
             log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
             value: -215,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
             value: 695,
             time: '02-14-12:07'
           },
           {
-            icon: 'bill-trans.png',
-            type: '邀请奖励',
+            type: '5',
             log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
             value: -815,
             time: '02-14-12:07'
@@ -124,50 +122,43 @@ Page({
         expenditure: '14730',
         list: [
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 贝博氏彩泥36色超轻粘土儿童手工彩泥黏土太空泥玩具DIY套装',
             value: -15,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '转账',
+            type: '1',
             log: ' 安普康（AMPCOM）网线直通头RJ45水晶头网络连接器方形屏蔽直通头模块延长器 超值版3个装 AMCAT6BK302黑色',
             value: 315,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '税收',
+            type: '2',
             log: ' 方家铺子 黄小米（五谷 杂粮小黄米 月子粥 东北粗粮粥米伴侣）1kg',
             value: 675,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '分红',
+            type: '3',
             log: ' 百草味 超值量贩定制款 每日红枣960g/盒 新疆特产甜心灰枣 零食干果礼盒大礼包免洗枣子',
             value: 15,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-rmb.png',
-            type: '重消',
+            type: '4',
             log: ' 金锣 火腿肠 肉粒多猪肉香肠系列 40g*8支',
             value: -215,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-card.png',
-            type: '提现',
+            type: '0',
             log: ' 香满园 家用 中筋面粉 美味富强小麦粉5kg 包子饺子馒头饼手擀面（新老包装随机发货）',
             value: 695,
             time: '01-14-12:07'
           },
           {
-            icon: 'bill-trans.png',
-            type: '邀请奖励',
+            type: '5',
             log: ' 苹果官方MFI认证 苹果数据线Xs Max/XR/X/8/7手机快充充电器线USB电源线 适iphone5/6s/7Plus/ipad Anker正品',
             value: -815,
             time: '01-14-12:07'

@@ -1,0 +1,2 @@
+/* pages/ucenter/userUpgrade/userUpgrade.wxss */
+@import '../../../form.wxss';

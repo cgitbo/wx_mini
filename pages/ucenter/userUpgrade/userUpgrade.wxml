@@ -1,0 +1,57 @@
+<!--pages/ucenter/userUpgrade/userUpgrade.wxml-->
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <form bindsubmit='onCardFormSubmit'>
+    <view class='form-wrap'>
+      <view class='mess'>会员选择</view>
+      <view class='form-info'>
+        <view class='list-item'>
+          <view class='title'>会员</view>
+          <picker bindchange='bindPickerAmountChange' value='{{UserIndex}}' range='{{UserList}}' class='value'>
+            <input name='bank_name' hidden value='{{UserList[UserIndex]}}' />
+            {{UserList[UserIndex]}}
+            <view class='icon'>
+              <view class='icon-right'></view>
+            </view>
+          </picker>
+        </view>
+
+        <view class='list-item'>
+          <view class='title'>报单时间</view>
+          <input name='bank_name_user' class='value' value='{{UserTime}}' disabled />
+        </view>
+      </view>
+    </view>
+
+    <view class='form-wrap'>
+      <view class='mess'>补交金额</view>
+      <view class='form-info'>
+        <view class='list-item'>
+          <view class='title'>金额</view>
+          <input name='bank_name_user' class='value' value='4800' disabled />
+        </view>
+      </view>
+    </view>
+
+    <view class='form-wrap'>
+      <view class='mess'>支付方式</view>
+      <radio-group class='payment' bindchange=''>
+        <view class='form-info'>
+          <label class='list-item'>
+            <view class='title'>积分支付</view>
+            <input name='bank_name_user' class='value' value='4521' disabled />
+            <radio value='' checked='checked' />
+          </label>
+          <label class='list-item'>
+            <view class='title'>余额支付</view>
+            <input name='bank_name_user' class='value' value='9524' disabled />
+            <radio value='' checked='checked' />
+          </label>
+        </view>
+      </radio-group>
+    </view>
+
+    <view class='submit-btn'>
+      <button class='btn' plain form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

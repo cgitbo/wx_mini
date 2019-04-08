@@ -18,7 +18,10 @@
     "pages/ucenter/bankCard/bankCard",
     "pages/ucenter/transfer/transfer",
     "pages/ucenter/billingDetail/billingDetail",
-    "pages/ucenter/report/report"
+    "pages/ucenter/report/report",
+    "pages/ucenter/userUpgrade/userUpgrade",
+    "pages/ucenter/referrer/referrer",
+    "pages/ucenter/point/point"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -56,7 +56,7 @@ Page({
     const navUrlConf = {
       withdraw: () => `/pages/ucenter/withdraw/withdraw?bankInfo=${JSON.stringify(this.data.BankInfo)}`,
       transfer: () => `/pages/ucenter/transfer/transfer?type=balance`,
-      billingDetail: () => `/pages/ucenter/billingDetail/billingDetail`
+      billingDetail: () => `/pages/ucenter/billingDetail/billingDetail?type=balance`
     }
     const navUrl = navUrlConf[url] && navUrlConf[url]()
     if (!navUrl) return

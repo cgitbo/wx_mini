@@ -4,7 +4,7 @@
 /* 解决ipx底部 */
 
 .container-ipx {
-  padding-bottom: 68rpx !important;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .feed-bottom-ipx {
@@ -56,6 +56,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.no-border {
+  border: none !important;
 }
 
 /* 重写 checkbox 样式 */

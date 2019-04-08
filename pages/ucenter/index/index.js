@@ -10,9 +10,9 @@ Page({
     navList: [
       { name: '我的钱包', img: '/images/nav/wallet.png', url: 'wallet' },
       { name: '我要报单', img: '/images/nav/report.png', url: 'report' },
-      { name: '会员升级', img: '/images/nav/update.png', url: '' },
-      { name: '我的推荐', img: '/images/nav/referrer.png', url: '' },
-      { name: '我的积分', img: '/images/nav/point.png', url: '' },
+      { name: '会员升级', img: '/images/nav/update.png', url: 'userUpgrade' },
+      { name: '我的推荐', img: '/images/nav/referrer.png', url: 'referrer' },
+      { name: '我的积分', img: '/images/nav/point.png', url: 'point' },
       { name: '报单列表', img: '/images/nav/report-list.png', url: '' },
       { name: '我的二维码', img: '/images/nav/qr-code.png', url: '' },
       { name: '系统设置', img: '/images/nav/setting.png', url: '' },

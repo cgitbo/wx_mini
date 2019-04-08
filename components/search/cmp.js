@@ -6,7 +6,11 @@ Component({
   properties: {
     confirmType: String,
     size: String,
-    placeholder: String
+    placeholder: String,
+    type: {
+      type: String,
+      value: 'text'
+    }
   },
 
   /**

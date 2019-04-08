@@ -10,18 +10,19 @@
         </view>
         <view class='list-item'>
           <view class='title'>手机号码</view>
-          <input name='bank_name_user' class='value' placeholder='请输入手机号码' />
+          <input name='bank_name_user' class='value' placeholder='请输入手机号码' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>身份证</view>
-          <input name='bank_user' class='value' placeholder='请输入身份证号码' />
+          <input name='bank_user' class='value' placeholder='请输入身份证号码' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>所在地区</view>
-          <picker mode='region' bindchange='bindRegionChange' value='{{region}}'>
+          <picker mode='region' bindchange='bindRegionChange' value='{{region}}' class='value'>
             <input name='bank_area' hidden value='{{postcode}}' />
-            <view class='value picker'>
               {{region[0]}} {{region[1]}} {{region[2]}}
+            <view class='icon'>
+              <view class='icon-right'></view>
             </view>
           </picker>
         </view>
@@ -33,51 +34,62 @@
       <view class='form-info'>
         <view class='list-item'>
           <view class='title'>推荐人</view>
-          <input name='bank_name_user' class='value' placeholder='请输入推荐人手机号' />
+          <input name='bank_name_user' class='value' placeholder='请输入推荐人手机号' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>接点人</view>
-          <input name='bank_name_user' class='value' placeholder='请输入接点人手机号' />
+          <input name='bank_name_user' class='value' placeholder='请输入接点人手机号' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>报单金额</view>
-          <picker bindchange='bindPickerAmountChange' value='{{AmountIndex}}' range='{{ReportAmountList}}'>
+          <picker bindchange='bindPickerAmountChange' value='{{AmountIndex}}' range='{{ReportAmountList}}' class='value'>
             <input name='bank_name' hidden value='{{ReportAmountList[AmountIndex]}}' />
-            <view class='value picker'>{{ReportAmountList[AmountIndex]}}</view>
+            {{ReportAmountList[AmountIndex]}}
+            <view class='icon'>
+              <view class='icon-right'></view>
+            </view>
           </picker>
         </view>
-
       </view>
     </view>
+
     <view class='form-wrap'>
       <view class='mess'>支付方式</view>
-      <view class='form-info'>
-        <radio-group class='payment' bindchange=''>
-          <view class='list-item'>
-            <label class='pay-type'>
-              <view class='title'>积分支付</view>
-              <radio value='' checked='checked' />
-            </label>
-          </view>
-          <view class='list-item'>
-            <label class='pay-type'>
-              <view class='title'>余额支付</view>
-              <radio value='' checked='checked' />
-            </label>
-          </view>
-        </radio-group>
-      </view>
+      <radio-group class='payment' bindchange=''>
+        <view class='form-info'>
+          <label class='list-item'>
+            <view class='title'>积分支付</view>
+            <input name='bank_name_user' class='value' value='4521' disabled />
+            <radio value='' checked='checked' />
+          </label>
+          <label class='list-item'>
+            <view class='title'>余额支付</view>
+            <input name='bank_name_user' class='value' value='9524' disabled />
+            <radio value='' checked='checked' />
+          </label>
+        </view>
+      </radio-group>
     </view>
 
-    <view class='tip-msg'>
-      <view class='text'>
-        <text class='red'>1.</text>银行卡信息必须填写完整准确。
-      </view>
-      <view class='text'>
-        <text class='red'>2.</text>绑定的必须是本人的银行卡。
-      </view>
-      <view class='text'>
-        <text class='red'>3.</text>银行卡信息填写不正确会导致提现失败。
+    <view class='form-wrap'>
+      <view class='mess'>公司资料</view>
+      <view class='form-info'>
+        <view class='list-item no-border'>
+          <view class='title'>公司名称</view>
+          <view class='value'>杭州万泽冰酒业有限公司</view>
+        </view>
+        <view class='list-item no-border'>
+          <view class='title'>开户银行</view>
+          <view class='value'>农村商业银行</view>
+        </view>
+        <view class='list-item no-border'>
+          <view class='title'>开户支行</view>
+          <view class='value'>浙江萧山义桥支行</view>
+        </view>
+        <view class='list-item no-border'>
+          <view class='title'>公司账号</view>
+          <view class='value'>2010 0013 6750 543</view>
+        </view>
       </view>
     </view>
 

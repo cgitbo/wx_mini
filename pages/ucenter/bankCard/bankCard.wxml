@@ -6,9 +6,12 @@
       <view class='form-info'>
         <view class='list-item'>
           <view class='title'>开户银行</view>
-          <picker bindchange='bindPickerBankChange' value='{{BankIndex}}' range='{{BankList}}'>
+          <picker bindchange='bindPickerBankChange' value='{{BankIndex}}' range='{{BankList}}' class='value'>
             <input name='bank_name' hidden value='{{BankList[BankIndex]}}' />
-            <view class='value picker'>{{BankList[BankIndex]}}</view>
+            {{BankList[BankIndex]}}
+            <view class='icon'>
+              <view class='icon-right'></view>
+            </view>
           </picker>
         </view>
         <view class='list-item' hidden='{{BankIndex != BankList.length -1}}'>
@@ -21,10 +24,11 @@
         </view>
         <view class='list-item'>
           <view class='title'>开户地区</view>
-          <picker mode='region' bindchange='bindRegionChange' value='{{region}}'>
+          <picker mode='region' bindchange='bindRegionChange' value='{{region}}' class='value'>
             <input name='bank_area' hidden value='{{postcode}}' />
-            <view class='value picker'>
               {{region[0]}} {{region[1]}} {{region[2]}}
+            <view class='icon'>
+              <view class='icon-right'></view>
             </view>
           </picker>
         </view>

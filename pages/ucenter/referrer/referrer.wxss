@@ -1,0 +1,40 @@
+/* pages/ucenter/referrer/referrer.wxss */
+
+.container {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.head-box {
+  height: 112rpx;
+}
+
+.search-box {
+  padding: 24rpx;
+  border-radius: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-box .search {
+  flex: 1;
+}
+
+.referrer-list {
+  padding: 20rpx 24rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.referrer-list .list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.referrer-list .list-item.des {
+  margin-top: 10rpx;
+}
+
+.referrer-list .list-item  .name {
+  font-size: 28rpx;
+  color: #333;
+}

@@ -1,6 +1,2 @@
 /* pages/ucenter/bankCard/bankCard.wxss */
 @import '../../../form.wxss';
-
-page {
-  background-color: #f8f8f8;
-}

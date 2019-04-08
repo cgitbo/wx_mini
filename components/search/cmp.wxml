@@ -1,5 +1,5 @@
 <!--components/search/cmp.wxml-->
 <view class='container'>
-  <image class='img' src='./images/search.png'></image>
-  <input class='input {{size}}' placeholder="{{placeholder}}" confirm-type='{{confirmType}}' bindconfirm='onConfirmTap' />
+  <icon class='search-icon' type="search" size="15" color="#45ae8c" />
+  <input class='input {{size}}' placeholder="{{placeholder}}" confirm-type='{{confirmType}}' bindconfirm='onConfirmTap' type='{{type}}' />
 </view>

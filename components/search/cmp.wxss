@@ -22,10 +22,11 @@
   border-radius: 32rpx;
 }
 
-.img {
-  width: 28rpx;
-  height: 29rpx;
+.search-icon {
+  width: 30rpx;
+  height: 30rpx;
   position: absolute;
   left: 24rpx;
-  top: 18rpx;
+  top: 50%;
+  transform: translateY(-50%);
 }

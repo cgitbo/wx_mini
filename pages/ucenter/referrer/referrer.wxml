@@ -1,0 +1,19 @@
+<!--pages/ucenter/referrer/referrer.wxml-->
+<view class='container {{IsIPX && "container-ipx"}}'>
+  <view class='head-box bg-green'>
+    <view class='search-box'>
+      <yh-search class='search' confirm-type='search' size='big' placeholder='请输入手机号' type='number' />
+    </view>
+  </view>
+
+  <view class='referrer-list' wx:for='{{ReffrrerList}}' wx:key>
+    <view class='list-item'>
+      <view class='name'>{{item.name}}</view>
+      <view class='amount'>{{item.amount}}</view>
+    </view>
+    <view class='list-item des'>
+      <view class='tel'>{{item.tel}}</view>
+      <view class='time'>{{item.time}}</view>
+    </view>
+  </view>
+</view>
