@@ -1,3 +1,51 @@
 <!--pages/ucenter/verification/verification.wxml-->
-<view bindtap='fn'>666666666</view>
-<image src='{{tempFilePaths}}' />
+<view class='container'>
+  <form bindsubmit='onCardFormSubmit'>
+    <view class='form-info'>
+      <view class='list-item'>
+        <view class='title'>真实姓名</view>
+        <input name='user_name' class='value' placeholder='请输入真实姓名' />
+      </view>
+      <view class='list-item'>
+        <view class='title'>身份证号</view>
+        <input name='id_number' class='value' placeholder='请输入身份证号码' />
+      </view>
+    </view>
+
+    <view class='img-wrap'>
+      <view class='title'>身份证照片</view>
+
+      <view class='item-wrap'>
+        <view class='item' catch:tap='onChooseImgTap' data-img='tempFrontImg'>
+          <view class='icon' />
+          <view class='text'>正面照片</view>
+          <view class='tip'>(文字清晰,字面齐全)</view>
+          <image class='cover-img' hidden='{{!tempFrontImg}}' src='{{tempFrontImg}}' />
+        </view>
+
+        <view class='item' catch:tap='onChooseImgTap' data-img='tempBackImg'>
+          <view class='icon' />
+          <view class='text'>反面照片</view>
+          <view class='tip'>(文字清晰,字面齐全)</view>
+          <image class='cover-img' hidden='{{!tempBackImg}}' src='{{tempBackImg}}' />
+        </view>
+      </view>
+
+      <view class='tip-msg'>
+        <view class='text'>
+          <text class='red'>1.</text>银行卡信息必须填写完整准确。
+        </view>
+        <view class='text'>
+          <text class='red'>2.</text>绑定的必须是本人的银行卡。
+        </view>
+        <view class='text'>
+          <text class='red'>3.</text>银行卡信息填写不正确会导致提现失败。
+        </view>
+      </view>
+    </view>
+
+    <view class='submit-btn'>
+      <button class='btn' plain form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

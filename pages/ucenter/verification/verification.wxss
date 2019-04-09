@@ -1,1 +1,90 @@
 /* pages/ucenter/verification/verification.wxss */
+
+@import '../../../form.wxss';
+
+.img-wrap {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 0 24rpx;
+}
+
+.img-wrap .title {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.img-wrap .item-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-wrap .item-wrap .item {
+  border: 1px dotted #999;
+  border-radius: 24rpx;
+  width: 340rpx;
+  height: 240rpx;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.item .icon {
+  position: relative;
+  width: 68rpx;
+  height: 68rpx;
+  margin-top: 40rpx;
+}
+
+.item .icon::before {
+  display: block;
+  content: '';
+  width: 68rpx;
+  height: 2rpx;
+  background-color: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item .icon::after {
+  display: block;
+  content: '';
+  width: 2rpx;
+  height: 68rpx;
+  background-color: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item .text {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.item .tip {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.item .cover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24rpx;
+}
+
+.img-wrap .tip-msg {
+  padding: 24rpx 0;
+}

@@ -5,18 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tempFilePaths: ''
+    tempFrontImg: '', // 身份证正面的照片
+    tempBackImg: '', // 身份证后面的照片
   },
 
-  fn() {
+  // 身份证正面照片选择
+  onChooseImgTap(e) {
+    const imgUrl = e.currentTarget.dataset.img
+    this._chooseImg({ imgUrl })
+  },
+
+  // 表单提交
+  onCardFormSubmit(e) {
+    const params = e.detail
+    console.log(params)
+  },
+
+  // 选择照片上传
+  _chooseImg({ imgUrl }) {
     const that = this
     wx.chooseImage({
+      count: 1,
       success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
         that.setData({
-          tempFilePaths
+          [imgUrl]: tempFilePaths
         })
-        
+
         // wx.uploadFile({
         //   url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
         //   filePath: tempFilePaths[0],
@@ -32,7 +48,6 @@ Page({
       }
     })
   },
- 
 
   /**
    * 生命周期函数--监听页面加载
