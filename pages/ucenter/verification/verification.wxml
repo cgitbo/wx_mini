@@ -1,2 +1,3 @@
 <!--pages/ucenter/verification/verification.wxml-->
-<text>pages/ucenter/verification/verification.wxml</text>
+<view bindtap='fn'>666666666</view>
+<image src='{{tempFilePaths}}' />

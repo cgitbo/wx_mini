@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 13,
 			"list": [
 				{
 					"id": 0,
@@ -131,9 +131,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "report",
-					"pathName": "pages/ucenter/report/report",
+					"id": 13,
+					"name": "verification",
+					"pathName": "pages/ucenter/verification/verification",
 					"query": "",
 					"scene": null
 				},

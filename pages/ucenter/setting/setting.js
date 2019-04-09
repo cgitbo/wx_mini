@@ -6,11 +6,11 @@ Page({
    */
   data: {
     UserSettingList: [ // 用户设置列表
-      { title: '实名认证', des: '未认证', type: 'author', url: 'verification' },
+      { title: '实名认证', des: '未认证', type: 'author', url: '/pages/ucenter/verification/verification' },
       { title: '手机号码', des: '18858870435' },
       { title: '修改登录密码' },
       { title: '修改提现密码' },
-      { title: '收货地址管理' },
+      { title: '收货地址管理', url: '/pages/car/address/address' },
     ],
     UserAuthor: false // 是否实名
   },
@@ -21,7 +21,7 @@ Page({
     console.log(url)
     if(!url) return
     wx.navigateTo({
-      url: `/pages/ucenter/${url}/${url}`
+      url
     })
   },
 
