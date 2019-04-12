@@ -4,6 +4,6 @@
     <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
       <view class='back' hidden='{{hideIcon}}'></view>
     </navigator>
-    <view class='content'>{{barTitle}}</view>
+    <view class='content' style='color:{{color}}'>{{barTitle}}</view>
   </view>
 </view>

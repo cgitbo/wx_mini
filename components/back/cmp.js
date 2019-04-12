@@ -6,7 +6,11 @@ Component({
   properties: {
     customConf: Object,
     barTitle: String,
-    hideIcon: Boolean
+    hideIcon: Boolean,
+    color: {
+      type: String,
+      value: '#fff'
+    }
   },
 
   /**

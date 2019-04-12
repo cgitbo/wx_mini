@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/ucenter/index/index",
+    "pages/common/login/login",
     "pages/home/index/index",
     "pages/ucenter/order/order",
     "pages/group/index/index",

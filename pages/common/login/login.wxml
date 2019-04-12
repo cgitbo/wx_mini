@@ -1,0 +1,26 @@
+<!--pages/common/login/login.wxml-->
+<view class='container'>
+  <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='登录' color='#000' hide-icon />
+  <image class='bg-img' src='/images/common/bg.png' />
+  <view class='content'>
+    <image class='img' src='/images/common/logo.png' />
+    <form bindsubmit='onLoginFormSubmit'>
+      <view class='login-wrap'>
+        <view class='item'>
+          <view class='title'>账号</view>
+          <input class='inp' name='loginInfo' type='number' maxlength='11' value='18658189067' placeholder-class='place-class' placeholder='请输入手机号' />
+          <image class='icon-rt' src='/images/common/mobile.png' />
+        </view>
+        <view class='item'>
+          <view class='title'>密码</view>
+          <input class='inp' name='password' password placeholder-class='place-class' value='111111' placeholder='请输入密码' />
+          <image class='icon-rt' src='/images/common/eye.png' />
+          <view class='forget'>忘记密码</view>
+        </view>
+      </view>
+      <view class='btn-wrap'>
+        <button class='btn' plain form-type='submit'>登录</button>
+      </view>
+    </form>
+  </view>
+</view>

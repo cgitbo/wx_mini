@@ -132,8 +132,8 @@
 				},
 				{
 					"id": 13,
-					"name": "verification",
-					"pathName": "pages/ucenter/verification/verification",
+					"name": "login",
+					"pathName": "pages/common/login/login",
 					"query": "",
 					"scene": null
 				},
