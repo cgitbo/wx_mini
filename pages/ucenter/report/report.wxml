@@ -10,11 +10,11 @@
         </view>
         <view class='list-item'>
           <view class='title'>手机号码</view>
-          <input name='bank_name_user' class='value' placeholder='请输入手机号码' type='number' />
+          <input name='bank_name_user' class='value' type='number' placeholder='请输入手机号码' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>身份证</view>
-          <input name='bank_user' class='value' placeholder='请输入身份证号码' type='number' />
+          <input name='bank_user' class='value' type='idcard' placeholder='请输入身份证号码' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>所在地区</view>
@@ -38,11 +38,11 @@
       <view class='form-info'>
         <view class='list-item'>
           <view class='title'>推荐人</view>
-          <input name='bank_name_user' class='value' placeholder='请输入推荐人手机号' type='number' />
+          <input name='bank_name_user' class='value' type='number' placeholder='请输入推荐人手机号' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>接点人</view>
-          <input name='bank_name_user' class='value' placeholder='请输入接点人手机号' type='number' />
+          <input name='bank_name_user' class='value' type='number' placeholder='请输入接点人手机号' type='number' />
         </view>
         <view class='list-item'>
           <view class='title'>报单金额</view>

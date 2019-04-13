@@ -15,7 +15,7 @@
           <view class='title'>密码</view>
           <input class='inp' name='password' password placeholder-class='place-class' value='111111' placeholder='请输入密码' />
           <image class='icon-rt' src='/images/common/eye.png' />
-          <view class='forget'>忘记密码</view>
+          <view class='forget' catch:tap='onForgetPasswordTap'>忘记密码</view>
         </view>
       </view>
       <view class='btn-wrap'>

@@ -35,6 +35,13 @@ Page({
     })
   },
 
+  // 忘记密码
+  onForgetPasswordTap(e) {
+    wx.navigateTo({
+      url: '/pages/common/findPassword/findPassword'
+    })
+  },
+
   showModal(error) {
     wx.showModal({
       content: error.msg,

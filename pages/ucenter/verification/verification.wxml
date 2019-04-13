@@ -8,7 +8,7 @@
       </view>
       <view class='list-item'>
         <view class='title'>身份证号</view>
-        <input name='id_number' class='value' placeholder='请输入身份证号码' />
+        <input name='id_number' class='value' type='idcard' placeholder='请输入身份证号码' />
       </view>
     </view>
 

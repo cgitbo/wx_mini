@@ -38,7 +38,7 @@
         </view>
         <view class='list-item'>
           <view class='title'>银行卡号</view>
-          <input name='bank_number' class='value' placeholder='请输入银行卡卡号' type='number' />
+          <input name='bank_number' class='value' type='number' placeholder='请输入银行卡卡号' type='number' />
         </view>
       </view>
     </view>

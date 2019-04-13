@@ -26,7 +26,8 @@
     "pages/ucenter/setting/setting",
     "pages/ucenter/verification/verification",
     "pages/ucenter/qrCode/qrCode",
-    "pages/ucenter/reportList/reportList"
+    "pages/ucenter/reportList/reportList",
+    "pages/common/findPassword/findPassword"
   ],
   "window": {
     "backgroundTextStyle": "light",

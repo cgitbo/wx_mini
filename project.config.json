@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 14,
 			"list": [
 				{
 					"id": 0,
@@ -132,15 +132,15 @@
 				},
 				{
 					"id": 13,
-					"name": "login",
-					"pathName": "pages/common/login/login",
+					"name": "findpass",
+					"pathName": "pages/common/findPassword/findPassword",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 14,
-					"name": "setting",
-					"pathName": "pages/ucenter/setting/setting",
+					"name": "login",
+					"pathName": "pages/common/login/login",
 					"query": "",
 					"scene": null
 				}
