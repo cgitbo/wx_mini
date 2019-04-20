@@ -1,5 +1,9 @@
 // pages/ucenter/order/order.js
 const app = getApp()
+import { OrderModel } from '../../../models/ucenter/order'
+import { throttle } from '../../../utils/util'
+const orderModel = new OrderModel()
+
 Page({
 
   /**
@@ -8,25 +12,71 @@ Page({
   data: {
     OrderType: 0, // 订单类型 0.全部 1.待付款 2.待发货 3.待收货 4.已完成
     OrderNavList: ['全部', '待付款', '待发货', '待收货', '已完成'],
-    OrderDetailList: [
+    OrderList: [ // 订单列表
       // { name: ''}
     ],
+    ShowLoading: true, // 是否真正请求数据
+    PageIndex: 1, // 当前请求的页数
+    LoadMore: true, // 是否还可以加载更多
     IsIPX: app.globalData.IsIPX // 是否ipx
   },
 
   // 订单类型点击事件
   onOrderNavTap(e) {
     const OrderType = e.currentTarget.dataset.type
+    const orderType = this.data.OrderType
+    // 类型一样 不进行操作
+    if (OrderType == orderType) return
+    this._showLoading()
     this.setData({
       OrderType
     })
+    // 防抖处理
+    throttle(this.getData, 500, true)({ status: OrderType })
   },
 
   // 订单详情事件
   onOrderListTap(e) {
-    console.log(e)
+    const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '/pages/ucenter/orderDetail/orderDetail'
+      url: `/pages/ucenter/orderDetail/orderDetail?id=${id}`
+    })
+  },
+
+  // 获取数据
+  getData({ status, page = 1, limit = 20, isCancat = false }) {
+    let lastArr = this.data.OrderList || []
+    this._toggleLoadMore(true)
+    return orderModel.getOrderList({ status, page, limit }).then(OrderList => {
+      this._toggleLoadMore(OrderList.length)
+      if (isCancat) OrderList = lastArr.concat(OrderList)
+      this.setData({
+        OrderList
+      })
+      this._hideLoading()
+    })
+  },
+
+  // 切换loadmore是否显示
+  _toggleLoadMore(val) {
+    this.setData({
+      LoadMore: Boolean(val)
+    })
+  },
+
+  // 隐藏loading
+  _hideLoading() {
+    wx.hideNavigationBarLoading()
+    this.setData({
+      ShowLoading: false
+    })
+  },
+
+  // 显示loading
+  _showLoading() {
+    wx.showNavigationBarLoading()
+    this.setData({
+      ShowLoading: true
     })
   },
 
@@ -35,10 +85,10 @@ Page({
    */
   onLoad: function (options) {
     const OrderType = options.type || 0
-    console.log(OrderType)
     this.setData({
       OrderType
     })
+    this.getData({ status: OrderType })
   },
 
   /**
@@ -73,14 +123,31 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this._showLoading()
+    const OrderType = this.data.OrderType
+    this.getData({ status: OrderType }).then(() => {
+      wx.stopPullDownRefresh()
+    })
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if (!this.data.LoadMore) {
+      this.setData({
+        PageIndex: 1
+      })
+      return
+    }
+    this._showLoading()
+    let { OrderType, PageIndex } = this.data
+    PageIndex++
+    this.getData({ status: OrderType, page: PageIndex, isCancat: true }).then(() => {
+      this.setData({
+        PageIndex
+      })
+    })
   },
 
   /**

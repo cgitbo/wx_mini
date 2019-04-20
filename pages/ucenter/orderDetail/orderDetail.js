@@ -1,5 +1,8 @@
 // pages/ucenter/orderDetail/orderDetail.js
 const app = getApp()
+import { OrderModel } from '../../../models/ucenter/order'
+const orderModel = new OrderModel()
+
 Page({
 
   /**
@@ -50,11 +53,33 @@ Page({
     })
   },
 
+  // 获取数据
+  getData(orderId) {
+
+    // orderModel.getDeliveryById(1).then(res=>{
+    //   console.log(res)
+    // })
+
+    orderModel.getOrderDetailByOrderId({ orderId }).then(res => {
+      const GoodsList = res.map(ele => {
+        ele.goods_array = JSON.parse(ele.goods_array)
+        ele.goods_name = ele.goods_array.name
+        ele.goods_sku = ele.goods_array.value
+        return ele
+      })
+      this.setData({
+        GoodsList
+      })
+    })
+
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const orderId = options.id
+    this.getData(orderId)
   },
 
   /**

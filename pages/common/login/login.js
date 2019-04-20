@@ -1,9 +1,9 @@
 // pages/common/login/login.js
-import { LoginModel } from '../../../models/common/login'
+const app = getApp()
 
+import { LoginModel } from '../../../models/common/login'
 const loginModel = new LoginModel()
 
-const app = getApp()
 Page({
 
   /**
@@ -21,14 +21,13 @@ Page({
     const params = e.detail.value
     if (!loginModel.WxValidate.checkForm(params)) {
       const error = loginModel.WxValidate.errorList[0]
-      this.showModal(error)
+      loginModel.WxValidate.showModal(error)
       return false
     }
 
     //验证通过以后
     loginModel.getUserToken(params).then(res => {
       const userToken = res.userToken
-      console.log(userToken)
       if (userToken && userToken != '') {
         loginModel.setUserToken(userToken)
       }
@@ -39,13 +38,6 @@ Page({
   onForgetPasswordTap(e) {
     wx.navigateTo({
       url: '/pages/common/findPassword/findPassword'
-    })
-  },
-
-  showModal(error) {
-    wx.showModal({
-      content: error.msg,
-      showCancel: false,
     })
   },
 

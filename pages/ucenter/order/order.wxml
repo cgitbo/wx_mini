@@ -1,41 +1,41 @@
 <!--pages/ucenter/order/order.wxml-->
 <view class='container {{IsIPX && "container-ipx"}}'>
   <view class='order-nav'>
-    <view class='nav {{index == OrderType ? "cur" : ""}}' wx:for='{{OrderNavList}}' wx:key='*this' catchtap='onOrderNavTap' data-type='{{index}}'>{{item}}</view>
+    <view class='nav {{index == OrderType ? "cur" : ""}}'
+          wx:for='{{OrderNavList}}'
+          wx:key='*this'
+          catchtap='onOrderNavTap'
+          data-type='{{index}}'>
+      {{item}}
+    </view>
   </view>
 
   <view class='order-list'>
-    <view class='order-box' catchtap='onOrderListTap'>
+   
+    <view class='order-box' wx:for='{{OrderList}}' wx:key='{{item.id}}' hidden='{{ShowLoading}}'>
 
       <view class='shop-title'>
-        <yh-shopBar right-text='待付款' />
+        <yh-shopBar right-text='{{item.status_text}}' />
       </view>
 
-      <view class='order-item'>
-        <view class='img-box'>
-          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
-          <view class='num'>x8</view>
-        </view>
-        <view class='img-box'>
-          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
-          <view class='num'>x9</view>
-        </view>
-        <view class='img-box'>
-          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
-          <view class='num'>x2</view>
+      <view catchtap='onOrderListTap' data-id='{{item.id}}'>
+        <view class='order-item'>
+          <view class='img-box' wx:for='{{item.goods}}' wx:for-index='goodsId' wx:for-item='goods' wx:key='{{goods.id}}'>
+            <image class='img' src='{{goods.img[0] == "h" ? goods.img : "http://wzbj.ehanone.com" + goods.img}}' />
+            <view class='num'>x{{goods.goods_nums}}</view>
+          </view>
+          <view class='des' wx:if='{{item.goods.length == 1}}'>{{item.goods[0].goods_array.name}}</view>
+          <view class='more' wx:else>
+            <view class='more-text'>查看更多</view>
+            <view class='more-icon'></view>
+          </view>
         </view>
 
-        <!-- <view class='des'>贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿童手工彩泥黏泥黏泥黏泥黏泥黏泥黏泥黏土太空泥玩具DIY套装</view> -->
-        <view class='more'>
-          <view class='more-text'>查看更多</view>
-          <view class='more-icon'></view>
-        </view>
-      </view>
-
-      <view class='total-bar'>
-        <view class='count'>共4件商品</view>
-        <view class='payment'>实付金额：
-          <text class='price'>￥55.33</text>
+        <view class='total-bar'>
+          <view class='count'>共{{item.goods_nums}}件商品</view>
+          <view class='payment'>实付金额：
+            <text class='price'>￥{{item.order_amount}}</text>
+          </view>
         </view>
       </view>
 
@@ -48,37 +48,10 @@
         </view>
       </view>
     </view>
-
-    <view class='order-box'>
-
-      <view class='shop-title'>
-        <yh-shopBar right-text='待付款' />
-      </view>
-
-      <view class='order-item'>
-        <view class='img-box'>
-          <image class='img' src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg'></image>
-        </view>
-
-        <view class='des fixed-line line-clamp-3'>贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色贝博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿博氏彩泥36色超轻粘土儿童手工彩泥黏泥黏泥黏泥黏泥黏泥黏泥黏土太空泥玩具DIY套装</view>
-
-      </view>
-
-      <view class='total-bar'>
-        <view class='count'>共4件商品</view>
-        <view class='payment'>实付金额：
-          <text class='price'>￥55.33</text>
-        </view>
-      </view>
-
-      <view class='btn-group'>
-        <view class='btn'>
-          <view class=''>取消订单</view>
-        </view>
-        <view class='btn'>
-          <view class=''>立即付款</view>
-        </view>
-      </view>
+    
+    <view hidden='{{!ShowLoading}}'>
+      <yh-loading />
     </view>
+    <view hidden='{{LoadMore}}' class='load-more'>我也是有底线的~</view>
   </view>
 </view>

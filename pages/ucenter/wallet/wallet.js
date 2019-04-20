@@ -1,5 +1,8 @@
 // pages/ucenter/wallet/wallet.js
 const app = getApp()
+import { IndexModel } from '../../../models/ucenter/index'
+const indexModel = new IndexModel()
+
 Page({
 
   /**
@@ -11,13 +14,12 @@ Page({
       { title: '我要转账', imgSrc: '/images/ucenter/money.png', url: 'transfer' },
       { title: '账单明细', imgSrc: '/images/ucenter/bill.png', url: 'billingDetail' }
     ],
-    hasBankInfo: true, // 是否有银行卡
+    hasBankInfo: false, // 是否有银行卡
     BankInfo: { // 银行卡信息
-      name: '中信银行',
-      number: 8905,
-      icon: 'no-bank'
+      bank: '— — — —',
+      card_num: ['----', '----', '----', '----', '----'],
+      icon: 'no'
     },
-    BankIcon: 'no-bank', // 银行卡图标
     BankIcons: { // 银行图标
       abc: '农业银行',
       boc: '中国银行',
@@ -26,6 +28,10 @@ Page({
       cmb: '招商银行',
       icbc: '工商银行',
       zjrc: '农商银行'
+    },
+    userInfo: { // 用户信息
+      balance: 0,
+      freeze_balance: 0
     },
     IsIPX: app.globalData.IsIPX // 是否ipx
   },
@@ -65,11 +71,45 @@ Page({
     })
   },
 
+  // 获取data
+  getUserInfo() {
+    const getMemberInfo = indexModel.getMemberInfo()
+    const getUserBankInfo = indexModel.getUserBankInfo()
+    return Promise.all([getMemberInfo, getUserBankInfo]).then(res => {
+      const [userInfo, bankInfo] = res
+      let { bank, card_num, icon } = this.data.BankInfo
+      let hasBankInfo = this.data.hasBankInfo
+      if (bankInfo && bankInfo.card_num && bankInfo.card_num != '') {
+        bank = bankInfo.bank
+        card_num = bankInfo.card_num.replace(/\s+/g, '').match(/\d{1,4}/g)
+        icon: this._getBankIcon(bankInfo.bank) ? this._getBankIcon(bankInfo.bank)[0] : 'no-bank'
+        hasBankInfo = true
+      }
+      const BankInfo = { bank, card_num, icon }
+      this.setData({
+        userInfo,
+        BankInfo,
+        hasBankInfo
+      })
+      wx.setStorageSync('userInfo', userInfo)
+      wx.setStorageSync('bankInfo', bankInfo)
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const userInfo = wx.getStorageSync('userInfo')
+    const BankInfo = wx.getStorageSync('bankInfo')
+    if (!BankInfo || BankInfo == '' || !userInfo || userInfo == '') {
+      this.getUserInfo()
+      return
+    }
+    this.setData({
+      userInfo,
+      BankInfo
+    })
   },
 
   /**
@@ -83,7 +123,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(this._getBankIcon('中国银行'))
+
   },
 
   /**
@@ -104,7 +144,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.showNavigationBarLoading()
+    this.getUserInfo().then(() => {
+      wx.stopPullDownRefresh()
+      wx.hideNavigationBarLoading()
+    })
   },
 
   /**

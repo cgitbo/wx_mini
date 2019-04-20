@@ -225,3 +225,10 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   height: 46rpx;
   line-height: 46rpx;
 }
+
+/* 拉到底了的样式 */
+.load-more {
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}

@@ -413,6 +413,16 @@ class WxValidate {
   validationErrors() {
     return this.errorList
   }
+
+  /**
+   * 显示错误信息
+   */
+  showModal(error) {
+    wx.showModal({
+      content: error.msg,
+      showCancel: false,
+    })
+  }
 }
 
 export default WxValidate

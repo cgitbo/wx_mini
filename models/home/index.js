@@ -1,16 +1,16 @@
 import { Request } from '../../utils/request.js'
 class IndexModel extends Request {
-  // 获取用户信息
-  getMemberInfo() {
+  // 获取banner信息
+  getBannerConf() {
     return this.getData({
-      url: `getMemberInfo`
+      url: 'getBannerConf'
     })
   }
 
-  // 获取银行卡信息
-  getUserBankInfo() {
+  // 获取分类信息
+  getCategoryListTopType() {
     return this.getData({
-      url: `getUserBankInfo`
+      url: 'getCategoryListTopType'
     })
   }
 }

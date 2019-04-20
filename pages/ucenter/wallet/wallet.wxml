@@ -1,20 +1,19 @@
 <!--pages/ucenter/wallet/wallet.wxml-->
 <view class='container {{IsIPX && "container-ipx"}}'>
   <view class='head-wrap'>
-    <image class='img' src='/images/ucenter/wallet-bg.png'></image>
+    <image class='img' src='/images/ucenter/wallet-bg.png' />
 
     <view class='bank-wrap'>
       <view class='bank-title'>
-        <image class='img' src='/images/ucenter/bankIcon/{{hasBankInfo ? BankIcon : "no-bank"}}.png' binderror='onIconError'></image>
+        <image class='img' src='/images/ucenter/bankIcon/{{BankInfo.icon}}-bank.png' binderror='onIconError' />
         <view class='bank-name'>
-          <view class='name'>{{hasBankInfo ? BankInfo.name : '— — — —'}}</view>
+          <view class='name'>{{BankInfo.bank}}</view>
           <view class='type'>储蓄卡</view>
         </view>
       </view>
 
       <view class='bank-num'>
-        <view class='number' wx:for='{{3}}' wx:key>{{hasBankInfo ? '****' : '----'}}</view>
-        <view class='number'>{{hasBankInfo ? BankInfo.number : '----'}}</view>
+        <view class='number' wx:for='{{BankInfo.card_num}}' wx:key='{{item + "" + index}}'>{{item}}</view>
       </view>
 
       <view class='bind-card' catch:tap='onChangeCardTap'>
@@ -27,11 +26,11 @@
   <view class='amount-wrap list-item box-shadow'>
     <view class='item col-line'>
       <view class='title'>账户余额</view>
-      <view class='number red'>27888.00</view>
+      <view class='number red'>{{userInfo.balance}}</view>
     </view>
     <view class='item'>
       <view class='title'>股权保证金</view>
-      <view class='number red'>97888</view>
+      <view class='number red'>{{userInfo.freeze_balance}}</view>
     </view>
   </view>
 

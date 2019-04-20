@@ -1,25 +1,44 @@
 const md5 = require('./md5')
 
 class Request {
-  // baseurl
-  baseUrl = 'http://192.168.100.40:8082/service/'
+  constructor() {
+    this._init()
+  }
 
-  // 签名 和后端一致
-  _sign(url, data) {
-    const encryptKey = '39d38be4be18cd9ff5363baa96027647'
-    const time = this.getTime()
-    const rand = this.getRand()
+  _init() {
+    this._initData()
+    this.authUserToken()
+  }
 
-    const path = `rand=${rand}&time=${time}`
+  _initData() {
+    this.baseUrl = 'http://192.168.100.40:8082/service/'
+    this.requestArr = []
+    this.rand = this.getRand()
+    this.time = this.getTime()
+    this.hasToken = this.checkUserToken()
+  }
 
-    let md5Path = ''
-    for (let k in data) {
-      md5Path += `&${k}=${data[k]}`
+  authUserToken() {
+    if (!this.hasToken) {
+      wx.redirectTo({
+        url: '/pages/common/login/login'
+      })
     }
-    md5Path = path + md5Path
+  }
 
-    const sign = `${url}?${path}&sign=${md5(md5Path + encryptKey)}`
-    return sign
+  clearUserToken() {
+    wx.removeStorageSync('token')
+    setTimeout(() => {
+      this.authUserToken()
+    }, 800)
+  }
+
+  checkUserToken() {
+    const userToken = wx.getStorageSync('token')
+    if (!userToken || userToken == '') {
+      return false
+    }
+    return true
   }
 
   // getRand
@@ -31,47 +50,63 @@ class Request {
     return new Date().getTime()
   }
 
-  // requestArr
-  requestArr = []
+  // 签名 和后端一致
+  sign(data) {
+    const encryptKey = '39d38be4be18cd9ff5363baa96027647'
+    const time = this.time
+    const rand = this.rand
+
+    const path = `rand=${rand}&time=${time}`
+
+    let md5Path = ''
+
+    for (let k in data) {
+      md5Path += `${k}=${data[k]}&`
+    }
+
+    return md5(md5Path + path + encryptKey)
+  }
 
   // getHeader
-  getHeader() {
-    if (wx.getStorageSync('token')) {
-      return {
-        'content-type': 'application/json',
-        'userToken': wx.getStorageSync('token')
-      }
-    }
-    return {
+  getHeader(data) {
+    const header = {
+      time: this.time,
+      rand: this.rand,
+      sign: this.sign(data),
       'content-type': 'application/json'
     }
+
+    const userToken = wx.getStorageSync('token')
+    if (userToken && userToken != '') {
+      header.userToken = userToken
+    }
+    return header
   }
 
   // getData
   getData({ url, method = 'GET', data = {} }) {
-    url = this._sign(url, data)
-    return this._getData({ url, method, data })
-  }
-
-  _getData({ url, method = 'GET', data = {} }) {
     return new Promise((resolve, reject) => {
       const req = wx.request({
         url: this.baseUrl + url,
-        header: this.getHeader(),
+        header: this.getHeader(data),
         data: data,
         method: method,
         success: (res) => {
-          let { status } = res.data
+          let { status, data, error } = res.data
           if (status == 'success') {
-            resolve(res.data.data)
+            resolve(data)
+          } else if (status == 'fail') {
+            this._showError(error)
+            if (error.indexOf('userToken') != -1) {
+              this.clearUserToken()
+            }
           } else {
-            reject()
             this._showError()
           }
         },
         fail: (res) => {
-          reject()
-          // this._showError()
+          // reject()
+          this._showError()
         },
       })
 
@@ -91,9 +126,9 @@ class Request {
   }
 
   // showerr
-  _showError() {
+  _showError(e = '请求错误') {
     wx.showToast({
-      title: '请求错误',
+      title: e,
       icon: 'none'
     })
   }

@@ -1,5 +1,5 @@
 // pages/ucenter/index/index.js
-import { IndexModel } from '../../../models/ucenter/index.js'
+import { IndexModel } from '../../../models/ucenter/index'
 const indexModel = new IndexModel()
 Page({
 
@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navList: [
+    navList: [ // 导航数据
       { name: '我的钱包', img: '/images/nav/wallet.png', url: 'wallet' },
       { name: '我要报单', img: '/images/nav/report.png', url: 'report' },
       { name: '会员升级', img: '/images/nav/update.png', url: 'userUpgrade' },
@@ -18,7 +18,18 @@ Page({
       { name: '系统设置', img: '/images/nav/setting.png', url: 'setting' },
       // { name: '修改登录密码', img: '/images/nav/lock.png', url: '' },
       // { name: '修改提现密码', img: '/images/nav/card-lock.png', url: '' },
-    ]
+    ],
+    userInfo: { // 用户信息
+      true_name: '', // 姓名
+      mobile: '', // 手机号
+      balance: 0, // 余额
+      point: 0, // 积分
+      preparation: 0, // 报单积分
+      freeze_balance: 0, // 股权保证金
+      is_reporter: false, // 报单中心
+      is_wxshare: false, // 分享二维码
+    }
+
   },
 
   // 退出登录
@@ -37,9 +48,19 @@ Page({
   // 导航跳转方法 
   onNavlistTap(e) {
     const url = e.currentTarget.dataset.url
-    if(!url) return
+    if (!url) return
     wx.navigateTo({
       url: `/pages/ucenter/${url}/${url}`
+    })
+  },
+
+  // 获取data
+  getData() {
+    return indexModel.getMemberInfo().then(userInfo => {
+      this.setData({
+        userInfo
+      })
+      wx.setStorageSync('userInfo', userInfo)
     })
   },
 
@@ -47,7 +68,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
 
   /**
@@ -82,7 +103,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.showNavigationBarLoading()
+    this.getData().then(() => {
+      wx.stopPullDownRefresh()
+      wx.hideNavigationBarLoading()
+    })
   },
 
   /**

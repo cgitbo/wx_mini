@@ -1,5 +1,9 @@
 // pages/common/findPassword/findPassword.js
 const app = getApp()
+
+import { FindPassModel } from '../../../models/common/findPass'
+const findPassModel = new FindPassModel()
+
 Page({
 
   /**
@@ -59,7 +63,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    findPassModel.initValidate()
   },
 
   /**
