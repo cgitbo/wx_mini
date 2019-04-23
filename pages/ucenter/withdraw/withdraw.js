@@ -7,7 +7,7 @@ Page({
    */
   data: {
     BankInfo: {
-      icon: 'no-bank'
+      icon: 'no'
     },
     IsIPX: app.globalData.IsIPX // 是否ipx
   },
@@ -28,6 +28,7 @@ Page({
    */
   onLoad: function (options) {
     const BankInfo = JSON.parse(options.bankInfo)
+    BankInfo.lastNum = BankInfo.card_num.slice(-1)[0]
     this.setData({
       BankInfo
     })

@@ -2,8 +2,8 @@
 <view class='container'>
   <view class='author-container bg-green'>
     <view class='user-box'>
-      <open-data type="userAvatarUrl"  class='avatar' />
-      <!-- <image class='avatar' src='http://g.hiphotos.baidu.com/image/h%3D300/sign=0b07325c0c087bf462ec51e9c2d2575e/37d3d539b6003af32c15d1773b2ac65c1038b67d.jpg' /> -->
+      <!-- <open-data type="userAvatarUrl"  class='avatar' /> -->
+      <image class='avatar' src='{{globalUserInfo.avatarUrl}}' />
       <view class='info-box'>
         <view class='name-box'>
           <text class='name'>{{userInfo.true_name}}</text>

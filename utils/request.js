@@ -7,7 +7,6 @@ class Request {
 
   _init() {
     this._initData()
-    this.authUserToken()
   }
 
   _initData() {
@@ -15,30 +14,20 @@ class Request {
     this.requestArr = []
     this.rand = this.getRand()
     this.time = this.getTime()
-    this.hasToken = this.checkUserToken()
   }
 
   authUserToken() {
-    if (!this.hasToken) {
-      wx.redirectTo({
-        url: '/pages/common/login/login'
-      })
+    const userToken = wx.getStorageSync('token')
+    if (!userToken || userToken == '') {
+      this.clearUserToken()
     }
   }
 
   clearUserToken() {
-    wx.removeStorageSync('token')
-    setTimeout(() => {
-      this.authUserToken()
-    }, 800)
-  }
-
-  checkUserToken() {
-    const userToken = wx.getStorageSync('token')
-    if (!userToken || userToken == '') {
-      return false
-    }
-    return true
+    wx.clearStorage()
+    wx.redirectTo({
+      url: '/pages/common/login/login'
+    })
   }
 
   // getRand

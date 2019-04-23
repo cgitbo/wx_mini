@@ -3,7 +3,8 @@
   <yh-back class='back' custom-conf='{{CustomConf}}' bar-title='登录' color='#000' hide-icon />
   <image class='bg-img' src='/images/common/bg.png' />
   <view class='content'>
-    <image class='img' src='/images/common/logo.png' />
+    <image class='img' hidden='{{hasUserInfo}}' src='/images/common/logo.png' />
+    <image class='img avatar' hidden='{{!hasUserInfo}}' src='{{userInfo.avatarUrl}}' />
     <form bindsubmit='onLoginFormSubmit'>
       <view class='login-wrap'>
         <view class='item'>
@@ -19,7 +20,8 @@
         </view>
       </view>
       <view class='btn-wrap'>
-        <button class='btn' plain form-type='submit'>登录</button>
+        <button wx:if='{{!hasUserInfo && canIUse}}' class='btn' plain open-type='getUserInfo' bindgetuserinfo='getUserInfo'>获取授权</button>
+        <button wx:else class='btn' plain form-type='submit'>登录</button>
       </view>
     </form>
   </view>

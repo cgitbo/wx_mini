@@ -1,6 +1,9 @@
 // pages/ucenter/index/index.js
+const app = getApp()
+
 import { IndexModel } from '../../../models/ucenter/index'
 const indexModel = new IndexModel()
+
 Page({
 
   /**
@@ -28,13 +31,13 @@ Page({
       freeze_balance: 0, // 股权保证金
       is_reporter: false, // 报单中心
       is_wxshare: false, // 分享二维码
-    }
-
+    },
+    globalUserInfo: {} // 微信授权登录的信息
   },
 
   // 退出登录
   onLoginoutTap() {
-    console.log('退出')
+    indexModel.clearUserToken()
   },
 
   // 跳转订单页面
@@ -56,9 +59,11 @@ Page({
 
   // 获取data
   getData() {
+    const globalUserInfo = app.globalData.userInfo || {}
     return indexModel.getMemberInfo().then(userInfo => {
       this.setData({
-        userInfo
+        userInfo,
+        globalUserInfo
       })
       wx.setStorageSync('userInfo', userInfo)
     })

@@ -42,10 +42,19 @@ Page({
     return Object.entries(icons).filter(ele => ele.pop() == name).shift()
   },
 
+  // 加工银行卡数据
+  _getBankInfo(bankInfo) {
+    return {
+      bank: bankInfo.bank,
+      card_num: bankInfo.card_num.replace(/\s+/g, '').match(/\d{1,4}/g),
+      icon: this._getBankIcon(bankInfo.bank) ? this._getBankIcon(bankInfo.bank)[0] : 'no',
+    }
+  },
+
   // 银行图片找不到默认图片
   onIconError() {
     this.setData({
-      'BankInfo.icon': 'no-bank'
+      'BankInfo.icon': 'no'
     })
   },
 
@@ -77,19 +86,12 @@ Page({
     const getUserBankInfo = indexModel.getUserBankInfo()
     return Promise.all([getMemberInfo, getUserBankInfo]).then(res => {
       const [userInfo, bankInfo] = res
-      let { bank, card_num, icon } = this.data.BankInfo
-      let hasBankInfo = this.data.hasBankInfo
-      if (bankInfo && bankInfo.card_num && bankInfo.card_num != '') {
-        bank = bankInfo.bank
-        card_num = bankInfo.card_num.replace(/\s+/g, '').match(/\d{1,4}/g)
-        icon: this._getBankIcon(bankInfo.bank) ? this._getBankIcon(bankInfo.bank)[0] : 'no-bank'
-        hasBankInfo = true
-      }
-      const BankInfo = { bank, card_num, icon }
+
+      const BankInfo = this._getBankInfo(bankInfo)
       this.setData({
         userInfo,
         BankInfo,
-        hasBankInfo
+        hasBankInfo: true
       })
       wx.setStorageSync('userInfo', userInfo)
       wx.setStorageSync('bankInfo', bankInfo)
@@ -101,14 +103,16 @@ Page({
    */
   onLoad: function (options) {
     const userInfo = wx.getStorageSync('userInfo')
-    const BankInfo = wx.getStorageSync('bankInfo')
-    if (!BankInfo || BankInfo == '' || !userInfo || userInfo == '') {
+    const bankInfo = wx.getStorageSync('bankInfo')
+    if (!bankInfo || bankInfo == '' || !userInfo || userInfo == '') {
       this.getUserInfo()
       return
     }
+    const BankInfo = this._getBankInfo(bankInfo)
     this.setData({
       userInfo,
-      BankInfo
+      BankInfo,
+      hasBankInfo: true
     })
   },
 

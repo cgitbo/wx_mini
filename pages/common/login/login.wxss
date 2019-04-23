@@ -23,6 +23,14 @@
   margin-top: 225rpx;
 }
 
+.content .avatar {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+  margin-top: 293rpx;
+  overflow: hidden;
+}
+
 .login-wrap {
   width: 480rpx;
   margin-top: 80rpx;

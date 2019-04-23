@@ -36,7 +36,7 @@ Page({
       { title: '支付方式', content: '微信支付', bool: true },
       { title: '付款时间', content: '2018-05-18 15:74:15', bool: true },
       { title: '发货时间', content: '2018-05-18 15:74:15', bool: true },
-      { title: '完成时间', content: '2018-05-18 15:74:15', bool: false }
+      { title: '完成时间', content: '2018-05-18 15:74:15', bool: true }
     ],
     OrderTotle: [
       { title: '实付金额', content: '￥154.12', bool: true },

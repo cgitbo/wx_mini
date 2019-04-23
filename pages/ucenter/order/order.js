@@ -48,12 +48,22 @@ Page({
     let lastArr = this.data.OrderList || []
     this._toggleLoadMore(true)
     return orderModel.getOrderList({ status, page, limit }).then(OrderList => {
-      this._toggleLoadMore(OrderList.length)
+      const resLen = OrderList.length
+      this._toggleLoadMore(resLen)
+      this._hideLoading()
+      if (!resLen && !isCancat) {
+        return this._resetData()
+      }
       if (isCancat) OrderList = lastArr.concat(OrderList)
       this.setData({
         OrderList
       })
-      this._hideLoading()
+    })
+  },
+
+  _resetData() {
+    this.setData({
+      OrderList: []
     })
   },
 

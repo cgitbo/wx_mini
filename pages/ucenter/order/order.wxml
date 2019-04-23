@@ -52,6 +52,6 @@
     <view hidden='{{!ShowLoading}}'>
       <yh-loading />
     </view>
-    <view hidden='{{LoadMore}}' class='load-more'>我也是有底线的~</view>
+    <view hidden='{{LoadMore || ShowLoading}}' class='load-more'>我也是有底线的~</view>
   </view>
 </view>

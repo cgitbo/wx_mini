@@ -5,7 +5,7 @@
 
     <view class='bank-wrap'>
       <view class='bank-title'>
-        <image class='img' src='/images/ucenter/bankIcon/{{BankInfo.icon}}-bank.png' binderror='onIconError' />
+        <image class='img' src='/images/ucenter/bankIcon/{{BankInfo.icon || "no"}}-bank.png' binderror='onIconError' />
         <view class='bank-name'>
           <view class='name'>{{BankInfo.bank}}</view>
           <view class='type'>储蓄卡</view>

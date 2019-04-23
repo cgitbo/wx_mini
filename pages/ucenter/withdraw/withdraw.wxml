@@ -1,10 +1,10 @@
 <!--pages/ucenter/withdraw/withdraw.wxml-->
 <view class='container {{IsIPX && "container-ipx"}}'>
   <view class='head-wrap'>
-    <image class='img' src='/images/ucenter/bankIcon/{{BankInfo.icon}}.png' />
+    <image class='img' src='/images/ucenter/bankIcon/{{BankInfo.icon}}-bank.png' />
     <view class='bank-info'>
-      <view class='name'>{{BankInfo.name}}</view>
-      <view class='des'>尾号 {{BankInfo.number}} 的银行卡</view>
+      <view class='name'>{{BankInfo.bank}}</view>
+      <view class='des'>尾号 {{BankInfo.lastNum}} 的银行卡</view>
     </view>
   </view>
 
