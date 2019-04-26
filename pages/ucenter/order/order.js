@@ -27,10 +27,9 @@ Page({
     const orderType = this.data.OrderType
     // 类型一样 不进行操作
     if (OrderType == orderType) return
+    this._resetData()
     this._showLoading()
-    this.setData({
-      OrderType
-    })
+    this.setData({ OrderType })
     // 防抖处理
     throttle(this.getData, 500, true)({ status: OrderType })
   },
@@ -54,16 +53,16 @@ Page({
       if (!resLen && !isCancat) {
         return this._resetData()
       }
+      if (!resLen) return false
       if (isCancat) OrderList = lastArr.concat(OrderList)
-      this.setData({
-        OrderList
-      })
+      this.setData({ OrderList })
     })
   },
 
   _resetData() {
     this.setData({
-      OrderList: []
+      OrderList: [],
+      PageIndex: 1
     })
   },
 
@@ -144,19 +143,14 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    if (!this.data.LoadMore) {
-      this.setData({
-        PageIndex: 1
-      })
-      return
-    }
+    let { OrderType, PageIndex, LoadMore, OrderList } = this.data
+    if (!LoadMore) return
+    // 每次请求的数据为20条 当前数据不足20条说明已经请求完毕了
+    if (OrderList.length < 20) return this._toggleLoadMore(false)
     this._showLoading()
-    let { OrderType, PageIndex } = this.data
     PageIndex++
     this.getData({ status: OrderType, page: PageIndex, isCancat: true }).then(() => {
-      this.setData({
-        PageIndex
-      })
+      this.setData({ PageIndex })
     })
   },
 

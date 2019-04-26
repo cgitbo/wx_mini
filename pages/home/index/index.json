@@ -5,7 +5,6 @@
     "yh-swiper": "/components/swiper/cmp"
   },
   "navigationBarTitleText": "积分商城",
-  "disableScroll": true,
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"
 }

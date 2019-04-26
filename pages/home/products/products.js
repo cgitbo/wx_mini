@@ -1,29 +1,14 @@
 // pages/home/products/products.js
 const app = getApp()
+import { ProductsModel } from '../../../models/home/products'
+const productsModel = new ProductsModel()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    NavList: [
-      { name: '男装' },
-      { name: '服饰' },
-      { name: '咖啡' },
-      { name: '服饰' },
-      { name: '精品茗茶啊' },
-      { name: '服饰' },
-      { name: '服饰' },
-      { name: '服饰' },
-      { name: '这是五个字' },
-      { name: '这是五个字' },
-      { name: '服饰' },
-      { name: '服饰' },
-      { name: '三个字' },
-      { name: '精品茗茶' },
-      { name: '这是他妈六个' },
-      { name: '精品茗茶' },
-      { name: '精品茗茶' }
+    NavList: [ // 当前二级导航数据
     ],
     CurIndex: 0, // 当前点击的下标
     NavId: 'navId0', // 要滚动的id值
@@ -124,29 +109,34 @@ Page({
     })
   },
 
-  // 设置当前的下标和页面标题
-  _setCurData(CurIndex) {
-    const NavList = this.data.NavList || []
-    const title = NavList[CurIndex].name
-    if (!title) return
-    
-    this._setCurIndex(CurIndex)
-    this._setNavBarTitle(title)
+  // 从缓存中取分类数据
+  getNavList() {
+    const storageNavList = wx.getStorageSync('secondNavList') || []
+    let NavList = this.data.NavList
+    if (NavList.length == 0) NavList = storageNavList
+    this.setData({ NavList })
   },
 
-  // 设置当前下标
-  _setCurIndex(CurIndex) {
+  // 获取数据
+  getData(CurIndex) {
+    this.getNavList()
+    this._setCurData(CurIndex)
+
+
+  },
+
+  // 设置当前的下标和页面标题
+  _setCurData(CurIndex) {
+    const NavList = this.data.NavList
+
     this.setData({
       CurIndex,
       NavId: `navId${CurIndex > 2 ? CurIndex - 2 : 0}`
     })
-  },
 
-  // 设置当前页面标题
-  _setNavBarTitle(title) {
-    wx.setNavigationBarTitle({
-      title
-    })
+    const title = NavList[CurIndex].name
+    if (!title) return
+    wx.setNavigationBarTitle({ title })
   },
 
   /**
@@ -154,7 +144,7 @@ Page({
    */
   onLoad: function (options) {
     const CurIndex = options.id
-    this._setCurData(CurIndex)
+    this.getData(CurIndex)
   },
 
   /**

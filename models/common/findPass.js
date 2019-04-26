@@ -5,7 +5,7 @@ class FindPassModel extends Request {
   // 获取验证码
   getCaptcha(data) {
     return this.getData({
-      url: 'userToken',
+      url: 'send_message_mobile',
       data
     })
   }

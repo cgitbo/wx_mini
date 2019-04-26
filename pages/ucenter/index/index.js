@@ -32,6 +32,11 @@ Page({
       is_reporter: false, // 报单中心
       is_wxshare: false, // 分享二维码
     },
+    orderCount: { // 订单数量
+      no_pay: 0, // 未付款
+      no_send: 0, // 未发货
+      no_get: 0 // 待收货
+    },
     globalUserInfo: {} // 微信授权登录的信息
   },
 
@@ -59,13 +64,21 @@ Page({
 
   // 获取data
   getData() {
+    wx.showNavigationBarLoading()
     const globalUserInfo = app.globalData.userInfo || {}
-    return indexModel.getMemberInfo().then(userInfo => {
+
+    const getMemberInfo = indexModel.getMemberInfo()
+    const getOrderCout = indexModel.getOrderCout()
+
+    return Promise.all([getMemberInfo, getOrderCout]).then(res => {
+      const [userInfo, orderCount] = res
       this.setData({
         userInfo,
+        orderCount,
         globalUserInfo
       })
       wx.setStorageSync('userInfo', userInfo)
+      wx.hideNavigationBarLoading()
     })
   },
 
@@ -108,10 +121,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.showNavigationBarLoading()
     this.getData().then(() => {
       wx.stopPullDownRefresh()
-      wx.hideNavigationBarLoading()
     })
   },
 

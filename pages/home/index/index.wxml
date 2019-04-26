@@ -16,16 +16,20 @@
 
   <view class='nav-box'>
     <scroll-view class='nav' scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}rpx">
-      <view class='cu-item {{index == CurIndex ? "cur" : ""}}' catchtap='onNavTap' wx:for='{{FirstNavList}}' wx:key='{{item.id}}' data-index='{{index}}' data-id='{{item.id}}'>
-        {{item.name}}
-      </view>
+      <block wx:for='{{FirstNavList}}' wx:key='{{item.id}}'>
+        <view class='cu-item {{index == CurIndex ? "cur" : ""}}'
+              wx:if='{{item.visibility == 1}}'
+              data-index='{{index}}'
+              data-id='{{item.id}}'
+              catchtap='onNavTap'>{{item.name}}</view>
+      </block>
     </scroll-view>
 
     <scroll-view class='sec-box' scroll-y scroll-with-animation>
-      <view class='title'>杭州特产</view>
+      <view class='title'>{{FirstNavList[CurIndex].name}}</view>
       <view class='item-box'>
-        <view class='item-list' wx:for='{{SecondNavList}}' wx:key='index' data-id='{{index}}' catchtap='onNavListTap'>
-          <image lazy-load class='img' src='{{item.img}}'></image>
+        <view class='item-list' wx:for='{{SecondNavList}}' wx:key='{{item.id}}' data-id='{{index}}' catchtap='onNavListTap'>
+          <image lazy-load class='img' src='{{item.cat_pic[0] == "h" ? item.cat_pic : "http://www.ehanone.com" + item.cat_pic}}'></image>
           <view class='name'>{{item.name}}</view>
         </view>
       </view>

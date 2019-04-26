@@ -12,7 +12,7 @@
 
   <view class='order-list'>
    
-    <view class='order-box' wx:for='{{OrderList}}' wx:key='{{item.id}}' hidden='{{ShowLoading}}'>
+    <view class='order-box' wx:for='{{OrderList}}' wx:key='{{item.id}}'>
 
       <view class='shop-title'>
         <yh-shopBar right-text='{{item.status_text}}' />

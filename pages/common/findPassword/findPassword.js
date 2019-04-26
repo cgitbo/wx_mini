@@ -13,19 +13,43 @@ Page({
     IsIPX: app.globalData.IsIPX, // 是否ipx
     CaptchaText: '获取验证码', // 验证码文字
     CaptchaDisabled: false, // 默认可以点击
-    ValidateBool: false // 是否验证通过手机号
+    ValidateBool: false, // 是否验证通过手机号
+    NameVal: '', // 姓名
+    MobileVal: '' // 手机号
+  },
+
+  // 输入姓名触发
+  onNameBlur(e) {
+    const NameVal = e.detail.value
+    this.setData({ NameVal })
   },
 
   // 输入手机号触发
   onMobileInput(e) {
-    const value = e.detail.value
-    if (value.length != 11) return
+    const MobileVal = e.detail.value
+    const NameVal = this.data.NameVal
+    if (!NameVal || MobileVal.length != 11) return
+    this.setData({ MobileVal })
+    this.getCaptcha()
+  },
 
-    console.log('验证手机号和姓名 发送验证码', value)
+  // 获取验证码按钮
+  onCaptchaTap(e) {
+    console.log(e)
+    this._getCaptchaTime()
+    this.getCaptcha()
   },
 
   // 获取验证码
-  onCaptchaTap(e) {
+  getCaptcha() {
+    const { NameVal, MobileVal } = this.data
+    findPassModel.getCaptcha({ NameVal, MobileVal }).then(res => {
+      console.log(res)
+    })
+  },
+
+  // 验证码倒计时
+  _getCaptchaTime() {
     let time = 60
     this.timer && clearInterval(this.timer)
     this.timer = setInterval(() => {

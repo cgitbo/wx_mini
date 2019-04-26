@@ -1,5 +1,5 @@
 import { Request } from '../../utils/request.js'
-class IndexModel extends Request {
+class ProductsModel extends Request {
   // 获取banner信息
   getBannerConf() {
     return this.getData({
@@ -22,4 +22,4 @@ class IndexModel extends Request {
   }
 }
 
-export { IndexModel }
+export { ProductsModel }

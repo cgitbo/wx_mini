@@ -3,7 +3,7 @@
   <swiper class='{{swiperSize}}' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' circular='{{circular}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{activeColor}}' bindchange='onSwiperChange'>
     <block wx:for='{{swiperImgs}}' wx:key='index'>
       <swiper-item>
-        <image catchtap='onImgTap' data-index='{{index}}' src='{{item}}' class='slide-image' mode='scaleToFill' />
+        <image lazy-load catchtap='onImgTap' data-index='{{index}}' src='{{item}}' class='slide-image' mode='scaleToFill' />
       </swiper-item>
     </block>
   </swiper>

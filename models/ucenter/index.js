@@ -13,6 +13,13 @@ class IndexModel extends Request {
       url: `getUserBankInfo`
     })
   }
+
+  // 获取订单数量
+  getOrderCout() {
+    return this.getData({
+      url: `my_order_status_count`
+    })
+  }
 }
 
 export { IndexModel }

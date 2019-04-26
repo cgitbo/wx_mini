@@ -37,21 +37,21 @@
       <view class='order-list' catchtap='onOrderListTap' data-type='1'>
         <view class='img-box'>
           <image src='/images/order/pay.png'></image>
-          <yh-tip class='tip' num='99' />
+          <yh-tip class='tip' num='{{orderCount.no_pay}}' />
         </view>
         <view>待付款</view>
       </view>
       <view class='order-list' catchtap='onOrderListTap' data-type='2'>
         <view class='img-box'>
           <image src='/images/order/car.png'></image>
-          <yh-tip class='tip' num='15' />
+          <yh-tip class='tip' num='{{orderCount.no_send}}' />
         </view>
         <view>待发货</view>
       </view>
       <view class='order-list' catchtap='onOrderListTap' data-type='3'>
         <view class='img-box'>
           <image src='/images/order/bag.png'></image>
-          <yh-tip class='tip' num='34' />
+          <yh-tip class='tip' num='{{orderCount.no_get}}' />
         </view>
         <view>待收货</view>
       </view>

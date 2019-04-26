@@ -19,7 +19,7 @@
       </view>
     </view>
 
-    <view class='more {{MoreBool && "up"}}' catchtap='onMoreTap'></view>
+    <view class='more {{MoreBool && "up"}}' wx:if='{{NavList.length > 5}}' catchtap='onMoreTap'></view>
   </view>
 
   <view class='product-list'>
